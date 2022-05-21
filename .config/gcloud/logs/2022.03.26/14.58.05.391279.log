@@ -1,0 +1,78 @@
+2022-03-26 14:58:05,392 DEBUG    root            Loaded Command Group: ['gcloud', 'builds']
+2022-03-26 14:58:05,404 DEBUG    root            Loaded Command Group: ['gcloud', 'builds', 'submit']
+2022-03-26 14:58:05,411 DEBUG    root            Running [gcloud.builds.submit] with arguments: [--substitutions: "OrderedDict([('_MODEL_NAME', 'material-analyzer'), ('_DOCKERFOLDER', 'automl-vision-cpu-1.14.0'), ('_GCS_MODEL_PATH', 'gs://greenday-taco-ai/model-export/iod/tf_saved_model-taco_20220325070838-2022-03-26T21:38:37.487016Z/saved_model.pb')])"]
+2022-03-26 14:58:05,413 DEBUG    root            (gcloud.builds.submit) parsing cloudbuild.yaml: while parsing a block mapping
+  in "cloudbuild.yaml", line 10, column 3
+expected <block end>, but found '<scalar>'
+  in "cloudbuild.yaml", line 27, column 46
+Traceback (most recent call last):
+  File "/Users/ankurahir/Documents/G-Cloud/google-cloud-sdk/lib/googlecloudsdk/core/yaml.py", line 136, in load
+    return yaml.load(stream, loader, version=version)
+  File "/Users/ankurahir/Documents/G-Cloud/google-cloud-sdk/lib/third_party/ruamel/yaml/main.py", line 935, in load
+    return loader._constructor.get_single_data()
+  File "/Users/ankurahir/Documents/G-Cloud/google-cloud-sdk/lib/third_party/ruamel/yaml/constructor.py", line 109, in get_single_data
+    node = self.composer.get_single_node()
+  File "/Users/ankurahir/Documents/G-Cloud/google-cloud-sdk/lib/third_party/ruamel/yaml/composer.py", line 78, in get_single_node
+    document = self.compose_document()
+  File "/Users/ankurahir/Documents/G-Cloud/google-cloud-sdk/lib/third_party/ruamel/yaml/composer.py", line 101, in compose_document
+    node = self.compose_node(None, None)
+  File "/Users/ankurahir/Documents/G-Cloud/google-cloud-sdk/lib/third_party/ruamel/yaml/composer.py", line 138, in compose_node
+    node = self.compose_mapping_node(anchor)
+  File "/Users/ankurahir/Documents/G-Cloud/google-cloud-sdk/lib/third_party/ruamel/yaml/composer.py", line 218, in compose_mapping_node
+    item_value = self.compose_node(node, item_key)
+  File "/Users/ankurahir/Documents/G-Cloud/google-cloud-sdk/lib/third_party/ruamel/yaml/composer.py", line 136, in compose_node
+    node = self.compose_sequence_node(anchor)
+  File "/Users/ankurahir/Documents/G-Cloud/google-cloud-sdk/lib/third_party/ruamel/yaml/composer.py", line 180, in compose_sequence_node
+    node.value.append(self.compose_node(node, index))
+  File "/Users/ankurahir/Documents/G-Cloud/google-cloud-sdk/lib/third_party/ruamel/yaml/composer.py", line 138, in compose_node
+    node = self.compose_mapping_node(anchor)
+  File "/Users/ankurahir/Documents/G-Cloud/google-cloud-sdk/lib/third_party/ruamel/yaml/composer.py", line 211, in compose_mapping_node
+    while not self.parser.check_event(MappingEndEvent):
+  File "/Users/ankurahir/Documents/G-Cloud/google-cloud-sdk/lib/third_party/ruamel/yaml/parser.py", line 141, in check_event
+    self.current_event = self.state()
+  File "/Users/ankurahir/Documents/G-Cloud/google-cloud-sdk/lib/third_party/ruamel/yaml/parser.py", line 577, in parse_block_mapping_key
+    raise ParserError(
+ruamel.yaml.parser.ParserError: while parsing a block mapping
+  in "cloudbuild.yaml", line 10, column 3
+expected <block end>, but found '<scalar>'
+  in "cloudbuild.yaml", line 27, column 46
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/ankurahir/Documents/G-Cloud/google-cloud-sdk/lib/googlecloudsdk/api_lib/cloudbuild/cloudbuild_util.py", line 298, in LoadMessageFromStream
+    structured_data = yaml.load(stream, file_hint=path)
+  File "/Users/ankurahir/Documents/G-Cloud/google-cloud-sdk/lib/googlecloudsdk/core/yaml.py", line 138, in load
+    raise YAMLParseError(e, f=file_hint)
+googlecloudsdk.core.yaml.YAMLParseError: Failed to parse YAML from [cloudbuild.yaml]: while parsing a block mapping
+  in "cloudbuild.yaml", line 10, column 3
+expected <block end>, but found '<scalar>'
+  in "cloudbuild.yaml", line 27, column 46
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/ankurahir/Documents/G-Cloud/google-cloud-sdk/lib/googlecloudsdk/calliope/cli.py", line 987, in Execute
+    resources = calliope_command.Run(cli=self, args=args)
+  File "/Users/ankurahir/Documents/G-Cloud/google-cloud-sdk/lib/googlecloudsdk/calliope/backend.py", line 809, in Run
+    resources = command_instance.Run(args)
+  File "/Users/ankurahir/Documents/G-Cloud/google-cloud-sdk/lib/surface/builds/submit.py", line 154, in Run
+    build_config = submit_util.CreateBuildConfig(
+  File "/Users/ankurahir/Documents/G-Cloud/google-cloud-sdk/lib/googlecloudsdk/command_lib/builds/submit_util.py", line 435, in CreateBuildConfig
+    build_config = _SetBuildSteps(tag, no_cache, messages, substitutions,
+  File "/Users/ankurahir/Documents/G-Cloud/google-cloud-sdk/lib/googlecloudsdk/command_lib/builds/submit_util.py", line 204, in _SetBuildSteps
+    build_config = config.LoadCloudbuildConfigFromPath(
+  File "/Users/ankurahir/Documents/G-Cloud/google-cloud-sdk/lib/googlecloudsdk/api_lib/cloudbuild/config.py", line 152, in LoadCloudbuildConfigFromPath
+    build = cloudbuild_util.LoadMessageFromPath(
+  File "/Users/ankurahir/Documents/G-Cloud/google-cloud-sdk/lib/googlecloudsdk/api_lib/cloudbuild/cloudbuild_util.py", line 411, in LoadMessageFromPath
+    return LoadMessageFromStream(f, msg_type, msg_friendly_name,
+  File "/Users/ankurahir/Documents/G-Cloud/google-cloud-sdk/lib/googlecloudsdk/api_lib/cloudbuild/cloudbuild_util.py", line 300, in LoadMessageFromStream
+    raise cloudbuild_exceptions.ParserError(path, e.inner_error)
+googlecloudsdk.api_lib.cloudbuild.cloudbuild_exceptions.ParserError: parsing cloudbuild.yaml: while parsing a block mapping
+  in "cloudbuild.yaml", line 10, column 3
+expected <block end>, but found '<scalar>'
+  in "cloudbuild.yaml", line 27, column 46
+2022-03-26 14:58:05,416 ERROR    root            (gcloud.builds.submit) parsing cloudbuild.yaml: while parsing a block mapping
+  in "cloudbuild.yaml", line 10, column 3
+expected <block end>, but found '<scalar>'
+  in "cloudbuild.yaml", line 27, column 46

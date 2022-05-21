@@ -1,0 +1,6 @@
+2022-03-26 14:56:53,889 DEBUG    root            Loaded Command Group: ['gcloud', 'builds']
+2022-03-26 14:56:53,903 DEBUG    root            Loaded Command Group: ['gcloud', 'builds', 'submit']
+2022-03-26 14:56:53,910 ERROR    root            (gcloud.builds.submit) unrecognized arguments: _GCS_MODEL_PATH=gs://greenday-taco-ai/model-export/iod/tf_saved_model-taco_20220325070838-2022-03-26T21:38:37.487016Z/saved_model.pb 
+
+To search the help text of gcloud commands, run:
+  gcloud help -- SEARCH_TERMS

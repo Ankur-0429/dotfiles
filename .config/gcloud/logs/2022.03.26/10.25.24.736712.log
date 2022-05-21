@@ -1,0 +1,13 @@
+2022-03-26 10:25:24,737 DEBUG    root            Loaded Command Group: ['gcloud', 'auth']
+2022-03-26 10:25:24,738 DEBUG    root            Loaded Command Group: ['gcloud', 'auth', 'application_default']
+2022-03-26 10:25:24,759 DEBUG    root            Loaded Command Group: ['gcloud', 'auth', 'application-default', 'print_access_token']
+2022-03-26 10:25:24,760 DEBUG    root            Running [gcloud.auth.application-default.print-access-token] with arguments: []
+2022-03-26 10:25:24,796 DEBUG    google.auth.transport.requests Making request: POST https://oauth2.googleapis.com/token
+2022-03-26 10:25:24,833 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): oauth2.googleapis.com:443
+2022-03-26 10:25:25,002 DEBUG    urllib3.connectionpool https://oauth2.googleapis.com:443 "POST /token HTTP/1.1" 200 None
+2022-03-26 10:25:25,004 INFO     root            Display format: "value(token)"
+2022-03-26 10:25:25,004 INFO     ___FILE_ONLY___ ya29.c.b0AXv0zTP1i4xSNKyV9C-C1BXKN_eg610SaPzJuQcHjTLfqz7Ug7MOrvUspOPSifeMsCDCcljgdUj2VnzzpZ9ChSwmCj6_oECGl0gKQA6tx0y4PbhNYrYJCCHD7ANiKxeV194yEYg29ishfetm3sVoqMTzTfRga3lJ545WuRng0eoIOHDf5wAzU9sx4Is_ujirfSfD4sk04_lS8Q-o16YBaH7W8D2sug.........................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+
+2022-03-26 10:25:25,006 DEBUG    root            Checking for updates...
+2022-03-26 10:25:25,046 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): dl.google.com:443
+2022-03-26 10:25:25,206 DEBUG    urllib3.connectionpool https://dl.google.com:443 "GET /dl/cloudsdk/channels/rapid/components-2.json HTTP/1.1" 200 186644

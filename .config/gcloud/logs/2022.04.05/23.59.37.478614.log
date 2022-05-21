@@ -1,0 +1,58 @@
+2022-04-05 23:59:37,480 DEBUG    root            Loaded Command Group: ['gcloud', 'run']
+2022-04-05 23:59:37,501 DEBUG    root            Loaded Command Group: ['gcloud', 'run', 'deploy']
+2022-04-05 23:59:37,507 DEBUG    root            Running [gcloud.run.deploy] with arguments: [--clear-env-vars: "True", --cpu: "1", --image: "us-east1-docker.pkg.dev/greenday-6aba2/greenday/app:latest", --max-instances: "<googlecloudsdk.command_lib.run.flags._ScaleValue object at 0x103180100>", --memory: "512Mi", --min-instances: "<googlecloudsdk.command_lib.run.flags._ScaleValue object at 0x103180250>", --region: "us-east1", --service-account: "greenday-service-account@greenday-6aba2.iam.gserviceaccount.com", SERVICE: "discordbot"]
+2022-04-05 23:59:37,522 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): us-east1-run.googleapis.com:443
+2022-04-05 23:59:38,086 DEBUG    urllib3.connectionpool https://us-east1-run.googleapis.com:443 "GET /apis/serving.knative.dev/v1/namespaces/greenday-6aba2/services/discordbot?alt=json HTTP/1.1" 404 None
+2022-04-05 23:59:38,594 DEBUG    urllib3.connectionpool https://us-east1-run.googleapis.com:443 "POST /v1/projects/greenday-6aba2/locations/us-east1/services/discordbot:testIamPermissions?alt=json HTTP/1.1" 200 None
+2022-04-06 00:00:06,517 INFO     ___FILE_ONLY___ Deploying container to Cloud Run service [[1mdiscordbot[m] in project [[1mgreenday-6aba2[m] region [[1mus-east1[m]
+
+2022-04-06 00:00:06,518 INFO     ___FILE_ONLY___ Deploying new service...
+2022-04-06 00:00:07,047 DEBUG    urllib3.connectionpool https://us-east1-run.googleapis.com:443 "POST /apis/serving.knative.dev/v1/namespaces/greenday-6aba2/services?alt=json HTTP/1.1" 200 None
+2022-04-06 00:00:07,119 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): run.googleapis.com:443
+2022-04-06 00:00:07,707 DEBUG    urllib3.connectionpool https://run.googleapis.com:443 "GET /v1/projects/greenday-6aba2/locations/us-east1/services/discordbot:getIamPolicy?alt=json HTTP/1.1" 200 None
+2022-04-06 00:00:08,431 DEBUG    urllib3.connectionpool https://run.googleapis.com:443 "POST /v1/projects/greenday-6aba2/locations/us-east1/services/discordbot:setIamPolicy?alt=json HTTP/1.1" 200 None
+2022-04-06 00:00:08,890 DEBUG    urllib3.connectionpool https://us-east1-run.googleapis.com:443 "GET /apis/serving.knative.dev/v1/namespaces/greenday-6aba2/services/discordbot?alt=json HTTP/1.1" 200 None
+2022-04-06 00:00:10,452 DEBUG    urllib3.connectionpool https://us-east1-run.googleapis.com:443 "GET /apis/serving.knative.dev/v1/namespaces/greenday-6aba2/services/discordbot?alt=json HTTP/1.1" 200 None
+2022-04-06 00:00:12,023 DEBUG    urllib3.connectionpool https://us-east1-run.googleapis.com:443 "GET /apis/serving.knative.dev/v1/namespaces/greenday-6aba2/services/discordbot?alt=json HTTP/1.1" 200 None
+2022-04-06 00:00:13,529 DEBUG    urllib3.connectionpool https://us-east1-run.googleapis.com:443 "GET /apis/serving.knative.dev/v1/namespaces/greenday-6aba2/services/discordbot?alt=json HTTP/1.1" 200 None
+2022-04-06 00:00:15,102 DEBUG    urllib3.connectionpool https://us-east1-run.googleapis.com:443 "GET /apis/serving.knative.dev/v1/namespaces/greenday-6aba2/services/discordbot?alt=json HTTP/1.1" 200 None
+2022-04-06 00:00:16,682 DEBUG    urllib3.connectionpool https://us-east1-run.googleapis.com:443 "GET /apis/serving.knative.dev/v1/namespaces/greenday-6aba2/services/discordbot?alt=json HTTP/1.1" 200 None
+2022-04-06 00:00:18,253 DEBUG    urllib3.connectionpool https://us-east1-run.googleapis.com:443 "GET /apis/serving.knative.dev/v1/namespaces/greenday-6aba2/services/discordbot?alt=json HTTP/1.1" 200 None
+2022-04-06 00:00:19,704 DEBUG    urllib3.connectionpool https://us-east1-run.googleapis.com:443 "GET /apis/serving.knative.dev/v1/namespaces/greenday-6aba2/services/discordbot?alt=json HTTP/1.1" 200 None
+2022-04-06 00:00:21,130 DEBUG    urllib3.connectionpool https://us-east1-run.googleapis.com:443 "GET /apis/serving.knative.dev/v1/namespaces/greenday-6aba2/services/discordbot?alt=json HTTP/1.1" 200 None
+2022-04-06 00:00:22,535 DEBUG    urllib3.connectionpool https://us-east1-run.googleapis.com:443 "GET /apis/serving.knative.dev/v1/namespaces/greenday-6aba2/services/discordbot?alt=json HTTP/1.1" 200 None
+2022-04-06 00:00:22,569 DEBUG    root            (gcloud.run.deploy) Cloud Run error: The user-provided container failed to start and listen on the port defined provided by the PORT=8080 environment variable. Logs for this revision might contain more information.
+
+Logs URL: https://console.cloud.google.com/logs/viewer?project=greenday-6aba2&resource=cloud_run_revision/service_name/discordbot/revision_name/discordbot-00001-bav&advancedFilter=resource.type%3D%22cloud_run_revision%22%0Aresource.labels.service_name%3D%22discordbot%22%0Aresource.labels.revision_name%3D%22discordbot-00001-bav%22
+For more troubleshooting guidance, see https://cloud.google.com/run/docs/troubleshooting#container-failed-to-start
+Traceback (most recent call last):
+  File "/Users/ankurahir/Documents/G-Cloud/google-cloud-sdk/lib/googlecloudsdk/calliope/cli.py", line 987, in Execute
+    resources = calliope_command.Run(cli=self, args=args)
+  File "/Users/ankurahir/Documents/G-Cloud/google-cloud-sdk/lib/googlecloudsdk/calliope/backend.py", line 809, in Run
+    resources = command_instance.Run(args)
+  File "/Users/ankurahir/Documents/G-Cloud/google-cloud-sdk/lib/surface/run/deploy.py", line 265, in Run
+    service = operations.ReleaseService(
+  File "/Users/ankurahir/Documents/G-Cloud/google-cloud-sdk/lib/googlecloudsdk/command_lib/run/serverless_operations.py", line 1171, in ReleaseService
+    self.WaitForCondition(poller)
+  File "/Users/ankurahir/Documents/G-Cloud/google-cloud-sdk/lib/googlecloudsdk/command_lib/run/serverless_operations.py", line 627, in WaitForCondition
+    return waiter.PollUntilDone(poller, None, wait_ceiling_ms=1000)
+  File "/Users/ankurahir/Documents/G-Cloud/google-cloud-sdk/lib/googlecloudsdk/api_lib/util/waiter.py", line 322, in PollUntilDone
+    operation = retryer.RetryOnResult(
+  File "/Users/ankurahir/Documents/G-Cloud/google-cloud-sdk/lib/googlecloudsdk/core/util/retry.py", line 239, in RetryOnResult
+    result = func(*args, **kwargs)
+  File "/Users/ankurahir/Documents/G-Cloud/google-cloud-sdk/lib/googlecloudsdk/command_lib/run/serverless_operations.py", line 248, in Poll
+    self._PollTerminalSubconditions(conditions, conditions_message)
+  File "/Users/ankurahir/Documents/G-Cloud/google-cloud-sdk/lib/googlecloudsdk/command_lib/run/serverless_operations.py", line 228, in _PollTerminalSubconditions
+    self._PossiblyFailStage(condition, message)
+  File "/Users/ankurahir/Documents/G-Cloud/google-cloud-sdk/lib/googlecloudsdk/command_lib/run/serverless_operations.py", line 345, in _PossiblyFailStage
+    self._tracker.FailStage(condition, self._resource_fail_type(message),
+  File "/Users/ankurahir/Documents/G-Cloud/google-cloud-sdk/lib/googlecloudsdk/core/console/progress_tracker.py", line 940, in FailStage
+    raise failure_exception  # pylint: disable=raising-bad-type
+googlecloudsdk.command_lib.run.exceptions.DeploymentFailedError: Cloud Run error: The user-provided container failed to start and listen on the port defined provided by the PORT=8080 environment variable. Logs for this revision might contain more information.
+
+Logs URL: https://console.cloud.google.com/logs/viewer?project=greenday-6aba2&resource=cloud_run_revision/service_name/discordbot/revision_name/discordbot-00001-bav&advancedFilter=resource.type%3D%22cloud_run_revision%22%0Aresource.labels.service_name%3D%22discordbot%22%0Aresource.labels.revision_name%3D%22discordbot-00001-bav%22
+For more troubleshooting guidance, see https://cloud.google.com/run/docs/troubleshooting#container-failed-to-start
+2022-04-06 00:00:22,574 ERROR    root            (gcloud.run.deploy) Cloud Run error: The user-provided container failed to start and listen on the port defined provided by the PORT=8080 environment variable. Logs for this revision might contain more information.
+
+Logs URL: https://console.cloud.google.com/logs/viewer?project=greenday-6aba2&resource=cloud_run_revision/service_name/discordbot/revision_name/discordbot-00001-bav&advancedFilter=resource.type%3D%22cloud_run_revision%22%0Aresource.labels.service_name%3D%22discordbot%22%0Aresource.labels.revision_name%3D%22discordbot-00001-bav%22
+For more troubleshooting guidance, see https://cloud.google.com/run/docs/troubleshooting#container-failed-to-start

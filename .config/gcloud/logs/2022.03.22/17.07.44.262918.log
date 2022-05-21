@@ -1,0 +1,80 @@
+2022-03-22 17:07:44,264 DEBUG    root            Loaded Command Group: ['gcloud', 'run']
+2022-03-22 17:07:44,293 DEBUG    root            Loaded Command Group: ['gcloud', 'run', 'deploy']
+2022-03-22 17:07:44,300 DEBUG    root            Running [gcloud.run.deploy] with arguments: [--clear-env-vars: "True", --cpu: "2", --image: "us-east1-docker.pkg.dev/greenday-6aba2/greenday/multi:latest", --max-instances: "<googlecloudsdk.command_lib.run.flags._ScaleValue object at 0x1059fae80>", --memory: "6G", --min-instances: "<googlecloudsdk.command_lib.run.flags._ScaleValue object at 0x1059fa280>", --region: "us-east1", --service-account: "greenday-service-account@greenday-6aba2.iam.gserviceaccount.com", SERVICE: "multi-service"]
+2022-03-22 17:07:44,364 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): us-east1-run.googleapis.com:443
+2022-03-22 17:07:44,699 DEBUG    urllib3.connectionpool https://us-east1-run.googleapis.com:443 "GET /apis/serving.knative.dev/v1/namespaces/greenday-6aba2/services/multi-service?alt=json HTTP/1.1" 200 None
+2022-03-22 17:07:44,702 INFO     ___FILE_ONLY___ Deploying container to Cloud Run service [[1mmulti-service[m] in project [[1mgreenday-6aba2[m] region [[1mus-east1[m]
+
+2022-03-22 17:07:44,702 INFO     ___FILE_ONLY___ Deploying...
+2022-03-22 17:07:45,286 DEBUG    urllib3.connectionpool https://us-east1-run.googleapis.com:443 "PUT /apis/serving.knative.dev/v1/namespaces/greenday-6aba2/services/multi-service?alt=json HTTP/1.1" 200 None
+2022-03-22 17:07:45,952 DEBUG    urllib3.connectionpool https://us-east1-run.googleapis.com:443 "GET /apis/serving.knative.dev/v1/namespaces/greenday-6aba2/services/multi-service?alt=json HTTP/1.1" 200 None
+2022-03-22 17:07:47,136 DEBUG    urllib3.connectionpool https://us-east1-run.googleapis.com:443 "GET /apis/serving.knative.dev/v1/namespaces/greenday-6aba2/services/multi-service?alt=json HTTP/1.1" 200 None
+2022-03-22 17:07:48,322 DEBUG    urllib3.connectionpool https://us-east1-run.googleapis.com:443 "GET /apis/serving.knative.dev/v1/namespaces/greenday-6aba2/services/multi-service?alt=json HTTP/1.1" 200 None
+2022-03-22 17:07:49,833 DEBUG    urllib3.connectionpool https://us-east1-run.googleapis.com:443 "GET /apis/serving.knative.dev/v1/namespaces/greenday-6aba2/services/multi-service?alt=json HTTP/1.1" 200 None
+2022-03-22 17:07:51,370 DEBUG    urllib3.connectionpool https://us-east1-run.googleapis.com:443 "GET /apis/serving.knative.dev/v1/namespaces/greenday-6aba2/services/multi-service?alt=json HTTP/1.1" 200 None
+2022-03-22 17:07:52,910 DEBUG    urllib3.connectionpool https://us-east1-run.googleapis.com:443 "GET /apis/serving.knative.dev/v1/namespaces/greenday-6aba2/services/multi-service?alt=json HTTP/1.1" 200 None
+2022-03-22 17:07:54,408 DEBUG    urllib3.connectionpool https://us-east1-run.googleapis.com:443 "GET /apis/serving.knative.dev/v1/namespaces/greenday-6aba2/services/multi-service?alt=json HTTP/1.1" 200 None
+2022-03-22 17:07:55,564 DEBUG    urllib3.connectionpool https://us-east1-run.googleapis.com:443 "GET /apis/serving.knative.dev/v1/namespaces/greenday-6aba2/services/multi-service?alt=json HTTP/1.1" 200 None
+2022-03-22 17:07:56,759 DEBUG    urllib3.connectionpool https://us-east1-run.googleapis.com:443 "GET /apis/serving.knative.dev/v1/namespaces/greenday-6aba2/services/multi-service?alt=json HTTP/1.1" 200 None
+2022-03-22 17:07:58,267 DEBUG    urllib3.connectionpool https://us-east1-run.googleapis.com:443 "GET /apis/serving.knative.dev/v1/namespaces/greenday-6aba2/services/multi-service?alt=json HTTP/1.1" 200 None
+2022-03-22 17:07:59,880 DEBUG    urllib3.connectionpool https://us-east1-run.googleapis.com:443 "GET /apis/serving.knative.dev/v1/namespaces/greenday-6aba2/services/multi-service?alt=json HTTP/1.1" 200 None
+2022-03-22 17:08:01,394 DEBUG    urllib3.connectionpool https://us-east1-run.googleapis.com:443 "GET /apis/serving.knative.dev/v1/namespaces/greenday-6aba2/services/multi-service?alt=json HTTP/1.1" 200 None
+2022-03-22 17:08:02,897 DEBUG    urllib3.connectionpool https://us-east1-run.googleapis.com:443 "GET /apis/serving.knative.dev/v1/namespaces/greenday-6aba2/services/multi-service?alt=json HTTP/1.1" 200 None
+2022-03-22 17:08:04,223 DEBUG    urllib3.connectionpool https://us-east1-run.googleapis.com:443 "GET /apis/serving.knative.dev/v1/namespaces/greenday-6aba2/services/multi-service?alt=json HTTP/1.1" 200 None
+2022-03-22 17:08:05,398 DEBUG    urllib3.connectionpool https://us-east1-run.googleapis.com:443 "GET /apis/serving.knative.dev/v1/namespaces/greenday-6aba2/services/multi-service?alt=json HTTP/1.1" 200 None
+2022-03-22 17:08:07,041 DEBUG    urllib3.connectionpool https://us-east1-run.googleapis.com:443 "GET /apis/serving.knative.dev/v1/namespaces/greenday-6aba2/services/multi-service?alt=json HTTP/1.1" 200 None
+2022-03-22 17:08:08,681 DEBUG    urllib3.connectionpool https://us-east1-run.googleapis.com:443 "GET /apis/serving.knative.dev/v1/namespaces/greenday-6aba2/services/multi-service?alt=json HTTP/1.1" 200 None
+2022-03-22 17:08:10,182 DEBUG    urllib3.connectionpool https://us-east1-run.googleapis.com:443 "GET /apis/serving.knative.dev/v1/namespaces/greenday-6aba2/services/multi-service?alt=json HTTP/1.1" 200 None
+2022-03-22 17:08:11,749 DEBUG    urllib3.connectionpool https://us-east1-run.googleapis.com:443 "GET /apis/serving.knative.dev/v1/namespaces/greenday-6aba2/services/multi-service?alt=json HTTP/1.1" 200 None
+2022-03-22 17:08:13,284 DEBUG    urllib3.connectionpool https://us-east1-run.googleapis.com:443 "GET /apis/serving.knative.dev/v1/namespaces/greenday-6aba2/services/multi-service?alt=json HTTP/1.1" 200 None
+2022-03-22 17:08:14,771 DEBUG    urllib3.connectionpool https://us-east1-run.googleapis.com:443 "GET /apis/serving.knative.dev/v1/namespaces/greenday-6aba2/services/multi-service?alt=json HTTP/1.1" 200 None
+2022-03-22 17:08:15,994 DEBUG    urllib3.connectionpool https://us-east1-run.googleapis.com:443 "GET /apis/serving.knative.dev/v1/namespaces/greenday-6aba2/services/multi-service?alt=json HTTP/1.1" 200 None
+2022-03-22 17:08:17,134 DEBUG    urllib3.connectionpool https://us-east1-run.googleapis.com:443 "GET /apis/serving.knative.dev/v1/namespaces/greenday-6aba2/services/multi-service?alt=json HTTP/1.1" 200 None
+2022-03-22 17:08:18,605 DEBUG    urllib3.connectionpool https://us-east1-run.googleapis.com:443 "GET /apis/serving.knative.dev/v1/namespaces/greenday-6aba2/services/multi-service?alt=json HTTP/1.1" 200 None
+2022-03-22 17:08:20,519 DEBUG    urllib3.connectionpool https://us-east1-run.googleapis.com:443 "GET /apis/serving.knative.dev/v1/namespaces/greenday-6aba2/services/multi-service?alt=json HTTP/1.1" 200 None
+2022-03-22 17:08:21,686 DEBUG    urllib3.connectionpool https://us-east1-run.googleapis.com:443 "GET /apis/serving.knative.dev/v1/namespaces/greenday-6aba2/services/multi-service?alt=json HTTP/1.1" 200 None
+2022-03-22 17:08:22,892 DEBUG    urllib3.connectionpool https://us-east1-run.googleapis.com:443 "GET /apis/serving.knative.dev/v1/namespaces/greenday-6aba2/services/multi-service?alt=json HTTP/1.1" 200 None
+2022-03-22 17:08:24,067 DEBUG    urllib3.connectionpool https://us-east1-run.googleapis.com:443 "GET /apis/serving.knative.dev/v1/namespaces/greenday-6aba2/services/multi-service?alt=json HTTP/1.1" 200 None
+2022-03-22 17:08:25,664 DEBUG    urllib3.connectionpool https://us-east1-run.googleapis.com:443 "GET /apis/serving.knative.dev/v1/namespaces/greenday-6aba2/services/multi-service?alt=json HTTP/1.1" 200 None
+2022-03-22 17:08:27,181 DEBUG    urllib3.connectionpool https://us-east1-run.googleapis.com:443 "GET /apis/serving.knative.dev/v1/namespaces/greenday-6aba2/services/multi-service?alt=json HTTP/1.1" 200 None
+2022-03-22 17:08:28,661 DEBUG    urllib3.connectionpool https://us-east1-run.googleapis.com:443 "GET /apis/serving.knative.dev/v1/namespaces/greenday-6aba2/services/multi-service?alt=json HTTP/1.1" 200 None
+2022-03-22 17:08:30,138 DEBUG    urllib3.connectionpool https://us-east1-run.googleapis.com:443 "GET /apis/serving.knative.dev/v1/namespaces/greenday-6aba2/services/multi-service?alt=json HTTP/1.1" 200 None
+2022-03-22 17:08:31,625 DEBUG    urllib3.connectionpool https://us-east1-run.googleapis.com:443 "GET /apis/serving.knative.dev/v1/namespaces/greenday-6aba2/services/multi-service?alt=json HTTP/1.1" 200 None
+2022-03-22 17:08:33,191 DEBUG    urllib3.connectionpool https://us-east1-run.googleapis.com:443 "GET /apis/serving.knative.dev/v1/namespaces/greenday-6aba2/services/multi-service?alt=json HTTP/1.1" 200 None
+2022-03-22 17:08:35,050 DEBUG    urllib3.connectionpool https://us-east1-run.googleapis.com:443 "GET /apis/serving.knative.dev/v1/namespaces/greenday-6aba2/services/multi-service?alt=json HTTP/1.1" 200 None
+2022-03-22 17:08:36,263 DEBUG    urllib3.connectionpool https://us-east1-run.googleapis.com:443 "GET /apis/serving.knative.dev/v1/namespaces/greenday-6aba2/services/multi-service?alt=json HTTP/1.1" 200 None
+2022-03-22 17:08:37,951 DEBUG    urllib3.connectionpool https://us-east1-run.googleapis.com:443 "GET /apis/serving.knative.dev/v1/namespaces/greenday-6aba2/services/multi-service?alt=json HTTP/1.1" 200 None
+2022-03-22 17:08:39,448 DEBUG    urllib3.connectionpool https://us-east1-run.googleapis.com:443 "GET /apis/serving.knative.dev/v1/namespaces/greenday-6aba2/services/multi-service?alt=json HTTP/1.1" 200 None
+2022-03-22 17:08:40,665 DEBUG    urllib3.connectionpool https://us-east1-run.googleapis.com:443 "GET /apis/serving.knative.dev/v1/namespaces/greenday-6aba2/services/multi-service?alt=json HTTP/1.1" 200 None
+2022-03-22 17:08:42,149 DEBUG    urllib3.connectionpool https://us-east1-run.googleapis.com:443 "GET /apis/serving.knative.dev/v1/namespaces/greenday-6aba2/services/multi-service?alt=json HTTP/1.1" 200 None
+2022-03-22 17:08:43,648 DEBUG    urllib3.connectionpool https://us-east1-run.googleapis.com:443 "GET /apis/serving.knative.dev/v1/namespaces/greenday-6aba2/services/multi-service?alt=json HTTP/1.1" 200 None
+2022-03-22 17:08:45,705 DEBUG    urllib3.connectionpool https://us-east1-run.googleapis.com:443 "GET /apis/serving.knative.dev/v1/namespaces/greenday-6aba2/services/multi-service?alt=json HTTP/1.1" 200 None
+2022-03-22 17:08:47,224 DEBUG    urllib3.connectionpool https://us-east1-run.googleapis.com:443 "GET /apis/serving.knative.dev/v1/namespaces/greenday-6aba2/services/multi-service?alt=json HTTP/1.1" 200 None
+2022-03-22 17:08:48,801 DEBUG    urllib3.connectionpool https://us-east1-run.googleapis.com:443 "GET /apis/serving.knative.dev/v1/namespaces/greenday-6aba2/services/multi-service?alt=json HTTP/1.1" 200 None
+2022-03-22 17:08:50,328 DEBUG    urllib3.connectionpool https://us-east1-run.googleapis.com:443 "GET /apis/serving.knative.dev/v1/namespaces/greenday-6aba2/services/multi-service?alt=json HTTP/1.1" 200 None
+2022-03-22 17:08:51,516 DEBUG    urllib3.connectionpool https://us-east1-run.googleapis.com:443 "GET /apis/serving.knative.dev/v1/namespaces/greenday-6aba2/services/multi-service?alt=json HTTP/1.1" 200 None
+2022-03-22 17:08:53,102 DEBUG    urllib3.connectionpool https://us-east1-run.googleapis.com:443 "GET /apis/serving.knative.dev/v1/namespaces/greenday-6aba2/services/multi-service?alt=json HTTP/1.1" 200 None
+2022-03-22 17:08:54,741 DEBUG    urllib3.connectionpool https://us-east1-run.googleapis.com:443 "GET /apis/serving.knative.dev/v1/namespaces/greenday-6aba2/services/multi-service?alt=json HTTP/1.1" 200 None
+2022-03-22 17:08:55,937 DEBUG    urllib3.connectionpool https://us-east1-run.googleapis.com:443 "GET /apis/serving.knative.dev/v1/namespaces/greenday-6aba2/services/multi-service?alt=json HTTP/1.1" 200 None
+2022-03-22 17:08:57,483 DEBUG    urllib3.connectionpool https://us-east1-run.googleapis.com:443 "GET /apis/serving.knative.dev/v1/namespaces/greenday-6aba2/services/multi-service?alt=json HTTP/1.1" 200 None
+2022-03-22 17:08:58,639 DEBUG    urllib3.connectionpool https://us-east1-run.googleapis.com:443 "GET /apis/serving.knative.dev/v1/namespaces/greenday-6aba2/services/multi-service?alt=json HTTP/1.1" 200 None
+2022-03-22 17:08:59,794 DEBUG    urllib3.connectionpool https://us-east1-run.googleapis.com:443 "GET /apis/serving.knative.dev/v1/namespaces/greenday-6aba2/services/multi-service?alt=json HTTP/1.1" 200 None
+2022-03-22 17:09:01,704 DEBUG    urllib3.connectionpool https://us-east1-run.googleapis.com:443 "GET /apis/serving.knative.dev/v1/namespaces/greenday-6aba2/services/multi-service?alt=json HTTP/1.1" 200 None
+2022-03-22 17:09:03,209 DEBUG    urllib3.connectionpool https://us-east1-run.googleapis.com:443 "GET /apis/serving.knative.dev/v1/namespaces/greenday-6aba2/services/multi-service?alt=json HTTP/1.1" 200 None
+2022-03-22 17:09:05,184 DEBUG    urllib3.connectionpool https://us-east1-run.googleapis.com:443 "GET /apis/serving.knative.dev/v1/namespaces/greenday-6aba2/services/multi-service?alt=json HTTP/1.1" 200 None
+2022-03-22 17:09:06,403 DEBUG    urllib3.connectionpool https://us-east1-run.googleapis.com:443 "GET /apis/serving.knative.dev/v1/namespaces/greenday-6aba2/services/multi-service?alt=json HTTP/1.1" 200 None
+2022-03-22 17:09:07,553 DEBUG    urllib3.connectionpool https://us-east1-run.googleapis.com:443 "GET /apis/serving.knative.dev/v1/namespaces/greenday-6aba2/services/multi-service?alt=json HTTP/1.1" 200 None
+2022-03-22 17:09:09,039 DEBUG    urllib3.connectionpool https://us-east1-run.googleapis.com:443 "GET /apis/serving.knative.dev/v1/namespaces/greenday-6aba2/services/multi-service?alt=json HTTP/1.1" 200 None
+2022-03-22 17:09:10,713 DEBUG    urllib3.connectionpool https://us-east1-run.googleapis.com:443 "GET /apis/serving.knative.dev/v1/namespaces/greenday-6aba2/services/multi-service?alt=json HTTP/1.1" 200 None
+2022-03-22 17:09:11,870 DEBUG    urllib3.connectionpool https://us-east1-run.googleapis.com:443 "GET /apis/serving.knative.dev/v1/namespaces/greenday-6aba2/services/multi-service?alt=json HTTP/1.1" 200 None
+2022-03-22 17:09:13,348 DEBUG    urllib3.connectionpool https://us-east1-run.googleapis.com:443 "GET /apis/serving.knative.dev/v1/namespaces/greenday-6aba2/services/multi-service?alt=json HTTP/1.1" 200 None
+2022-03-22 17:09:14,507 DEBUG    urllib3.connectionpool https://us-east1-run.googleapis.com:443 "GET /apis/serving.knative.dev/v1/namespaces/greenday-6aba2/services/multi-service?alt=json HTTP/1.1" 200 None
+2022-03-22 17:09:15,675 DEBUG    urllib3.connectionpool https://us-east1-run.googleapis.com:443 "GET /apis/serving.knative.dev/v1/namespaces/greenday-6aba2/services/multi-service?alt=json HTTP/1.1" 200 None
+2022-03-22 17:09:17,243 DEBUG    urllib3.connectionpool https://us-east1-run.googleapis.com:443 "GET /apis/serving.knative.dev/v1/namespaces/greenday-6aba2/services/multi-service?alt=json HTTP/1.1" 200 None
+2022-03-22 17:09:18,909 DEBUG    urllib3.connectionpool https://us-east1-run.googleapis.com:443 "GET /apis/serving.knative.dev/v1/namespaces/greenday-6aba2/services/multi-service?alt=json HTTP/1.1" 200 None
+2022-03-22 17:09:19,093 DEBUG    urllib3.connectionpool https://us-east1-run.googleapis.com:443 "GET /apis/serving.knative.dev/v1/namespaces/greenday-6aba2/services/multi-service?alt=json HTTP/1.1" 200 None
+2022-03-22 17:09:19,253 DEBUG    urllib3.connectionpool https://us-east1-run.googleapis.com:443 "GET /apis/serving.knative.dev/v1/namespaces/greenday-6aba2/services/multi-service?alt=json HTTP/1.1" 200 None
+2022-03-22 17:09:19,255 INFO     ___FILE_ONLY___ Service [[1mmulti-service[m] revision [[1mmulti-service-00088-fep[m] has been deployed and is serving [1m100[m percent of traffic.
+Service URL: [1mhttps://multi-service-gkv32wdswa-ue.a.run.app[m
+
+2022-03-22 17:09:19,256 INFO     root            Display format: "none"

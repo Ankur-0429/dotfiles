@@ -1,0 +1,901 @@
+2022-03-29 14:19:41,988 DEBUG    root            Loaded Command Group: ['gcloud', 'builds']
+2022-03-29 14:19:42,001 DEBUG    root            Loaded Command Group: ['gcloud', 'builds', 'submit']
+2022-03-29 14:19:42,008 DEBUG    root            Running [gcloud.builds.submit] with arguments: [--project: "greenday-6aba2", --tag: "us-east1-docker.pkg.dev/greenday-6aba2/greenday/multi:latest"]
+2022-03-29 14:19:42,013 DEBUG    google.auth.transport.requests Making request: POST https://oauth2.googleapis.com/token
+2022-03-29 14:19:42,021 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): oauth2.googleapis.com:443
+2022-03-29 14:19:42,127 DEBUG    urllib3.connectionpool https://oauth2.googleapis.com:443 "POST /token HTTP/1.1" 200 None
+2022-03-29 14:19:42,147 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): storage.googleapis.com:443
+2022-03-29 14:19:42,304 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /storage/v1/b/greenday-6aba2_cloudbuild?alt=json HTTP/1.1" 200 648
+2022-03-29 14:19:42,607 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /storage/v1/b?alt=json&maxResults=1000&prefix=greenday-6aba2_cloudbuild&project=greenday-6aba2 HTTP/1.1" 200 794
+2022-03-29 14:19:42,612 INFO     root            Using default gcloudignore file:
+--------------------------------------------------
+# This file specifies files that are *not* uploaded to Google Cloud
+# using gcloud. It follows the same syntax as .gitignore, with the addition of
+# "#!include" directives (which insert the entries of the given .gitignore-style
+# file at that point).
+#
+# For more information, run:
+#   $ gcloud topic gcloudignore
+#
+.gcloudignore
+# If you would like to upload your .git directory, .gitignore file or files
+# from your .gitignore file, remove the corresponding line
+# below:
+.git
+.gitignore
+#!include:.gitignore
+
+--------------------------------------------------
+2022-03-29 14:19:42,615 DEBUG    root            Skipping file [.gitignore]
+2022-03-29 14:19:42,615 DEBUG    root            Skipping file [greenday-6aba2-firebase-adminsdk-wppee-88cc844ed3.json]
+2022-03-29 14:19:42,615 DEBUG    root            Skipping file [response.json]
+2022-03-29 14:19:42,615 DEBUG    root            Skipping file [__pycache__]
+2022-03-29 14:19:42,615 DEBUG    root            Skipping file [venv]
+2022-03-29 14:19:42,616 DEBUG    root            Skipping file [.git]
+2022-03-29 14:19:42,616 DEBUG    root            Skipping file [.vscode/settings.json]
+2022-03-29 14:19:42,617 INFO     ___FILE_ONLY___ Creating temporary tarball archive of 19 file(s) totalling 110.3 KiB before compression.
+
+2022-03-29 14:19:42,622 DEBUG    root            Added dir [.vscode]
+2022-03-29 14:19:42,622 DEBUG    root            Added dir [assets]
+2022-03-29 14:19:42,623 DEBUG    root            Added dir [assets/images]
+2022-03-29 14:19:42,623 DEBUG    root            Added dir [assets/images/README]
+2022-03-29 14:19:42,627 DEBUG    root            Added [response.txt]
+2022-03-29 14:19:42,628 DEBUG    root            Added [user_image_database.py]
+2022-03-29 14:19:42,629 DEBUG    root            Added [requirements.txt]
+2022-03-29 14:19:42,629 DEBUG    root            Added [business_database.py]
+2022-03-29 14:19:42,630 DEBUG    root            Added [Dockerfile]
+2022-03-29 14:19:42,630 DEBUG    root            Added [location_database.py]
+2022-03-29 14:19:42,631 DEBUG    root            Added [auth_server.py]
+2022-03-29 14:19:42,632 DEBUG    root            Added [trashcan_database.py]
+2022-03-29 14:19:42,632 DEBUG    root            Added [MANIFEST.in]
+2022-03-29 14:19:42,633 DEBUG    root            Added [README.md]
+2022-03-29 14:19:42,633 DEBUG    root            Added [.Dockerignore]
+2022-03-29 14:19:42,634 DEBUG    root            Added [machine_learning.py]
+2022-03-29 14:19:42,634 DEBUG    root            Added [deploy.sh]
+2022-03-29 14:19:42,634 DEBUG    root            Added [main.py]
+2022-03-29 14:19:42,635 DEBUG    root            Added [user_database.py]
+2022-03-29 14:19:42,635 DEBUG    root            Added [data.py]
+2022-03-29 14:19:42,636 DEBUG    root            Added [google_storage_functions.py]
+2022-03-29 14:19:42,637 DEBUG    root            Added [assets/images/README/GooglePlay.png]
+2022-03-29 14:19:42,638 DEBUG    root            Added [assets/images/README/app-store.png]
+2022-03-29 14:19:42,638 INFO     ___FILE_ONLY___ Some files were not included in the source upload.
+
+Check the gcloud log [/Users/ankurahir/.config/gcloud/logs/2022.03.29/14.19.41.987520.log] to see which files and the contents of the
+default gcloudignore file used (see `$ gcloud topic gcloudignore` to learn
+more).
+
+
+2022-03-29 14:19:42,638 INFO     ___FILE_ONLY___ Uploading tarball of [.] to [gs://greenday-6aba2_cloudbuild/source/1648588782.140804-e089d3579bf04919a74faa1f326b1369.tgz]
+
+2022-03-29 14:19:42,642 INFO     root            Uploading [/var/folders/s5/kqdr94n90p92sn2jtby_q0rh0000gn/T/tmpbod33nnf/file.tgz] to [greenday-6aba2_cloudbuild/source/1648588782.140804-e089d3579bf04919a74faa1f326b1369.tgz]
+2022-03-29 14:19:42,846 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "POST /upload/storage/v1/b/greenday-6aba2_cloudbuild/o?alt=json&name=source%2F1648588782.140804-e089d3579bf04919a74faa1f326b1369.tgz&uploadType=multipart HTTP/1.1" 200 999
+2022-03-29 14:19:42,851 DEBUG    root            submitting build: <Build
+ images: ['us-east1-docker.pkg.dev/greenday-6aba2/greenday/multi:latest']
+ secrets: []
+ source: <Source
+ storageSource: <StorageSource
+ bucket: 'greenday-6aba2_cloudbuild'
+ generation: 1648588782777388
+ object: 'source/1648588782.140804-e089d3579bf04919a74faa1f326b1369.tgz'>>
+ steps: [<BuildStep
+ args: ['build', '--network', 'cloudbuild', '--no-cache', '-t', 'us-east1-docker.pkg.dev/greenday-6aba2/greenday/multi:latest', '.']
+ env: []
+ name: 'gcr.io/cloud-builders/docker'
+ secretEnv: []
+ volumes: []
+ waitFor: []>]
+ tags: []
+ warnings: []>
+2022-03-29 14:19:42,891 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudbuild.googleapis.com:443
+2022-03-29 14:19:44,905 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "POST /v1/projects/greenday-6aba2/locations/global/builds?alt=json HTTP/1.1" 200 None
+2022-03-29 14:19:44,912 INFO     ___FILE_ONLY___ Created [https://cloudbuild.googleapis.com/v1/projects/greenday-6aba2/locations/global/builds/0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7].
+
+2022-03-29 14:19:44,912 INFO     ___FILE_ONLY___ Logs are available at [https://console.cloud.google.com/cloud-build/builds/0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7?project=15765189134].
+
+2022-03-29 14:19:45,100 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/greenday-6aba2/locations/global/builds/0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7?alt=json HTTP/1.1" 200 None
+2022-03-29 14:19:45,106 DEBUG    root            GCS logfile url is https://storage.googleapis.com/15765189134.cloudbuild-logs.googleusercontent.com/log-0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7.txt
+2022-03-29 14:19:45,110 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): storage.googleapis.com:443
+2022-03-29 14:19:45,236 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/greenday-6aba2/locations/global/builds/0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7?alt=json HTTP/1.1" 200 None
+2022-03-29 14:19:45,284 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /15765189134.cloudbuild-logs.googleusercontent.com/log-0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7.txt HTTP/1.1" 404 256
+2022-03-29 14:19:45,284 DEBUG    root            Reading GCS logfile: 404 (no log yet; keep polling)
+2022-03-29 14:19:46,518 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/greenday-6aba2/locations/global/builds/0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7?alt=json HTTP/1.1" 200 None
+2022-03-29 14:19:46,523 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /15765189134.cloudbuild-logs.googleusercontent.com/log-0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7.txt HTTP/1.1" 416 164
+2022-03-29 14:19:46,524 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-03-29 14:19:47,698 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/greenday-6aba2/locations/global/builds/0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7?alt=json HTTP/1.1" 200 None
+2022-03-29 14:19:47,743 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /15765189134.cloudbuild-logs.googleusercontent.com/log-0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7.txt HTTP/1.1" 206 202
+2022-03-29 14:19:47,744 DEBUG    root            Reading GCS logfile: 206 (read 202 bytes)
+2022-03-29 14:19:47,744 INFO     ___FILE_ONLY___ ---------------------------------------------- REMOTE BUILD OUTPUT ----------------------------------------------
+
+2022-03-29 14:19:47,744 INFO     ___FILE_ONLY___ starting build "0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7"
+
+FETCHSOURCE
+Fetching storage object: gs://greenday-6aba2_cloudbuild/source/1648588782.140804-e089d3579bf04919a74faa1f326b1369.tgz#1648588782777388
+
+2022-03-29 14:19:48,836 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/greenday-6aba2/locations/global/builds/0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7?alt=json HTTP/1.1" 200 None
+2022-03-29 14:19:48,892 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /15765189134.cloudbuild-logs.googleusercontent.com/log-0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7.txt HTTP/1.1" 416 166
+2022-03-29 14:19:48,892 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-03-29 14:19:49,952 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/greenday-6aba2/locations/global/builds/0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7?alt=json HTTP/1.1" 200 None
+2022-03-29 14:19:50,097 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /15765189134.cloudbuild-logs.googleusercontent.com/log-0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7.txt HTTP/1.1" 416 166
+2022-03-29 14:19:50,098 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-03-29 14:19:51,144 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/greenday-6aba2/locations/global/builds/0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7?alt=json HTTP/1.1" 200 None
+2022-03-29 14:19:51,264 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /15765189134.cloudbuild-logs.googleusercontent.com/log-0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7.txt HTTP/1.1" 206 366
+2022-03-29 14:19:51,265 DEBUG    root            Reading GCS logfile: 206 (read 366 bytes)
+2022-03-29 14:19:51,265 INFO     ___FILE_ONLY___ Copying gs://greenday-6aba2_cloudbuild/source/1648588782.140804-e089d3579bf04919a74faa1f326b1369.tgz#1648588782777388...
+/ [0 files][    0.0 B/ 43.9 KiB]                                                / [1 files][ 43.9 KiB/ 43.9 KiB]                                                
+Operation completed over 1 objects/43.9 KiB.
+
+2022-03-29 14:19:52,318 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/greenday-6aba2/locations/global/builds/0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7?alt=json HTTP/1.1" 200 None
+2022-03-29 14:19:52,385 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /15765189134.cloudbuild-logs.googleusercontent.com/log-0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7.txt HTTP/1.1" 416 166
+2022-03-29 14:19:52,386 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-03-29 14:19:53,431 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/greenday-6aba2/locations/global/builds/0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7?alt=json HTTP/1.1" 200 None
+2022-03-29 14:19:53,559 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /15765189134.cloudbuild-logs.googleusercontent.com/log-0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7.txt HTTP/1.1" 206 154
+2022-03-29 14:19:53,561 DEBUG    root            Reading GCS logfile: 206 (read 154 bytes)
+2022-03-29 14:19:53,561 INFO     ___FILE_ONLY___ BUILD
+Already have image (with digest): gcr.io/cloud-builders/docker
+Sending build context to Docker daemon  131.1kB
+Step 1/14 : FROM python:3.8.0-slim
+
+2022-03-29 14:19:54,553 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/greenday-6aba2/locations/global/builds/0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7?alt=json HTTP/1.1" 200 None
+2022-03-29 14:19:54,695 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /15765189134.cloudbuild-logs.googleusercontent.com/log-0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7.txt HTTP/1.1" 206 239
+2022-03-29 14:19:54,697 DEBUG    root            Reading GCS logfile: 206 (read 239 bytes)
+2022-03-29 14:19:54,698 INFO     ___FILE_ONLY___ 3.8.0-slim: Pulling from library/python
+000eee12ec04: Pulling fs layer
+ddc2d83f8229: Pulling fs layer
+3ae1660fa0d9: Pulling fs layer
+ef709117d3d3: Pulling fs layer
+487a0421e8fa: Pulling fs layer
+ef709117d3d3: Waiting
+487a0421e8fa: Waiting
+
+2022-03-29 14:19:55,712 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/greenday-6aba2/locations/global/builds/0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7?alt=json HTTP/1.1" 200 None
+2022-03-29 14:19:55,996 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /15765189134.cloudbuild-logs.googleusercontent.com/log-0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7.txt HTTP/1.1" 206 325
+2022-03-29 14:19:55,996 DEBUG    root            Reading GCS logfile: 206 (read 325 bytes)
+2022-03-29 14:19:55,997 INFO     ___FILE_ONLY___ ddc2d83f8229: Verifying Checksum
+ddc2d83f8229: Download complete
+ef709117d3d3: Verifying Checksum
+ef709117d3d3: Download complete
+000eee12ec04: Verifying Checksum
+000eee12ec04: Download complete
+487a0421e8fa: Verifying Checksum
+487a0421e8fa: Download complete
+3ae1660fa0d9: Verifying Checksum
+3ae1660fa0d9: Download complete
+
+2022-03-29 14:19:56,826 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/greenday-6aba2/locations/global/builds/0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7?alt=json HTTP/1.1" 200 None
+2022-03-29 14:19:57,128 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /15765189134.cloudbuild-logs.googleusercontent.com/log-0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7.txt HTTP/1.1" 416 167
+2022-03-29 14:19:57,130 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-03-29 14:19:57,943 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/greenday-6aba2/locations/global/builds/0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7?alt=json HTTP/1.1" 200 None
+2022-03-29 14:19:58,269 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /15765189134.cloudbuild-logs.googleusercontent.com/log-0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7.txt HTTP/1.1" 206 56
+2022-03-29 14:19:58,270 DEBUG    root            Reading GCS logfile: 206 (read 56 bytes)
+2022-03-29 14:19:58,270 INFO     ___FILE_ONLY___ 000eee12ec04: Pull complete
+ddc2d83f8229: Pull complete
+
+2022-03-29 14:19:59,285 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/greenday-6aba2/locations/global/builds/0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7?alt=json HTTP/1.1" 200 None
+2022-03-29 14:19:59,406 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /15765189134.cloudbuild-logs.googleusercontent.com/log-0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7.txt HTTP/1.1" 416 167
+2022-03-29 14:19:59,408 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-03-29 14:20:00,488 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/greenday-6aba2/locations/global/builds/0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7?alt=json HTTP/1.1" 200 None
+2022-03-29 14:20:00,538 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /15765189134.cloudbuild-logs.googleusercontent.com/log-0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7.txt HTTP/1.1" 206 260
+2022-03-29 14:20:00,539 DEBUG    root            Reading GCS logfile: 206 (read 260 bytes)
+2022-03-29 14:20:00,539 INFO     ___FILE_ONLY___ 3ae1660fa0d9: Pull complete
+ef709117d3d3: Pull complete
+487a0421e8fa: Pull complete
+Digest: sha256:8e243f41e500238f78f7a29a81656114d3fe603d5c34079a462d090f71c4b225
+Status: Downloaded newer image for python:3.8.0-slim
+ ---> 577b86e4ee11
+Step 2/14 : COPY . /app
+
+2022-03-29 14:20:01,594 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/greenday-6aba2/locations/global/builds/0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7?alt=json HTTP/1.1" 200 None
+2022-03-29 14:20:01,685 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /15765189134.cloudbuild-logs.googleusercontent.com/log-0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7.txt HTTP/1.1" 206 477
+2022-03-29 14:20:01,686 DEBUG    root            Reading GCS logfile: 206 (read 477 bytes)
+2022-03-29 14:20:01,686 INFO     ___FILE_ONLY___  ---> e2528d5fd2e6
+Step 3/14 : WORKDIR /app
+ ---> Running in c4b9fca4aa0f
+Removing intermediate container c4b9fca4aa0f
+ ---> 6c2ce847c791
+Step 4/14 : ENV PYTHONUNBUFFERED True
+ ---> Running in 55be397b339e
+Removing intermediate container 55be397b339e
+ ---> cd8d89729bf3
+Step 5/14 : ENV VIRTUAL_ENV=/opt/venv
+ ---> Running in 99f5d0f0bd0f
+Removing intermediate container 99f5d0f0bd0f
+ ---> f863f59279c6
+Step 6/14 : RUN python3 -m venv $VIRTUAL_ENV
+ ---> Running in 4bf2b6f812ab
+
+2022-03-29 14:20:02,707 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/greenday-6aba2/locations/global/builds/0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7?alt=json HTTP/1.1" 200 None
+2022-03-29 14:20:02,938 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /15765189134.cloudbuild-logs.googleusercontent.com/log-0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7.txt HTTP/1.1" 416 167
+2022-03-29 14:20:02,940 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-03-29 14:20:03,929 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/greenday-6aba2/locations/global/builds/0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7?alt=json HTTP/1.1" 200 None
+2022-03-29 14:20:04,105 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /15765189134.cloudbuild-logs.googleusercontent.com/log-0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7.txt HTTP/1.1" 416 167
+2022-03-29 14:20:04,106 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-03-29 14:20:05,033 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/greenday-6aba2/locations/global/builds/0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7?alt=json HTTP/1.1" 200 None
+2022-03-29 14:20:05,237 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /15765189134.cloudbuild-logs.googleusercontent.com/log-0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7.txt HTTP/1.1" 416 167
+2022-03-29 14:20:05,238 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-03-29 14:20:06,186 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/greenday-6aba2/locations/global/builds/0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7?alt=json HTTP/1.1" 200 None
+2022-03-29 14:20:06,368 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /15765189134.cloudbuild-logs.googleusercontent.com/log-0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7.txt HTTP/1.1" 416 167
+2022-03-29 14:20:06,369 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-03-29 14:20:07,442 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/greenday-6aba2/locations/global/builds/0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7?alt=json HTTP/1.1" 200 None
+2022-03-29 14:20:07,610 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /15765189134.cloudbuild-logs.googleusercontent.com/log-0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7.txt HTTP/1.1" 206 276
+2022-03-29 14:20:07,612 DEBUG    root            Reading GCS logfile: 206 (read 276 bytes)
+2022-03-29 14:20:07,612 INFO     ___FILE_ONLY___ Removing intermediate container 4bf2b6f812ab
+ ---> 12f4a92b0346
+Step 7/14 : ENV PATH="$VIRTUAL_ENV/bin:$PATH"
+ ---> Running in 62319c87842e
+Removing intermediate container 62319c87842e
+ ---> 53953ccb9498
+Step 8/14 : RUN pip install --upgrade pip
+ ---> Running in 2b48cf631a24
+
+2022-03-29 14:20:08,676 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/greenday-6aba2/locations/global/builds/0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7?alt=json HTTP/1.1" 200 None
+2022-03-29 14:20:08,854 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /15765189134.cloudbuild-logs.googleusercontent.com/log-0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7.txt HTTP/1.1" 206 172
+2022-03-29 14:20:08,855 DEBUG    root            Reading GCS logfile: 206 (read 172 bytes)
+2022-03-29 14:20:08,855 INFO     ___FILE_ONLY___ Collecting pip
+  Downloading https://files.pythonhosted.org/packages/4d/16/0a14ca596f30316efd412a60bdfac02a7259bf8673d4d917dc60b9a21812/pip-22.0.4-py3-none-any.whl (2.1MB)
+
+2022-03-29 14:20:09,857 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/greenday-6aba2/locations/global/builds/0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7?alt=json HTTP/1.1" 200 None
+2022-03-29 14:20:10,035 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /15765189134.cloudbuild-logs.googleusercontent.com/log-0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7.txt HTTP/1.1" 206 148
+2022-03-29 14:20:10,037 DEBUG    root            Reading GCS logfile: 206 (read 148 bytes)
+2022-03-29 14:20:10,037 INFO     ___FILE_ONLY___ Installing collected packages: pip
+  Found existing installation: pip 19.2.3
+    Uninstalling pip-19.2.3:
+      Successfully uninstalled pip-19.2.3
+
+2022-03-29 14:20:10,974 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/greenday-6aba2/locations/global/builds/0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7?alt=json HTTP/1.1" 200 None
+2022-03-29 14:20:11,164 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /15765189134.cloudbuild-logs.googleusercontent.com/log-0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7.txt HTTP/1.1" 416 167
+2022-03-29 14:20:11,165 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-03-29 14:20:12,080 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/greenday-6aba2/locations/global/builds/0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7?alt=json HTTP/1.1" 200 None
+2022-03-29 14:20:12,310 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /15765189134.cloudbuild-logs.googleusercontent.com/log-0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7.txt HTTP/1.1" 206 34
+2022-03-29 14:20:12,311 DEBUG    root            Reading GCS logfile: 206 (read 34 bytes)
+2022-03-29 14:20:12,311 INFO     ___FILE_ONLY___ Successfully installed pip-22.0.4
+
+2022-03-29 14:20:13,195 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/greenday-6aba2/locations/global/builds/0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7?alt=json HTTP/1.1" 200 None
+2022-03-29 14:20:13,445 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /15765189134.cloudbuild-logs.googleusercontent.com/log-0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7.txt HTTP/1.1" 206 157
+2022-03-29 14:20:13,447 DEBUG    root            Reading GCS logfile: 206 (read 157 bytes)
+2022-03-29 14:20:13,447 INFO     ___FILE_ONLY___ Removing intermediate container 2b48cf631a24
+ ---> 44e0554bbccf
+Step 9/14 : RUN pip install --no-cache-dir -r requirements.txt
+ ---> Running in c4a869f0a2ac
+
+2022-03-29 14:20:14,308 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/greenday-6aba2/locations/global/builds/0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7?alt=json HTTP/1.1" 200 None
+2022-03-29 14:20:14,596 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /15765189134.cloudbuild-logs.googleusercontent.com/log-0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7.txt HTTP/1.1" 206 1577
+2022-03-29 14:20:14,598 DEBUG    root            Reading GCS logfile: 206 (read 1577 bytes)
+2022-03-29 14:20:14,598 INFO     ___FILE_ONLY___ Collecting CacheControl==0.12.10
+  Downloading CacheControl-0.12.10-py2.py3-none-any.whl (20 kB)
+Collecting cachetools==5.0.0
+  Downloading cachetools-5.0.0-py3-none-any.whl (9.1 kB)
+Collecting certifi==2021.10.8
+  Downloading certifi-2021.10.8-py2.py3-none-any.whl (149 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 149.2/149.2 KB 6.5 MB/s eta 0:00:00
+Collecting charset-normalizer==2.0.12
+  Downloading charset_normalizer-2.0.12-py3-none-any.whl (39 kB)
+Collecting click==8.0.4
+  Downloading click-8.0.4-py3-none-any.whl (97 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 97.5/97.5 KB 126.2 MB/s eta 0:00:00
+Collecting firebase-admin==5.2.0
+  Downloading firebase_admin-5.2.0-py3-none-any.whl (115 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 115.5/115.5 KB 117.9 MB/s eta 0:00:00
+Collecting Flask==2.0.3
+  Downloading Flask-2.0.3-py3-none-any.whl (95 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 95.6/95.6 KB 108.9 MB/s eta 0:00:00
+Collecting Flask-Cors==3.0.10
+  Downloading Flask_Cors-3.0.10-py2.py3-none-any.whl (14 kB)
+Collecting ftfy==6.1.1
+  Downloading ftfy-6.1.1-py3-none-any.whl (53 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 53.1/53.1 KB 120.5 MB/s eta 0:00:00
+
+2022-03-29 14:20:15,428 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/greenday-6aba2/locations/global/builds/0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7?alt=json HTTP/1.1" 200 None
+2022-03-29 14:20:15,756 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /15765189134.cloudbuild-logs.googleusercontent.com/log-0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7.txt HTTP/1.1" 206 1528
+2022-03-29 14:20:15,759 DEBUG    root            Reading GCS logfile: 206 (read 1528 bytes)
+2022-03-29 14:20:15,759 INFO     ___FILE_ONLY___ Collecting google-api-core==2.5.0
+  Downloading google_api_core-2.5.0-py2.py3-none-any.whl (111 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 111.8/111.8 KB 145.0 MB/s eta 0:00:00
+Collecting google-api-python-client==2.38.0
+  Downloading google_api_python_client-2.38.0-py2.py3-none-any.whl (8.2 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.2/8.2 MB 98.3 MB/s eta 0:00:00
+Collecting google-auth==2.6.0
+  Downloading google_auth-2.6.0-py2.py3-none-any.whl (156 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 156.3/156.3 KB 146.6 MB/s eta 0:00:00
+Collecting google-auth-httplib2==0.1.0
+  Downloading google_auth_httplib2-0.1.0-py2.py3-none-any.whl (9.3 kB)
+Collecting google-cloud-core==2.2.2
+  Downloading google_cloud_core-2.2.2-py2.py3-none-any.whl (29 kB)
+Collecting google-cloud-firestore==2.3.4
+  Downloading google_cloud_firestore-2.3.4-py2.py3-none-any.whl (232 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 232.0/232.0 KB 154.4 MB/s eta 0:00:00
+Collecting google-cloud-storage==2.1.0
+  Downloading google_cloud_storage-2.1.0-py2.py3-none-any.whl (106 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 106.6/106.6 KB 135.0 MB/s eta 0:00:00
+
+2022-03-29 14:20:16,559 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/greenday-6aba2/locations/global/builds/0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7?alt=json HTTP/1.1" 200 None
+2022-03-29 14:20:16,896 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /15765189134.cloudbuild-logs.googleusercontent.com/log-0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7.txt HTTP/1.1" 206 794
+2022-03-29 14:20:16,898 DEBUG    root            Reading GCS logfile: 206 (read 794 bytes)
+2022-03-29 14:20:16,898 INFO     ___FILE_ONLY___ Collecting google-crc32c==1.3.0
+  Downloading google_crc32c-1.3.0-cp38-cp38-manylinux_2_12_x86_64.manylinux2010_x86_64.whl (37 kB)
+Collecting google-resumable-media==2.2.1
+  Downloading google_resumable_media-2.2.1-py2.py3-none-any.whl (75 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 75.8/75.8 KB 133.9 MB/s eta 0:00:00
+Collecting googleapis-common-protos==1.55.0
+  Downloading googleapis_common_protos-1.55.0-py2.py3-none-any.whl (212 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 212.3/212.3 KB 152.5 MB/s eta 0:00:00
+Collecting googlemaps==4.6.0
+  Downloading googlemaps-4.6.0.tar.gz (31 kB)
+  Preparing metadata (setup.py): started
+
+2022-03-29 14:20:17,669 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/greenday-6aba2/locations/global/builds/0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7?alt=json HTTP/1.1" 200 None
+2022-03-29 14:20:18,031 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /15765189134.cloudbuild-logs.googleusercontent.com/log-0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7.txt HTTP/1.1" 416 167
+2022-03-29 14:20:18,033 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-03-29 14:20:18,785 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/greenday-6aba2/locations/global/builds/0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7?alt=json HTTP/1.1" 200 None
+2022-03-29 14:20:19,155 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /15765189134.cloudbuild-logs.googleusercontent.com/log-0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7.txt HTTP/1.1" 416 167
+2022-03-29 14:20:19,157 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-03-29 14:20:19,900 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/greenday-6aba2/locations/global/builds/0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7?alt=json HTTP/1.1" 200 None
+2022-03-29 14:20:20,304 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /15765189134.cloudbuild-logs.googleusercontent.com/log-0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7.txt HTTP/1.1" 206 61
+2022-03-29 14:20:20,305 DEBUG    root            Reading GCS logfile: 206 (read 61 bytes)
+2022-03-29 14:20:20,306 INFO     ___FILE_ONLY___   Preparing metadata (setup.py): finished with status 'done'
+
+2022-03-29 14:20:21,013 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/greenday-6aba2/locations/global/builds/0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7?alt=json HTTP/1.1" 200 None
+2022-03-29 14:20:21,516 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /15765189134.cloudbuild-logs.googleusercontent.com/log-0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7.txt HTTP/1.1" 206 1254
+2022-03-29 14:20:21,518 DEBUG    root            Reading GCS logfile: 206 (read 1254 bytes)
+2022-03-29 14:20:21,519 INFO     ___FILE_ONLY___ Collecting grpcio==1.44.0
+  Downloading grpcio-1.44.0-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (4.3 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.3/4.3 MB 152.1 MB/s eta 0:00:00
+Collecting grpcio-status==1.44.0
+  Downloading grpcio_status-1.44.0-py3-none-any.whl (10.0 kB)
+Collecting gunicorn==20.1.0
+  Downloading gunicorn-20.1.0-py3-none-any.whl (79 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 79.5/79.5 KB 132.9 MB/s eta 0:00:00
+Collecting httplib2==0.20.4
+  Downloading httplib2-0.20.4-py3-none-any.whl (96 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 96.6/96.6 KB 136.5 MB/s eta 0:00:00
+Collecting idna==3.3
+  Downloading idna-3.3-py3-none-any.whl (61 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 61.2/61.2 KB 134.9 MB/s eta 0:00:00
+Collecting itsdangerous==2.1.0
+  Downloading itsdangerous-2.1.0-py3-none-any.whl (15 kB)
+Collecting Jinja2==3.0.3
+  Downloading Jinja2-3.0.3-py3-none-any.whl (133 kB)
+
+2022-03-29 14:20:22,120 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/greenday-6aba2/locations/global/builds/0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7?alt=json HTTP/1.1" 200 None
+2022-03-29 14:20:22,657 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /15765189134.cloudbuild-logs.googleusercontent.com/log-0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7.txt HTTP/1.1" 206 1597
+2022-03-29 14:20:22,658 DEBUG    root            Reading GCS logfile: 206 (read 1597 bytes)
+2022-03-29 14:20:22,658 INFO     ___FILE_ONLY___      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 133.6/133.6 KB 125.5 MB/s eta 0:00:00
+Collecting MarkupSafe==2.1.0
+  Downloading MarkupSafe-2.1.0-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (25 kB)
+Collecting msgpack==1.0.3
+  Downloading msgpack-1.0.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (322 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 322.4/322.4 KB 155.5 MB/s eta 0:00:00
+Collecting numpy==1.22.2
+  Downloading numpy-1.22.2-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (16.8 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.8/16.8 MB 136.9 MB/s eta 0:00:00
+Collecting packaging==21.3
+  Downloading packaging-21.3-py3-none-any.whl (40 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 40.8/40.8 KB 113.3 MB/s eta 0:00:00
+Collecting Pillow==9.0.1
+  Downloading Pillow-9.0.1-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (4.3 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.3/4.3 MB 137.5 MB/s eta 0:00:00
+Collecting proto-plus==1.20.3
+  Downloading proto_plus-1.20.3-py3-none-any.whl (46 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 46.2/46.2 KB 116.5 MB/s eta 0:00:00
+
+2022-03-29 14:20:23,224 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/greenday-6aba2/locations/global/builds/0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7?alt=json HTTP/1.1" 200 None
+2022-03-29 14:20:23,816 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /15765189134.cloudbuild-logs.googleusercontent.com/log-0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7.txt HTTP/1.1" 206 1019
+2022-03-29 14:20:23,818 DEBUG    root            Reading GCS logfile: 206 (read 1019 bytes)
+2022-03-29 14:20:23,818 INFO     ___FILE_ONLY___ Collecting protobuf==3.19.4
+  Downloading protobuf-3.19.4-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (1.1 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.1/1.1 MB 140.9 MB/s eta 0:00:00
+Collecting pyasn1==0.4.8
+  Downloading pyasn1-0.4.8-py2.py3-none-any.whl (77 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 77.1/77.1 KB 123.4 MB/s eta 0:00:00
+Collecting pyasn1-modules==0.2.8
+  Downloading pyasn1_modules-0.2.8-py2.py3-none-any.whl (155 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 155.3/155.3 KB 145.7 MB/s eta 0:00:00
+Collecting pyparsing==3.0.7
+  Downloading pyparsing-3.0.7-py3-none-any.whl (98 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 98.0/98.0 KB 110.6 MB/s eta 0:00:00
+
+2022-03-29 14:20:24,347 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/greenday-6aba2/locations/global/builds/0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7?alt=json HTTP/1.1" 200 None
+2022-03-29 14:20:25,026 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /15765189134.cloudbuild-logs.googleusercontent.com/log-0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7.txt HTTP/1.1" 206 764
+2022-03-29 14:20:25,028 DEBUG    root            Reading GCS logfile: 206 (read 764 bytes)
+2022-03-29 14:20:25,028 INFO     ___FILE_ONLY___ Collecting regex==2022.1.18
+  Downloading regex-2022.1.18-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (764 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 764.6/764.6 KB 155.9 MB/s eta 0:00:00
+Collecting requests==2.27.1
+  Downloading requests-2.27.1-py2.py3-none-any.whl (63 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 63.1/63.1 KB 119.0 MB/s eta 0:00:00
+Collecting rsa==4.8
+  Downloading rsa-4.8-py3-none-any.whl (39 kB)
+Collecting six==1.16.0
+  Downloading six-1.16.0-py2.py3-none-any.whl (11 kB)
+Collecting torch==1.10.2
+  Downloading torch-1.10.2-cp38-cp38-manylinux1_x86_64.whl (881.9 MB)
+
+2022-03-29 14:20:25,481 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/greenday-6aba2/locations/global/builds/0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7?alt=json HTTP/1.1" 200 None
+2022-03-29 14:20:26,158 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /15765189134.cloudbuild-logs.googleusercontent.com/log-0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7.txt HTTP/1.1" 416 168
+2022-03-29 14:20:26,160 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-03-29 14:20:26,863 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/greenday-6aba2/locations/global/builds/0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7?alt=json HTTP/1.1" 200 None
+2022-03-29 14:20:27,319 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /15765189134.cloudbuild-logs.googleusercontent.com/log-0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7.txt HTTP/1.1" 416 168
+2022-03-29 14:20:27,321 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-03-29 14:20:27,971 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/greenday-6aba2/locations/global/builds/0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7?alt=json HTTP/1.1" 200 None
+2022-03-29 14:20:28,424 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /15765189134.cloudbuild-logs.googleusercontent.com/log-0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7.txt HTTP/1.1" 416 168
+2022-03-29 14:20:28,427 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-03-29 14:20:29,080 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/greenday-6aba2/locations/global/builds/0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7?alt=json HTTP/1.1" 200 None
+2022-03-29 14:20:29,557 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /15765189134.cloudbuild-logs.googleusercontent.com/log-0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7.txt HTTP/1.1" 416 168
+2022-03-29 14:20:29,559 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-03-29 14:20:30,402 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/greenday-6aba2/locations/global/builds/0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7?alt=json HTTP/1.1" 200 None
+2022-03-29 14:20:30,652 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /15765189134.cloudbuild-logs.googleusercontent.com/log-0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7.txt HTTP/1.1" 416 168
+2022-03-29 14:20:30,654 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-03-29 14:20:31,518 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/greenday-6aba2/locations/global/builds/0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7?alt=json HTTP/1.1" 200 None
+2022-03-29 14:20:31,790 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /15765189134.cloudbuild-logs.googleusercontent.com/log-0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7.txt HTTP/1.1" 416 168
+2022-03-29 14:20:31,792 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-03-29 14:20:32,634 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/greenday-6aba2/locations/global/builds/0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7?alt=json HTTP/1.1" 200 None
+2022-03-29 14:20:32,934 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /15765189134.cloudbuild-logs.googleusercontent.com/log-0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7.txt HTTP/1.1" 206 155
+2022-03-29 14:20:32,935 DEBUG    root            Reading GCS logfile: 206 (read 155 bytes)
+2022-03-29 14:20:32,936 INFO     ___FILE_ONLY___      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 881.9/881.9 MB 134.1 MB/s eta 0:00:00
+
+2022-03-29 14:20:34,393 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/greenday-6aba2/locations/global/builds/0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7?alt=json HTTP/1.1" 200 None
+2022-03-29 14:20:34,417 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /15765189134.cloudbuild-logs.googleusercontent.com/log-0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7.txt HTTP/1.1" 416 168
+2022-03-29 14:20:34,417 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-03-29 14:20:35,499 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/greenday-6aba2/locations/global/builds/0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7?alt=json HTTP/1.1" 200 None
+2022-03-29 14:20:35,553 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /15765189134.cloudbuild-logs.googleusercontent.com/log-0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7.txt HTTP/1.1" 206 1254
+2022-03-29 14:20:35,554 DEBUG    root            Reading GCS logfile: 206 (read 1254 bytes)
+2022-03-29 14:20:35,554 INFO     ___FILE_ONLY___ Collecting torchvision==0.11.3
+  Downloading torchvision-0.11.3-cp38-cp38-manylinux1_x86_64.whl (23.2 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 23.2/23.2 MB 137.6 MB/s eta 0:00:00
+Collecting tqdm==4.62.3
+  Downloading tqdm-4.62.3-py2.py3-none-any.whl (76 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 76.2/76.2 KB 129.8 MB/s eta 0:00:00
+Collecting typing_extensions==4.1.1
+  Downloading typing_extensions-4.1.1-py3-none-any.whl (26 kB)
+Collecting uritemplate==4.1.1
+  Downloading uritemplate-4.1.1-py2.py3-none-any.whl (10 kB)
+Collecting urllib3==1.26.8
+  Downloading urllib3-1.26.8-py2.py3-none-any.whl (138 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 138.7/138.7 KB 155.3 MB/s eta 0:00:00
+Collecting wcwidth==0.2.5
+  Downloading wcwidth-0.2.5-py2.py3-none-any.whl (30 kB)
+Collecting Werkzeug==2.0.3
+  Downloading Werkzeug-2.0.3-py3-none-any.whl (289 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 289.2/289.2 KB 152.6 MB/s eta 0:00:00
+
+2022-03-29 14:20:36,620 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/greenday-6aba2/locations/global/builds/0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7?alt=json HTTP/1.1" 200 None
+2022-03-29 14:20:36,704 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /15765189134.cloudbuild-logs.googleusercontent.com/log-0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7.txt HTTP/1.1" 206 420
+2022-03-29 14:20:36,706 DEBUG    root            Reading GCS logfile: 206 (read 420 bytes)
+2022-03-29 14:20:36,706 INFO     ___FILE_ONLY___ Collecting google-api-core[grpc]<3.0.0dev,>=1.22.1
+  Downloading google_api_core-2.7.1-py3-none-any.whl (114 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 114.7/114.7 KB 142.6 MB/s eta 0:00:00
+Requirement already satisfied: setuptools>=3.0 in /opt/venv/lib/python3.8/site-packages (from gunicorn==20.1.0->-r requirements.txt (line 23)) (41.2.0)
+
+2022-03-29 14:20:37,752 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/greenday-6aba2/locations/global/builds/0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7?alt=json HTTP/1.1" 200 None
+2022-03-29 14:20:37,856 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /15765189134.cloudbuild-logs.googleusercontent.com/log-0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7.txt HTTP/1.1" 206 1384
+2022-03-29 14:20:37,857 DEBUG    root            Reading GCS logfile: 206 (read 1384 bytes)
+2022-03-29 14:20:37,858 INFO     ___FILE_ONLY___   Downloading google_api_core-2.7.0-py3-none-any.whl (114 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 114.7/114.7 KB 141.4 MB/s eta 0:00:00
+  Downloading google_api_core-2.6.1-py3-none-any.whl (114 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 114.6/114.6 KB 141.6 MB/s eta 0:00:00
+  Downloading google_api_core-2.6.0-py2.py3-none-any.whl (114 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 114.6/114.6 KB 127.2 MB/s eta 0:00:00
+Using legacy 'setup.py install' for googlemaps, since package 'wheel' is not installed.
+Installing collected packages: wcwidth, regex, pyasn1, msgpack, certifi, Werkzeug, urllib3, uritemplate, typing_extensions, tqdm, six, rsa, pyparsing, pyasn1-modules, protobuf, Pillow, numpy, MarkupSafe, itsdangerous, idna, gunicorn, google-crc32c, ftfy, click, charset-normalizer, cachetools, torch, requests, proto-plus, packaging, Jinja2, httplib2, grpcio, googleapis-common-protos, google-resumable-media, google-auth, torchvision, grpcio-status, googlemaps, google-auth-httplib2, google-api-core, Flask, CacheControl, google-cloud-core, google-api-python-client, Flask-Cors, google-cloud-storage, google-cloud-firestore, firebase-admin
+
+2022-03-29 14:20:38,870 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/greenday-6aba2/locations/global/builds/0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7?alt=json HTTP/1.1" 200 None
+2022-03-29 14:20:39,000 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /15765189134.cloudbuild-logs.googleusercontent.com/log-0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7.txt HTTP/1.1" 416 168
+2022-03-29 14:20:39,002 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-03-29 14:20:39,992 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/greenday-6aba2/locations/global/builds/0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7?alt=json HTTP/1.1" 200 None
+2022-03-29 14:20:40,088 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /15765189134.cloudbuild-logs.googleusercontent.com/log-0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7.txt HTTP/1.1" 416 168
+2022-03-29 14:20:40,090 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-03-29 14:20:41,114 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/greenday-6aba2/locations/global/builds/0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7?alt=json HTTP/1.1" 200 None
+2022-03-29 14:20:41,179 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /15765189134.cloudbuild-logs.googleusercontent.com/log-0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7.txt HTTP/1.1" 416 168
+2022-03-29 14:20:41,179 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-03-29 14:20:42,236 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/greenday-6aba2/locations/global/builds/0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7?alt=json HTTP/1.1" 200 None
+2022-03-29 14:20:42,306 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /15765189134.cloudbuild-logs.googleusercontent.com/log-0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7.txt HTTP/1.1" 416 168
+2022-03-29 14:20:42,307 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-03-29 14:20:43,358 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/greenday-6aba2/locations/global/builds/0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7?alt=json HTTP/1.1" 200 None
+2022-03-29 14:20:43,445 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /15765189134.cloudbuild-logs.googleusercontent.com/log-0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7.txt HTTP/1.1" 416 168
+2022-03-29 14:20:43,447 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-03-29 14:20:44,484 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/greenday-6aba2/locations/global/builds/0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7?alt=json HTTP/1.1" 200 None
+2022-03-29 14:20:44,550 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /15765189134.cloudbuild-logs.googleusercontent.com/log-0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7.txt HTTP/1.1" 416 168
+2022-03-29 14:20:44,552 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-03-29 14:20:45,598 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/greenday-6aba2/locations/global/builds/0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7?alt=json HTTP/1.1" 200 None
+2022-03-29 14:20:45,681 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /15765189134.cloudbuild-logs.googleusercontent.com/log-0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7.txt HTTP/1.1" 416 168
+2022-03-29 14:20:45,682 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-03-29 14:20:46,705 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/greenday-6aba2/locations/global/builds/0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7?alt=json HTTP/1.1" 200 None
+2022-03-29 14:20:46,810 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /15765189134.cloudbuild-logs.googleusercontent.com/log-0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7.txt HTTP/1.1" 416 168
+2022-03-29 14:20:46,811 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-03-29 14:20:47,837 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/greenday-6aba2/locations/global/builds/0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7?alt=json HTTP/1.1" 200 None
+2022-03-29 14:20:47,904 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /15765189134.cloudbuild-logs.googleusercontent.com/log-0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7.txt HTTP/1.1" 416 168
+2022-03-29 14:20:47,905 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-03-29 14:20:48,959 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/greenday-6aba2/locations/global/builds/0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7?alt=json HTTP/1.1" 200 None
+2022-03-29 14:20:48,995 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /15765189134.cloudbuild-logs.googleusercontent.com/log-0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7.txt HTTP/1.1" 416 168
+2022-03-29 14:20:48,996 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-03-29 14:20:50,083 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/greenday-6aba2/locations/global/builds/0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7?alt=json HTTP/1.1" 200 None
+2022-03-29 14:20:50,126 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /15765189134.cloudbuild-logs.googleusercontent.com/log-0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7.txt HTTP/1.1" 416 168
+2022-03-29 14:20:50,128 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-03-29 14:20:51,203 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/greenday-6aba2/locations/global/builds/0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7?alt=json HTTP/1.1" 200 None
+2022-03-29 14:20:51,230 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /15765189134.cloudbuild-logs.googleusercontent.com/log-0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7.txt HTTP/1.1" 416 168
+2022-03-29 14:20:51,232 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-03-29 14:20:52,315 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/greenday-6aba2/locations/global/builds/0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7?alt=json HTTP/1.1" 200 None
+2022-03-29 14:20:52,328 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /15765189134.cloudbuild-logs.googleusercontent.com/log-0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7.txt HTTP/1.1" 416 168
+2022-03-29 14:20:52,330 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-03-29 14:20:53,430 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/greenday-6aba2/locations/global/builds/0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7?alt=json HTTP/1.1" 200 None
+2022-03-29 14:20:53,431 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /15765189134.cloudbuild-logs.googleusercontent.com/log-0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7.txt HTTP/1.1" 416 168
+2022-03-29 14:20:53,436 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-03-29 14:20:54,545 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/greenday-6aba2/locations/global/builds/0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7?alt=json HTTP/1.1" 200 None
+2022-03-29 14:20:54,573 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /15765189134.cloudbuild-logs.googleusercontent.com/log-0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7.txt HTTP/1.1" 416 168
+2022-03-29 14:20:54,574 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-03-29 14:20:55,654 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/greenday-6aba2/locations/global/builds/0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7?alt=json HTTP/1.1" 200 None
+2022-03-29 14:20:55,703 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /15765189134.cloudbuild-logs.googleusercontent.com/log-0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7.txt HTTP/1.1" 416 168
+2022-03-29 14:20:55,705 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-03-29 14:20:56,769 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/greenday-6aba2/locations/global/builds/0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7?alt=json HTTP/1.1" 200 None
+2022-03-29 14:20:56,812 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /15765189134.cloudbuild-logs.googleusercontent.com/log-0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7.txt HTTP/1.1" 416 168
+2022-03-29 14:20:56,814 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-03-29 14:20:57,896 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/greenday-6aba2/locations/global/builds/0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7?alt=json HTTP/1.1" 200 None
+2022-03-29 14:20:57,901 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /15765189134.cloudbuild-logs.googleusercontent.com/log-0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7.txt HTTP/1.1" 416 168
+2022-03-29 14:20:57,902 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-03-29 14:20:59,005 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /15765189134.cloudbuild-logs.googleusercontent.com/log-0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7.txt HTTP/1.1" 416 168
+2022-03-29 14:20:59,006 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/greenday-6aba2/locations/global/builds/0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7?alt=json HTTP/1.1" 200 None
+2022-03-29 14:20:59,007 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-03-29 14:21:00,108 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/greenday-6aba2/locations/global/builds/0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7?alt=json HTTP/1.1" 200 None
+2022-03-29 14:21:00,110 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /15765189134.cloudbuild-logs.googleusercontent.com/log-0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7.txt HTTP/1.1" 416 168
+2022-03-29 14:21:00,110 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-03-29 14:21:01,224 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/greenday-6aba2/locations/global/builds/0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7?alt=json HTTP/1.1" 200 None
+2022-03-29 14:21:01,270 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /15765189134.cloudbuild-logs.googleusercontent.com/log-0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7.txt HTTP/1.1" 416 168
+2022-03-29 14:21:01,271 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-03-29 14:21:02,341 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/greenday-6aba2/locations/global/builds/0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7?alt=json HTTP/1.1" 200 None
+2022-03-29 14:21:02,403 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /15765189134.cloudbuild-logs.googleusercontent.com/log-0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7.txt HTTP/1.1" 416 168
+2022-03-29 14:21:02,404 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-03-29 14:21:03,448 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/greenday-6aba2/locations/global/builds/0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7?alt=json HTTP/1.1" 200 None
+2022-03-29 14:21:03,508 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /15765189134.cloudbuild-logs.googleusercontent.com/log-0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7.txt HTTP/1.1" 416 168
+2022-03-29 14:21:03,510 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-03-29 14:21:04,570 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/greenday-6aba2/locations/global/builds/0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7?alt=json HTTP/1.1" 200 None
+2022-03-29 14:21:04,695 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /15765189134.cloudbuild-logs.googleusercontent.com/log-0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7.txt HTTP/1.1" 206 122
+2022-03-29 14:21:04,697 DEBUG    root            Reading GCS logfile: 206 (read 122 bytes)
+2022-03-29 14:21:04,697 INFO     ___FILE_ONLY___   Running setup.py install for googlemaps: started
+  Running setup.py install for googlemaps: finished with status 'done'
+
+2022-03-29 14:21:05,688 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/greenday-6aba2/locations/global/builds/0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7?alt=json HTTP/1.1" 200 None
+2022-03-29 14:21:05,830 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /15765189134.cloudbuild-logs.googleusercontent.com/log-0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7.txt HTTP/1.1" 416 168
+2022-03-29 14:21:05,831 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-03-29 14:21:06,840 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/greenday-6aba2/locations/global/builds/0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7?alt=json HTTP/1.1" 200 None
+2022-03-29 14:21:06,976 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /15765189134.cloudbuild-logs.googleusercontent.com/log-0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7.txt HTTP/1.1" 206 901
+2022-03-29 14:21:06,977 DEBUG    root            Reading GCS logfile: 206 (read 901 bytes)
+2022-03-29 14:21:06,978 INFO     ___FILE_ONLY___ Successfully installed CacheControl-0.12.10 Flask-2.0.3 Flask-Cors-3.0.10 Jinja2-3.0.3 MarkupSafe-2.1.0 Pillow-9.0.1 Werkzeug-2.0.3 cachetools-5.0.0 certifi-2021.10.8 charset-normalizer-2.0.12 click-8.0.4 firebase-admin-5.2.0 ftfy-6.1.1 google-api-core-2.5.0 google-api-python-client-2.38.0 google-auth-2.6.0 google-auth-httplib2-0.1.0 google-cloud-core-2.2.2 google-cloud-firestore-2.3.4 google-cloud-storage-2.1.0 google-crc32c-1.3.0 google-resumable-media-2.2.1 googleapis-common-protos-1.55.0 googlemaps-4.6.0 grpcio-1.44.0 grpcio-status-1.44.0 gunicorn-20.1.0 httplib2-0.20.4 idna-3.3 itsdangerous-2.1.0 msgpack-1.0.3 numpy-1.22.2 packaging-21.3 proto-plus-1.20.3 protobuf-3.19.4 pyasn1-0.4.8 pyasn1-modules-0.2.8 pyparsing-3.0.7 regex-2022.1.18 requests-2.27.1 rsa-4.8 six-1.16.0 torch-1.10.2 torchvision-0.11.3 tqdm-4.62.3 typing_extensions-4.1.1 uritemplate-4.1.1 urllib3-1.26.8 wcwidth-0.2.5
+
+2022-03-29 14:21:07,955 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/greenday-6aba2/locations/global/builds/0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7?alt=json HTTP/1.1" 200 None
+2022-03-29 14:21:08,127 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /15765189134.cloudbuild-logs.googleusercontent.com/log-0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7.txt HTTP/1.1" 416 168
+2022-03-29 14:21:08,130 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-03-29 14:21:09,069 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/greenday-6aba2/locations/global/builds/0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7?alt=json HTTP/1.1" 200 None
+2022-03-29 14:21:09,276 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /15765189134.cloudbuild-logs.googleusercontent.com/log-0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7.txt HTTP/1.1" 416 168
+2022-03-29 14:21:09,278 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-03-29 14:21:10,190 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/greenday-6aba2/locations/global/builds/0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7?alt=json HTTP/1.1" 200 None
+2022-03-29 14:21:10,424 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /15765189134.cloudbuild-logs.googleusercontent.com/log-0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7.txt HTTP/1.1" 416 168
+2022-03-29 14:21:10,426 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-03-29 14:21:11,304 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/greenday-6aba2/locations/global/builds/0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7?alt=json HTTP/1.1" 200 None
+2022-03-29 14:21:11,565 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /15765189134.cloudbuild-logs.googleusercontent.com/log-0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7.txt HTTP/1.1" 416 168
+2022-03-29 14:21:11,566 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-03-29 14:21:12,417 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/greenday-6aba2/locations/global/builds/0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7?alt=json HTTP/1.1" 200 None
+2022-03-29 14:21:12,661 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /15765189134.cloudbuild-logs.googleusercontent.com/log-0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7.txt HTTP/1.1" 416 168
+2022-03-29 14:21:12,663 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-03-29 14:21:13,536 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/greenday-6aba2/locations/global/builds/0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7?alt=json HTTP/1.1" 200 None
+2022-03-29 14:21:13,792 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /15765189134.cloudbuild-logs.googleusercontent.com/log-0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7.txt HTTP/1.1" 416 168
+2022-03-29 14:21:13,793 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-03-29 14:21:14,637 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/greenday-6aba2/locations/global/builds/0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7?alt=json HTTP/1.1" 200 None
+2022-03-29 14:21:14,885 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /15765189134.cloudbuild-logs.googleusercontent.com/log-0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7.txt HTTP/1.1" 416 168
+2022-03-29 14:21:14,886 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-03-29 14:21:15,755 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/greenday-6aba2/locations/global/builds/0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7?alt=json HTTP/1.1" 200 None
+2022-03-29 14:21:16,253 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /15765189134.cloudbuild-logs.googleusercontent.com/log-0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7.txt HTTP/1.1" 416 168
+2022-03-29 14:21:16,255 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-03-29 14:21:16,870 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/greenday-6aba2/locations/global/builds/0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7?alt=json HTTP/1.1" 200 None
+2022-03-29 14:21:17,387 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /15765189134.cloudbuild-logs.googleusercontent.com/log-0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7.txt HTTP/1.1" 416 168
+2022-03-29 14:21:17,389 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-03-29 14:21:17,992 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/greenday-6aba2/locations/global/builds/0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7?alt=json HTTP/1.1" 200 None
+2022-03-29 14:21:18,480 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /15765189134.cloudbuild-logs.googleusercontent.com/log-0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7.txt HTTP/1.1" 416 168
+2022-03-29 14:21:18,482 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-03-29 14:21:19,111 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/greenday-6aba2/locations/global/builds/0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7?alt=json HTTP/1.1" 200 None
+2022-03-29 14:21:19,583 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /15765189134.cloudbuild-logs.googleusercontent.com/log-0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7.txt HTTP/1.1" 416 168
+2022-03-29 14:21:19,585 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-03-29 14:21:20,380 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/greenday-6aba2/locations/global/builds/0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7?alt=json HTTP/1.1" 200 None
+2022-03-29 14:21:20,904 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /15765189134.cloudbuild-logs.googleusercontent.com/log-0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7.txt HTTP/1.1" 416 168
+2022-03-29 14:21:20,906 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-03-29 14:21:21,524 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/greenday-6aba2/locations/global/builds/0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7?alt=json HTTP/1.1" 200 None
+2022-03-29 14:21:22,139 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /15765189134.cloudbuild-logs.googleusercontent.com/log-0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7.txt HTTP/1.1" 416 168
+2022-03-29 14:21:22,141 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-03-29 14:21:22,658 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/greenday-6aba2/locations/global/builds/0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7?alt=json HTTP/1.1" 200 None
+2022-03-29 14:21:23,284 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /15765189134.cloudbuild-logs.googleusercontent.com/log-0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7.txt HTTP/1.1" 416 168
+2022-03-29 14:21:23,287 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-03-29 14:21:23,826 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/greenday-6aba2/locations/global/builds/0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7?alt=json HTTP/1.1" 200 None
+2022-03-29 14:21:24,418 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /15765189134.cloudbuild-logs.googleusercontent.com/log-0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7.txt HTTP/1.1" 416 168
+2022-03-29 14:21:24,420 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-03-29 14:21:24,989 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/greenday-6aba2/locations/global/builds/0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7?alt=json HTTP/1.1" 200 None
+2022-03-29 14:21:25,640 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /15765189134.cloudbuild-logs.googleusercontent.com/log-0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7.txt HTTP/1.1" 416 168
+2022-03-29 14:21:25,642 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-03-29 14:21:26,191 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/greenday-6aba2/locations/global/builds/0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7?alt=json HTTP/1.1" 200 None
+2022-03-29 14:21:26,771 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /15765189134.cloudbuild-logs.googleusercontent.com/log-0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7.txt HTTP/1.1" 416 168
+2022-03-29 14:21:26,772 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-03-29 14:21:27,318 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/greenday-6aba2/locations/global/builds/0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7?alt=json HTTP/1.1" 200 None
+2022-03-29 14:21:27,886 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /15765189134.cloudbuild-logs.googleusercontent.com/log-0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7.txt HTTP/1.1" 416 168
+2022-03-29 14:21:27,888 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-03-29 14:21:28,428 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/greenday-6aba2/locations/global/builds/0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7?alt=json HTTP/1.1" 200 None
+2022-03-29 14:21:29,030 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /15765189134.cloudbuild-logs.googleusercontent.com/log-0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7.txt HTTP/1.1" 416 168
+2022-03-29 14:21:29,031 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-03-29 14:21:29,552 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/greenday-6aba2/locations/global/builds/0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7?alt=json HTTP/1.1" 200 None
+2022-03-29 14:21:30,227 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /15765189134.cloudbuild-logs.googleusercontent.com/log-0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7.txt HTTP/1.1" 416 168
+2022-03-29 14:21:30,229 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-03-29 14:21:30,701 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/greenday-6aba2/locations/global/builds/0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7?alt=json HTTP/1.1" 200 None
+2022-03-29 14:21:31,352 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /15765189134.cloudbuild-logs.googleusercontent.com/log-0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7.txt HTTP/1.1" 416 168
+2022-03-29 14:21:31,354 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-03-29 14:21:31,934 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/greenday-6aba2/locations/global/builds/0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7?alt=json HTTP/1.1" 200 None
+2022-03-29 14:21:32,460 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /15765189134.cloudbuild-logs.googleusercontent.com/log-0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7.txt HTTP/1.1" 416 168
+2022-03-29 14:21:32,462 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-03-29 14:21:33,094 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/greenday-6aba2/locations/global/builds/0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7?alt=json HTTP/1.1" 200 None
+2022-03-29 14:21:33,591 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /15765189134.cloudbuild-logs.googleusercontent.com/log-0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7.txt HTTP/1.1" 416 168
+2022-03-29 14:21:33,593 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-03-29 14:21:34,199 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/greenday-6aba2/locations/global/builds/0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7?alt=json HTTP/1.1" 200 None
+2022-03-29 14:21:34,735 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /15765189134.cloudbuild-logs.googleusercontent.com/log-0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7.txt HTTP/1.1" 206 391
+2022-03-29 14:21:34,737 DEBUG    root            Reading GCS logfile: 206 (read 391 bytes)
+2022-03-29 14:21:34,737 INFO     ___FILE_ONLY___ Removing intermediate container c4a869f0a2ac
+ ---> a822468afe2a
+Step 10/14 : ENV PYTHONUNBUFFERED True
+ ---> Running in 5f49c7b7371b
+Removing intermediate container 5f49c7b7371b
+ ---> d66b8a11b7b6
+Step 11/14 : ENV FLASK_APP main
+ ---> Running in e417569275fa
+Removing intermediate container e417569275fa
+ ---> 968e91989bc6
+Step 12/14 : ENV FLASK_ENV production
+ ---> Running in 964600be0e9b
+
+2022-03-29 14:21:35,332 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/greenday-6aba2/locations/global/builds/0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7?alt=json HTTP/1.1" 200 None
+2022-03-29 14:21:35,862 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /15765189134.cloudbuild-logs.googleusercontent.com/log-0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7.txt HTTP/1.1" 206 556
+2022-03-29 14:21:35,863 DEBUG    root            Reading GCS logfile: 206 (read 556 bytes)
+2022-03-29 14:21:35,863 INFO     ___FILE_ONLY___ Removing intermediate container 964600be0e9b
+ ---> 7e9ae4ff4a64
+Step 13/14 : ENV PORT 8080
+ ---> Running in 7125e840fca3
+Removing intermediate container 7125e840fca3
+ ---> 6788c3528f1e
+Step 14/14 : CMD exec gunicorn --bind :$PORT --workers 3 --threads 8 --timeout 0 main:app
+ ---> Running in 801b4f5463aa
+Removing intermediate container 801b4f5463aa
+ ---> 92b29d428555
+Successfully built 92b29d428555
+Successfully tagged us-east1-docker.pkg.dev/greenday-6aba2/greenday/multi:latest
+PUSH
+Pushing us-east1-docker.pkg.dev/greenday-6aba2/greenday/multi:latest
+
+2022-03-29 14:21:36,523 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/greenday-6aba2/locations/global/builds/0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7?alt=json HTTP/1.1" 200 None
+2022-03-29 14:21:36,980 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /15765189134.cloudbuild-logs.googleusercontent.com/log-0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7.txt HTTP/1.1" 206 460
+2022-03-29 14:21:36,982 DEBUG    root            Reading GCS logfile: 206 (read 460 bytes)
+2022-03-29 14:21:36,983 INFO     ___FILE_ONLY___ The push refers to repository [us-east1-docker.pkg.dev/greenday-6aba2/greenday/multi]
+94d205fc3692: Preparing
+b6cc71a7b34d: Preparing
+6b2cdd2e1569: Preparing
+b74e04985360: Preparing
+d82a4c4e92ff: Preparing
+155411760e3a: Preparing
+2cbb114c7605: Preparing
+459d9d53a256: Preparing
+831c5620387f: Preparing
+2cbb114c7605: Waiting
+459d9d53a256: Waiting
+831c5620387f: Waiting
+155411760e3a: Waiting
+d82a4c4e92ff: Layer already exists
+155411760e3a: Layer already exists
+
+2022-03-29 14:21:37,657 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/greenday-6aba2/locations/global/builds/0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7?alt=json HTTP/1.1" 200 None
+2022-03-29 14:21:38,227 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /15765189134.cloudbuild-logs.googleusercontent.com/log-0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7.txt HTTP/1.1" 206 126
+2022-03-29 14:21:38,229 DEBUG    root            Reading GCS logfile: 206 (read 126 bytes)
+2022-03-29 14:21:38,229 INFO     ___FILE_ONLY___ 2cbb114c7605: Layer already exists
+459d9d53a256: Layer already exists
+b74e04985360: Pushed
+831c5620387f: Layer already exists
+
+2022-03-29 14:21:38,770 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/greenday-6aba2/locations/global/builds/0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7?alt=json HTTP/1.1" 200 None
+2022-03-29 14:21:39,482 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /15765189134.cloudbuild-logs.googleusercontent.com/log-0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7.txt HTTP/1.1" 416 168
+2022-03-29 14:21:39,484 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-03-29 14:21:39,908 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/greenday-6aba2/locations/global/builds/0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7?alt=json HTTP/1.1" 200 None
+2022-03-29 14:21:40,719 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /15765189134.cloudbuild-logs.googleusercontent.com/log-0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7.txt HTTP/1.1" 206 42
+2022-03-29 14:21:40,721 DEBUG    root            Reading GCS logfile: 206 (read 42 bytes)
+2022-03-29 14:21:40,722 INFO     ___FILE_ONLY___ 6b2cdd2e1569: Pushed
+b6cc71a7b34d: Pushed
+
+2022-03-29 14:21:41,043 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/greenday-6aba2/locations/global/builds/0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7?alt=json HTTP/1.1" 200 None
+2022-03-29 14:21:41,890 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /15765189134.cloudbuild-logs.googleusercontent.com/log-0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7.txt HTTP/1.1" 416 168
+2022-03-29 14:21:41,892 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-03-29 14:21:42,189 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/greenday-6aba2/locations/global/builds/0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7?alt=json HTTP/1.1" 200 None
+2022-03-29 14:21:42,995 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /15765189134.cloudbuild-logs.googleusercontent.com/log-0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7.txt HTTP/1.1" 416 168
+2022-03-29 14:21:42,996 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-03-29 14:21:43,298 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/greenday-6aba2/locations/global/builds/0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7?alt=json HTTP/1.1" 200 None
+2022-03-29 14:21:44,126 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /15765189134.cloudbuild-logs.googleusercontent.com/log-0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7.txt HTTP/1.1" 416 168
+2022-03-29 14:21:44,129 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-03-29 14:21:44,525 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/greenday-6aba2/locations/global/builds/0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7?alt=json HTTP/1.1" 200 None
+2022-03-29 14:21:45,271 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /15765189134.cloudbuild-logs.googleusercontent.com/log-0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7.txt HTTP/1.1" 416 168
+2022-03-29 14:21:45,273 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-03-29 14:21:45,668 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/greenday-6aba2/locations/global/builds/0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7?alt=json HTTP/1.1" 200 None
+2022-03-29 14:21:46,378 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /15765189134.cloudbuild-logs.googleusercontent.com/log-0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7.txt HTTP/1.1" 416 168
+2022-03-29 14:21:46,380 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-03-29 14:21:46,793 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/greenday-6aba2/locations/global/builds/0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7?alt=json HTTP/1.1" 200 None
+2022-03-29 14:21:47,668 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /15765189134.cloudbuild-logs.googleusercontent.com/log-0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7.txt HTTP/1.1" 416 168
+2022-03-29 14:21:47,670 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-03-29 14:21:47,923 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/greenday-6aba2/locations/global/builds/0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7?alt=json HTTP/1.1" 200 None
+2022-03-29 14:21:48,831 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /15765189134.cloudbuild-logs.googleusercontent.com/log-0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7.txt HTTP/1.1" 416 168
+2022-03-29 14:21:48,833 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-03-29 14:21:49,107 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/greenday-6aba2/locations/global/builds/0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7?alt=json HTTP/1.1" 200 None
+2022-03-29 14:21:49,932 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /15765189134.cloudbuild-logs.googleusercontent.com/log-0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7.txt HTTP/1.1" 416 168
+2022-03-29 14:21:49,935 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-03-29 14:21:50,255 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/greenday-6aba2/locations/global/builds/0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7?alt=json HTTP/1.1" 200 None
+2022-03-29 14:21:51,068 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /15765189134.cloudbuild-logs.googleusercontent.com/log-0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7.txt HTTP/1.1" 416 168
+2022-03-29 14:21:51,070 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-03-29 14:21:51,381 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/greenday-6aba2/locations/global/builds/0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7?alt=json HTTP/1.1" 200 None
+2022-03-29 14:21:52,252 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /15765189134.cloudbuild-logs.googleusercontent.com/log-0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7.txt HTTP/1.1" 416 168
+2022-03-29 14:21:52,254 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-03-29 14:21:52,497 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/greenday-6aba2/locations/global/builds/0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7?alt=json HTTP/1.1" 200 None
+2022-03-29 14:21:53,385 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /15765189134.cloudbuild-logs.googleusercontent.com/log-0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7.txt HTTP/1.1" 416 168
+2022-03-29 14:21:53,386 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-03-29 14:21:53,603 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/greenday-6aba2/locations/global/builds/0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7?alt=json HTTP/1.1" 200 None
+2022-03-29 14:21:54,518 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /15765189134.cloudbuild-logs.googleusercontent.com/log-0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7.txt HTTP/1.1" 416 168
+2022-03-29 14:21:54,520 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-03-29 14:21:54,735 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/greenday-6aba2/locations/global/builds/0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7?alt=json HTTP/1.1" 200 None
+2022-03-29 14:21:55,633 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /15765189134.cloudbuild-logs.googleusercontent.com/log-0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7.txt HTTP/1.1" 416 168
+2022-03-29 14:21:55,635 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-03-29 14:21:55,873 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/greenday-6aba2/locations/global/builds/0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7?alt=json HTTP/1.1" 200 None
+2022-03-29 14:21:56,777 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /15765189134.cloudbuild-logs.googleusercontent.com/log-0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7.txt HTTP/1.1" 416 168
+2022-03-29 14:21:56,779 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-03-29 14:21:57,102 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/greenday-6aba2/locations/global/builds/0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7?alt=json HTTP/1.1" 200 None
+2022-03-29 14:21:57,876 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /15765189134.cloudbuild-logs.googleusercontent.com/log-0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7.txt HTTP/1.1" 416 168
+2022-03-29 14:21:57,878 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-03-29 14:21:58,243 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/greenday-6aba2/locations/global/builds/0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7?alt=json HTTP/1.1" 200 None
+2022-03-29 14:21:59,006 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /15765189134.cloudbuild-logs.googleusercontent.com/log-0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7.txt HTTP/1.1" 416 168
+2022-03-29 14:21:59,006 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-03-29 14:21:59,384 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/greenday-6aba2/locations/global/builds/0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7?alt=json HTTP/1.1" 200 None
+2022-03-29 14:22:00,244 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /15765189134.cloudbuild-logs.googleusercontent.com/log-0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7.txt HTTP/1.1" 416 168
+2022-03-29 14:22:00,246 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-03-29 14:22:00,517 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/greenday-6aba2/locations/global/builds/0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7?alt=json HTTP/1.1" 200 None
+2022-03-29 14:22:01,392 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /15765189134.cloudbuild-logs.googleusercontent.com/log-0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7.txt HTTP/1.1" 416 168
+2022-03-29 14:22:01,395 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-03-29 14:22:01,698 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/greenday-6aba2/locations/global/builds/0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7?alt=json HTTP/1.1" 200 None
+2022-03-29 14:22:02,489 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /15765189134.cloudbuild-logs.googleusercontent.com/log-0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7.txt HTTP/1.1" 416 168
+2022-03-29 14:22:02,491 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-03-29 14:22:02,872 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/greenday-6aba2/locations/global/builds/0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7?alt=json HTTP/1.1" 200 None
+2022-03-29 14:22:03,619 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /15765189134.cloudbuild-logs.googleusercontent.com/log-0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7.txt HTTP/1.1" 416 168
+2022-03-29 14:22:03,621 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-03-29 14:22:04,019 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/greenday-6aba2/locations/global/builds/0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7?alt=json HTTP/1.1" 200 None
+2022-03-29 14:22:04,836 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /15765189134.cloudbuild-logs.googleusercontent.com/log-0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7.txt HTTP/1.1" 416 168
+2022-03-29 14:22:04,838 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-03-29 14:22:05,136 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/greenday-6aba2/locations/global/builds/0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7?alt=json HTTP/1.1" 200 None
+2022-03-29 14:22:05,986 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /15765189134.cloudbuild-logs.googleusercontent.com/log-0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7.txt HTTP/1.1" 416 168
+2022-03-29 14:22:05,988 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-03-29 14:22:06,250 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/greenday-6aba2/locations/global/builds/0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7?alt=json HTTP/1.1" 200 None
+2022-03-29 14:22:07,090 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /15765189134.cloudbuild-logs.googleusercontent.com/log-0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7.txt HTTP/1.1" 416 168
+2022-03-29 14:22:07,092 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-03-29 14:22:07,365 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/greenday-6aba2/locations/global/builds/0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7?alt=json HTTP/1.1" 200 None
+2022-03-29 14:22:08,195 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /15765189134.cloudbuild-logs.googleusercontent.com/log-0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7.txt HTTP/1.1" 416 168
+2022-03-29 14:22:08,198 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-03-29 14:22:08,638 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/greenday-6aba2/locations/global/builds/0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7?alt=json HTTP/1.1" 200 None
+2022-03-29 14:22:09,304 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /15765189134.cloudbuild-logs.googleusercontent.com/log-0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7.txt HTTP/1.1" 416 168
+2022-03-29 14:22:09,306 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-03-29 14:22:09,790 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/greenday-6aba2/locations/global/builds/0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7?alt=json HTTP/1.1" 200 None
+2022-03-29 14:22:10,396 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /15765189134.cloudbuild-logs.googleusercontent.com/log-0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7.txt HTTP/1.1" 416 168
+2022-03-29 14:22:10,397 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-03-29 14:22:10,912 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/greenday-6aba2/locations/global/builds/0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7?alt=json HTTP/1.1" 200 None
+2022-03-29 14:22:11,543 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /15765189134.cloudbuild-logs.googleusercontent.com/log-0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7.txt HTTP/1.1" 416 168
+2022-03-29 14:22:11,544 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-03-29 14:22:12,023 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/greenday-6aba2/locations/global/builds/0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7?alt=json HTTP/1.1" 200 None
+2022-03-29 14:22:12,835 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /15765189134.cloudbuild-logs.googleusercontent.com/log-0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7.txt HTTP/1.1" 416 168
+2022-03-29 14:22:12,837 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-03-29 14:22:13,135 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/greenday-6aba2/locations/global/builds/0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7?alt=json HTTP/1.1" 200 None
+2022-03-29 14:22:13,983 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /15765189134.cloudbuild-logs.googleusercontent.com/log-0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7.txt HTTP/1.1" 416 168
+2022-03-29 14:22:13,986 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-03-29 14:22:14,277 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/greenday-6aba2/locations/global/builds/0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7?alt=json HTTP/1.1" 200 None
+2022-03-29 14:22:15,092 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /15765189134.cloudbuild-logs.googleusercontent.com/log-0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7.txt HTTP/1.1" 416 168
+2022-03-29 14:22:15,095 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-03-29 14:22:15,430 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/greenday-6aba2/locations/global/builds/0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7?alt=json HTTP/1.1" 200 None
+2022-03-29 14:22:16,234 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /15765189134.cloudbuild-logs.googleusercontent.com/log-0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7.txt HTTP/1.1" 416 168
+2022-03-29 14:22:16,236 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-03-29 14:22:16,553 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/greenday-6aba2/locations/global/builds/0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7?alt=json HTTP/1.1" 200 None
+2022-03-29 14:22:17,325 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /15765189134.cloudbuild-logs.googleusercontent.com/log-0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7.txt HTTP/1.1" 416 168
+2022-03-29 14:22:17,326 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-03-29 14:22:17,702 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/greenday-6aba2/locations/global/builds/0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7?alt=json HTTP/1.1" 200 None
+2022-03-29 14:22:18,471 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /15765189134.cloudbuild-logs.googleusercontent.com/log-0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7.txt HTTP/1.1" 416 168
+2022-03-29 14:22:18,473 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-03-29 14:22:18,816 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/greenday-6aba2/locations/global/builds/0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7?alt=json HTTP/1.1" 200 None
+2022-03-29 14:22:19,603 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /15765189134.cloudbuild-logs.googleusercontent.com/log-0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7.txt HTTP/1.1" 416 168
+2022-03-29 14:22:19,605 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-03-29 14:22:19,943 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/greenday-6aba2/locations/global/builds/0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7?alt=json HTTP/1.1" 200 None
+2022-03-29 14:22:20,695 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /15765189134.cloudbuild-logs.googleusercontent.com/log-0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7.txt HTTP/1.1" 416 168
+2022-03-29 14:22:20,697 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-03-29 14:22:21,050 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/greenday-6aba2/locations/global/builds/0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7?alt=json HTTP/1.1" 200 None
+2022-03-29 14:22:21,792 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /15765189134.cloudbuild-logs.googleusercontent.com/log-0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7.txt HTTP/1.1" 416 168
+2022-03-29 14:22:21,794 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-03-29 14:22:22,273 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/greenday-6aba2/locations/global/builds/0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7?alt=json HTTP/1.1" 200 None
+2022-03-29 14:22:22,938 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /15765189134.cloudbuild-logs.googleusercontent.com/log-0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7.txt HTTP/1.1" 416 168
+2022-03-29 14:22:22,940 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-03-29 14:22:23,555 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/greenday-6aba2/locations/global/builds/0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7?alt=json HTTP/1.1" 200 None
+2022-03-29 14:22:24,042 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /15765189134.cloudbuild-logs.googleusercontent.com/log-0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7.txt HTTP/1.1" 416 168
+2022-03-29 14:22:24,042 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-03-29 14:22:24,761 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/greenday-6aba2/locations/global/builds/0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7?alt=json HTTP/1.1" 200 None
+2022-03-29 14:22:25,154 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /15765189134.cloudbuild-logs.googleusercontent.com/log-0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7.txt HTTP/1.1" 416 168
+2022-03-29 14:22:25,156 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-03-29 14:22:25,908 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/greenday-6aba2/locations/global/builds/0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7?alt=json HTTP/1.1" 200 None
+2022-03-29 14:22:26,267 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /15765189134.cloudbuild-logs.googleusercontent.com/log-0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7.txt HTTP/1.1" 416 168
+2022-03-29 14:22:26,269 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-03-29 14:22:27,028 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/greenday-6aba2/locations/global/builds/0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7?alt=json HTTP/1.1" 200 None
+2022-03-29 14:22:27,515 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /15765189134.cloudbuild-logs.googleusercontent.com/log-0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7.txt HTTP/1.1" 416 168
+2022-03-29 14:22:27,518 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-03-29 14:22:28,147 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/greenday-6aba2/locations/global/builds/0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7?alt=json HTTP/1.1" 200 None
+2022-03-29 14:22:28,658 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /15765189134.cloudbuild-logs.googleusercontent.com/log-0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7.txt HTTP/1.1" 416 168
+2022-03-29 14:22:28,661 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-03-29 14:22:29,296 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/greenday-6aba2/locations/global/builds/0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7?alt=json HTTP/1.1" 200 None
+2022-03-29 14:22:29,754 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /15765189134.cloudbuild-logs.googleusercontent.com/log-0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7.txt HTTP/1.1" 416 168
+2022-03-29 14:22:29,756 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-03-29 14:22:30,445 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/greenday-6aba2/locations/global/builds/0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7?alt=json HTTP/1.1" 200 None
+2022-03-29 14:22:30,891 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /15765189134.cloudbuild-logs.googleusercontent.com/log-0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7.txt HTTP/1.1" 416 168
+2022-03-29 14:22:30,891 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-03-29 14:22:31,665 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/greenday-6aba2/locations/global/builds/0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7?alt=json HTTP/1.1" 200 None
+2022-03-29 14:22:32,012 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /15765189134.cloudbuild-logs.googleusercontent.com/log-0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7.txt HTTP/1.1" 416 168
+2022-03-29 14:22:32,014 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-03-29 14:22:32,926 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/greenday-6aba2/locations/global/builds/0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7?alt=json HTTP/1.1" 200 None
+2022-03-29 14:22:33,167 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /15765189134.cloudbuild-logs.googleusercontent.com/log-0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7.txt HTTP/1.1" 416 168
+2022-03-29 14:22:33,169 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-03-29 14:22:34,062 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/greenday-6aba2/locations/global/builds/0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7?alt=json HTTP/1.1" 200 None
+2022-03-29 14:22:34,367 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /15765189134.cloudbuild-logs.googleusercontent.com/log-0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7.txt HTTP/1.1" 416 168
+2022-03-29 14:22:34,368 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-03-29 14:22:35,248 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/greenday-6aba2/locations/global/builds/0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7?alt=json HTTP/1.1" 200 None
+2022-03-29 14:22:35,486 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /15765189134.cloudbuild-logs.googleusercontent.com/log-0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7.txt HTTP/1.1" 416 168
+2022-03-29 14:22:35,488 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-03-29 14:22:36,387 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/greenday-6aba2/locations/global/builds/0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7?alt=json HTTP/1.1" 200 None
+2022-03-29 14:22:36,619 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /15765189134.cloudbuild-logs.googleusercontent.com/log-0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7.txt HTTP/1.1" 416 168
+2022-03-29 14:22:36,620 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-03-29 14:22:37,494 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/greenday-6aba2/locations/global/builds/0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7?alt=json HTTP/1.1" 200 None
+2022-03-29 14:22:37,757 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /15765189134.cloudbuild-logs.googleusercontent.com/log-0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7.txt HTTP/1.1" 416 168
+2022-03-29 14:22:37,759 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-03-29 14:22:38,610 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/greenday-6aba2/locations/global/builds/0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7?alt=json HTTP/1.1" 200 None
+2022-03-29 14:22:38,876 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /15765189134.cloudbuild-logs.googleusercontent.com/log-0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7.txt HTTP/1.1" 416 168
+2022-03-29 14:22:38,878 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-03-29 14:22:39,758 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/greenday-6aba2/locations/global/builds/0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7?alt=json HTTP/1.1" 200 None
+2022-03-29 14:22:40,097 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /15765189134.cloudbuild-logs.googleusercontent.com/log-0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7.txt HTTP/1.1" 416 168
+2022-03-29 14:22:40,099 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-03-29 14:22:40,890 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/greenday-6aba2/locations/global/builds/0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7?alt=json HTTP/1.1" 200 None
+2022-03-29 14:22:41,233 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /15765189134.cloudbuild-logs.googleusercontent.com/log-0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7.txt HTTP/1.1" 416 168
+2022-03-29 14:22:41,234 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-03-29 14:22:42,198 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/greenday-6aba2/locations/global/builds/0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7?alt=json HTTP/1.1" 200 None
+2022-03-29 14:22:42,328 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /15765189134.cloudbuild-logs.googleusercontent.com/log-0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7.txt HTTP/1.1" 416 168
+2022-03-29 14:22:42,330 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-03-29 14:22:43,341 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/greenday-6aba2/locations/global/builds/0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7?alt=json HTTP/1.1" 200 None
+2022-03-29 14:22:43,424 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /15765189134.cloudbuild-logs.googleusercontent.com/log-0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7.txt HTTP/1.1" 416 168
+2022-03-29 14:22:43,426 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-03-29 14:22:44,452 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/greenday-6aba2/locations/global/builds/0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7?alt=json HTTP/1.1" 200 None
+2022-03-29 14:22:44,544 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /15765189134.cloudbuild-logs.googleusercontent.com/log-0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7.txt HTTP/1.1" 416 168
+2022-03-29 14:22:44,545 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-03-29 14:22:45,602 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/greenday-6aba2/locations/global/builds/0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7?alt=json HTTP/1.1" 200 None
+2022-03-29 14:22:45,636 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /15765189134.cloudbuild-logs.googleusercontent.com/log-0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7.txt HTTP/1.1" 416 168
+2022-03-29 14:22:45,637 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-03-29 14:22:46,785 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /15765189134.cloudbuild-logs.googleusercontent.com/log-0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7.txt HTTP/1.1" 416 168
+2022-03-29 14:22:46,785 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-03-29 14:22:46,786 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/greenday-6aba2/locations/global/builds/0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7?alt=json HTTP/1.1" 200 None
+2022-03-29 14:22:48,116 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /15765189134.cloudbuild-logs.googleusercontent.com/log-0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7.txt HTTP/1.1" 416 168
+2022-03-29 14:22:48,118 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-03-29 14:22:48,119 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/greenday-6aba2/locations/global/builds/0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7?alt=json HTTP/1.1" 200 None
+2022-03-29 14:22:49,232 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /15765189134.cloudbuild-logs.googleusercontent.com/log-0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7.txt HTTP/1.1" 416 168
+2022-03-29 14:22:49,234 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-03-29 14:22:49,270 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/greenday-6aba2/locations/global/builds/0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7?alt=json HTTP/1.1" 200 None
+2022-03-29 14:22:50,333 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /15765189134.cloudbuild-logs.googleusercontent.com/log-0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7.txt HTTP/1.1" 416 168
+2022-03-29 14:22:50,333 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-03-29 14:22:50,394 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/greenday-6aba2/locations/global/builds/0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7?alt=json HTTP/1.1" 200 None
+2022-03-29 14:22:51,440 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /15765189134.cloudbuild-logs.googleusercontent.com/log-0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7.txt HTTP/1.1" 416 168
+2022-03-29 14:22:51,442 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-03-29 14:22:51,633 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/greenday-6aba2/locations/global/builds/0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7?alt=json HTTP/1.1" 200 None
+2022-03-29 14:22:52,683 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /15765189134.cloudbuild-logs.googleusercontent.com/log-0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7.txt HTTP/1.1" 416 168
+2022-03-29 14:22:52,684 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-03-29 14:22:52,776 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/greenday-6aba2/locations/global/builds/0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7?alt=json HTTP/1.1" 200 None
+2022-03-29 14:22:53,811 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /15765189134.cloudbuild-logs.googleusercontent.com/log-0baaf1f1-3f36-4bac-a9c8-2b7e1a25f8b7.txt HTTP/1.1" 416 168
+2022-03-29 14:22:53,814 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-03-29 14:22:53,819 INFO     ___FILE_ONLY___ Cancelling...
+
+2022-03-29 14:22:53,823 DEBUG    urllib3.connectionpool Starting new HTTPS connection (2): cloudbuild.googleapis.com:443
+2022-03-29 14:22:54,208 INFO     ___FILE_ONLY___ 
+
+Command killed by keyboard interrupt
+
+

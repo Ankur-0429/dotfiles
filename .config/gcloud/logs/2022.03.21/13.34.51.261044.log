@@ -1,0 +1,42 @@
+2022-03-21 13:34:51,261 DEBUG    root            Loaded Command Group: ['gcloud', 'projects']
+2022-03-21 13:34:51,272 DEBUG    root            Loaded Command Group: ['gcloud', 'projects', 'add_iam_policy_binding']
+2022-03-21 13:34:51,274 DEBUG    root            Running [gcloud.projects.add-iam-policy-binding] with arguments: [--member: "serviceAccount:103741969264891649668@greenday-6aba2.iam.gserviceaccount.com", --role: "roles/automl.editor", PROJECT_ID: "greenday-6aba2"]
+2022-03-21 13:34:51,285 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudresourcemanager.googleapis.com:443
+2022-03-21 13:34:51,674 DEBUG    urllib3.connectionpool https://cloudresourcemanager.googleapis.com:443 "POST /v1/projects/greenday-6aba2:getIamPolicy?alt=json HTTP/1.1" 200 None
+2022-03-21 13:34:51,700 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudresourcemanager.googleapis.com:443
+2022-03-21 13:34:52,564 DEBUG    urllib3.connectionpool https://cloudresourcemanager.googleapis.com:443 "POST /v1/projects/greenday-6aba2:setIamPolicy?alt=json HTTP/1.1" 400 None
+2022-03-21 13:34:52,566 INFO     ___FILE_ONLY___ ERROR: Policy modification failed. For a binding with condition, run "gcloud alpha iam policies lint-condition" to identify issues in condition.
+
+2022-03-21 13:34:52,567 DEBUG    root            (gcloud.projects.add-iam-policy-binding) INVALID_ARGUMENT: Service account 103741969264891649668@greenday-6aba2.iam.gserviceaccount.com does not exist.
+Traceback (most recent call last):
+  File "/Users/ankurahir/Documents/G-Cloud/google-cloud-sdk/lib/googlecloudsdk/calliope/cli.py", line 987, in Execute
+    resources = calliope_command.Run(cli=self, args=args)
+  File "/Users/ankurahir/Documents/G-Cloud/google-cloud-sdk/lib/googlecloudsdk/calliope/backend.py", line 809, in Run
+    resources = command_instance.Run(args)
+  File "/Users/ankurahir/Documents/G-Cloud/google-cloud-sdk/lib/googlecloudsdk/command_lib/util/apis/yaml_command_translator.py", line 1257, in Run
+    raise ex
+  File "/Users/ankurahir/Documents/G-Cloud/google-cloud-sdk/lib/googlecloudsdk/command_lib/util/apis/yaml_command_translator.py", line 1250, in Run
+    ref, response = self._CommonRun(args)
+  File "/Users/ankurahir/Documents/G-Cloud/google-cloud-sdk/lib/googlecloudsdk/command_lib/util/apis/yaml_command_translator.py", line 410, in _CommonRun
+    response = self.method.Call(request,
+  File "/Users/ankurahir/Documents/G-Cloud/google-cloud-sdk/lib/googlecloudsdk/command_lib/util/apis/registry.py", line 334, in Call
+    return request_func(global_params=global_params)
+  File "/Users/ankurahir/Documents/G-Cloud/google-cloud-sdk/lib/googlecloudsdk/command_lib/util/apis/registry.py", line 393, in RequestFunc
+    return method(request, global_params=global_params)
+  File "/Users/ankurahir/Documents/G-Cloud/google-cloud-sdk/lib/googlecloudsdk/third_party/apis/cloudresourcemanager/v1/cloudresourcemanager_v1_client.py", line 966, in SetIamPolicy
+    return self._RunMethod(
+  File "/Users/ankurahir/Documents/G-Cloud/google-cloud-sdk/lib/third_party/apitools/base/py/base_api.py", line 737, in _RunMethod
+    return self.ProcessHttpResponse(method_config, http_response, request)
+  File "/Users/ankurahir/Documents/G-Cloud/google-cloud-sdk/lib/third_party/apitools/base/py/base_api.py", line 743, in ProcessHttpResponse
+    self.__ProcessHttpResponse(method_config, http_response, request))
+  File "/Users/ankurahir/Documents/G-Cloud/google-cloud-sdk/lib/third_party/apitools/base/py/base_api.py", line 609, in __ProcessHttpResponse
+    raise exceptions.HttpError.FromResponse(
+apitools.base.py.exceptions.HttpBadRequestError: HttpError accessing <https://cloudresourcemanager.googleapis.com/v1/projects/greenday-6aba2:setIamPolicy?alt=json>: response: <{'vary': 'Origin, X-Origin, Referer', 'content-type': 'application/json; charset=UTF-8', 'content-encoding': 'gzip', 'date': 'Mon, 21 Mar 2022 20:34:52 GMT', 'server': 'ESF', 'cache-control': 'private', 'x-xss-protection': '0', 'x-frame-options': 'SAMEORIGIN', 'x-content-type-options': 'nosniff', 'server-timing': 'gfet4t7; dur=706', 'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000,h3-Q050=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"', 'transfer-encoding': 'chunked', 'status': 400}>, content <{
+  "error": {
+    "code": 400,
+    "message": "Service account 103741969264891649668@greenday-6aba2.iam.gserviceaccount.com does not exist.",
+    "status": "INVALID_ARGUMENT"
+  }
+}
+>
+2022-03-21 13:34:52,572 ERROR    root            (gcloud.projects.add-iam-policy-binding) INVALID_ARGUMENT: Service account 103741969264891649668@greenday-6aba2.iam.gserviceaccount.com does not exist.

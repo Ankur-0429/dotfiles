@@ -1,0 +1,587 @@
+2022-03-21 13:48:05,264 DEBUG    root            Loaded Command Group: ['gcloud', 'projects']
+2022-03-21 13:48:05,274 DEBUG    root            Loaded Command Group: ['gcloud', 'projects', 'add_iam_policy_binding']
+2022-03-21 13:48:05,275 DEBUG    root            Running [gcloud.projects.add-iam-policy-binding] with arguments: [--member: "serviceAccount:firebase-adminsdk-wppee@greenday-6aba2.iam.gserviceaccount.com", --role: "roles/automl.editor", PROJECT_ID: "greenday-6aba2"]
+2022-03-21 13:48:05,347 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudresourcemanager.googleapis.com:443
+2022-03-21 13:48:05,790 DEBUG    urllib3.connectionpool https://cloudresourcemanager.googleapis.com:443 "POST /v1/projects/greenday-6aba2:getIamPolicy?alt=json HTTP/1.1" 200 None
+2022-03-21 13:48:05,807 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudresourcemanager.googleapis.com:443
+2022-03-21 13:48:06,669 DEBUG    urllib3.connectionpool https://cloudresourcemanager.googleapis.com:443 "POST /v1/projects/greenday-6aba2:setIamPolicy?alt=json HTTP/1.1" 200 None
+2022-03-21 13:48:06,674 INFO     ___FILE_ONLY___ Updated IAM policy for project [greenday-6aba2].
+
+2022-03-21 13:48:06,675 INFO     root            Display format: "default"
+2022-03-21 13:48:06,681 INFO     ___FILE_ONLY___ bindings
+2022-03-21 13:48:06,682 INFO     ___FILE_ONLY___ :
+2022-03-21 13:48:06,682 INFO     ___FILE_ONLY___ 
+
+2022-03-21 13:48:06,682 INFO     ___FILE_ONLY___ -
+2022-03-21 13:48:06,682 INFO     ___FILE_ONLY___  
+2022-03-21 13:48:06,682 INFO     ___FILE_ONLY___ members
+2022-03-21 13:48:06,682 INFO     ___FILE_ONLY___ :
+2022-03-21 13:48:06,682 INFO     ___FILE_ONLY___ 
+
+2022-03-21 13:48:06,682 INFO     ___FILE_ONLY___   
+2022-03-21 13:48:06,682 INFO     ___FILE_ONLY___ -
+2022-03-21 13:48:06,683 INFO     ___FILE_ONLY___  
+2022-03-21 13:48:06,683 INFO     ___FILE_ONLY___ serviceAccount:service-15765189134@gcp-sa-artifactregistry.iam.gserviceaccount.com
+2022-03-21 13:48:06,683 INFO     ___FILE_ONLY___ 
+
+2022-03-21 13:48:06,683 INFO     ___FILE_ONLY___   
+2022-03-21 13:48:06,683 INFO     ___FILE_ONLY___ role
+2022-03-21 13:48:06,683 INFO     ___FILE_ONLY___ :
+2022-03-21 13:48:06,683 INFO     ___FILE_ONLY___  
+2022-03-21 13:48:06,683 INFO     ___FILE_ONLY___ roles/artifactregistry.serviceAgent
+2022-03-21 13:48:06,683 INFO     ___FILE_ONLY___ 
+
+2022-03-21 13:48:06,683 INFO     ___FILE_ONLY___ -
+2022-03-21 13:48:06,683 INFO     ___FILE_ONLY___  
+2022-03-21 13:48:06,683 INFO     ___FILE_ONLY___ members
+2022-03-21 13:48:06,684 INFO     ___FILE_ONLY___ :
+2022-03-21 13:48:06,684 INFO     ___FILE_ONLY___ 
+
+2022-03-21 13:48:06,684 INFO     ___FILE_ONLY___   
+2022-03-21 13:48:06,684 INFO     ___FILE_ONLY___ -
+2022-03-21 13:48:06,684 INFO     ___FILE_ONLY___  
+2022-03-21 13:48:06,684 INFO     ___FILE_ONLY___ serviceAccount:automlclient@greenday-6aba2.iam.gserviceaccount.com
+2022-03-21 13:48:06,684 INFO     ___FILE_ONLY___ 
+
+2022-03-21 13:48:06,684 INFO     ___FILE_ONLY___   
+2022-03-21 13:48:06,684 INFO     ___FILE_ONLY___ -
+2022-03-21 13:48:06,684 INFO     ___FILE_ONLY___  
+2022-03-21 13:48:06,684 INFO     ___FILE_ONLY___ serviceAccount:firebase-adminsdk-wppee@greenday-6aba2.iam.gserviceaccount.com
+2022-03-21 13:48:06,684 INFO     ___FILE_ONLY___ 
+
+2022-03-21 13:48:06,684 INFO     ___FILE_ONLY___   
+2022-03-21 13:48:06,684 INFO     ___FILE_ONLY___ -
+2022-03-21 13:48:06,685 INFO     ___FILE_ONLY___  
+2022-03-21 13:48:06,685 INFO     ___FILE_ONLY___ serviceAccount:greenday-service-account@greenday-6aba2.iam.gserviceaccount.com
+2022-03-21 13:48:06,685 INFO     ___FILE_ONLY___ 
+
+2022-03-21 13:48:06,685 INFO     ___FILE_ONLY___   
+2022-03-21 13:48:06,685 INFO     ___FILE_ONLY___ role
+2022-03-21 13:48:06,685 INFO     ___FILE_ONLY___ :
+2022-03-21 13:48:06,685 INFO     ___FILE_ONLY___  
+2022-03-21 13:48:06,685 INFO     ___FILE_ONLY___ roles/automl.editor
+2022-03-21 13:48:06,685 INFO     ___FILE_ONLY___ 
+
+2022-03-21 13:48:06,685 INFO     ___FILE_ONLY___ -
+2022-03-21 13:48:06,685 INFO     ___FILE_ONLY___  
+2022-03-21 13:48:06,685 INFO     ___FILE_ONLY___ members
+2022-03-21 13:48:06,685 INFO     ___FILE_ONLY___ :
+2022-03-21 13:48:06,686 INFO     ___FILE_ONLY___ 
+
+2022-03-21 13:48:06,686 INFO     ___FILE_ONLY___   
+2022-03-21 13:48:06,686 INFO     ___FILE_ONLY___ -
+2022-03-21 13:48:06,686 INFO     ___FILE_ONLY___  
+2022-03-21 13:48:06,686 INFO     ___FILE_ONLY___ serviceAccount:service-15765189134@gcp-sa-automl.iam.gserviceaccount.com
+2022-03-21 13:48:06,686 INFO     ___FILE_ONLY___ 
+
+2022-03-21 13:48:06,686 INFO     ___FILE_ONLY___   
+2022-03-21 13:48:06,686 INFO     ___FILE_ONLY___ role
+2022-03-21 13:48:06,686 INFO     ___FILE_ONLY___ :
+2022-03-21 13:48:06,686 INFO     ___FILE_ONLY___  
+2022-03-21 13:48:06,686 INFO     ___FILE_ONLY___ roles/automl.serviceAgent
+2022-03-21 13:48:06,686 INFO     ___FILE_ONLY___ 
+
+2022-03-21 13:48:06,686 INFO     ___FILE_ONLY___ -
+2022-03-21 13:48:06,686 INFO     ___FILE_ONLY___  
+2022-03-21 13:48:06,687 INFO     ___FILE_ONLY___ members
+2022-03-21 13:48:06,687 INFO     ___FILE_ONLY___ :
+2022-03-21 13:48:06,687 INFO     ___FILE_ONLY___ 
+
+2022-03-21 13:48:06,687 INFO     ___FILE_ONLY___   
+2022-03-21 13:48:06,687 INFO     ___FILE_ONLY___ -
+2022-03-21 13:48:06,687 INFO     ___FILE_ONLY___  
+2022-03-21 13:48:06,687 INFO     ___FILE_ONLY___ serviceAccount:15765189134@cloudbuild.gserviceaccount.com
+2022-03-21 13:48:06,687 INFO     ___FILE_ONLY___ 
+
+2022-03-21 13:48:06,687 INFO     ___FILE_ONLY___   
+2022-03-21 13:48:06,687 INFO     ___FILE_ONLY___ role
+2022-03-21 13:48:06,687 INFO     ___FILE_ONLY___ :
+2022-03-21 13:48:06,687 INFO     ___FILE_ONLY___  
+2022-03-21 13:48:06,687 INFO     ___FILE_ONLY___ roles/cloudbuild.builds.builder
+2022-03-21 13:48:06,687 INFO     ___FILE_ONLY___ 
+
+2022-03-21 13:48:06,688 INFO     ___FILE_ONLY___ -
+2022-03-21 13:48:06,688 INFO     ___FILE_ONLY___  
+2022-03-21 13:48:06,688 INFO     ___FILE_ONLY___ members
+2022-03-21 13:48:06,688 INFO     ___FILE_ONLY___ :
+2022-03-21 13:48:06,688 INFO     ___FILE_ONLY___ 
+
+2022-03-21 13:48:06,688 INFO     ___FILE_ONLY___   
+2022-03-21 13:48:06,688 INFO     ___FILE_ONLY___ -
+2022-03-21 13:48:06,688 INFO     ___FILE_ONLY___  
+2022-03-21 13:48:06,688 INFO     ___FILE_ONLY___ serviceAccount:service-15765189134@gcp-sa-cloudbuild.iam.gserviceaccount.com
+2022-03-21 13:48:06,688 INFO     ___FILE_ONLY___ 
+
+2022-03-21 13:48:06,688 INFO     ___FILE_ONLY___   
+2022-03-21 13:48:06,688 INFO     ___FILE_ONLY___ role
+2022-03-21 13:48:06,688 INFO     ___FILE_ONLY___ :
+2022-03-21 13:48:06,688 INFO     ___FILE_ONLY___  
+2022-03-21 13:48:06,688 INFO     ___FILE_ONLY___ roles/cloudbuild.serviceAgent
+2022-03-21 13:48:06,689 INFO     ___FILE_ONLY___ 
+
+2022-03-21 13:48:06,689 INFO     ___FILE_ONLY___ -
+2022-03-21 13:48:06,689 INFO     ___FILE_ONLY___  
+2022-03-21 13:48:06,689 INFO     ___FILE_ONLY___ members
+2022-03-21 13:48:06,689 INFO     ___FILE_ONLY___ :
+2022-03-21 13:48:06,689 INFO     ___FILE_ONLY___ 
+
+2022-03-21 13:48:06,689 INFO     ___FILE_ONLY___   
+2022-03-21 13:48:06,689 INFO     ___FILE_ONLY___ -
+2022-03-21 13:48:06,689 INFO     ___FILE_ONLY___  
+2022-03-21 13:48:06,689 INFO     ___FILE_ONLY___ serviceAccount:service-15765189134@compute-system.iam.gserviceaccount.com
+2022-03-21 13:48:06,689 INFO     ___FILE_ONLY___ 
+
+2022-03-21 13:48:06,689 INFO     ___FILE_ONLY___   
+2022-03-21 13:48:06,689 INFO     ___FILE_ONLY___ role
+2022-03-21 13:48:06,689 INFO     ___FILE_ONLY___ :
+2022-03-21 13:48:06,689 INFO     ___FILE_ONLY___  
+2022-03-21 13:48:06,690 INFO     ___FILE_ONLY___ roles/compute.serviceAgent
+2022-03-21 13:48:06,690 INFO     ___FILE_ONLY___ 
+
+2022-03-21 13:48:06,690 INFO     ___FILE_ONLY___ -
+2022-03-21 13:48:06,690 INFO     ___FILE_ONLY___  
+2022-03-21 13:48:06,690 INFO     ___FILE_ONLY___ members
+2022-03-21 13:48:06,690 INFO     ___FILE_ONLY___ :
+2022-03-21 13:48:06,690 INFO     ___FILE_ONLY___ 
+
+2022-03-21 13:48:06,690 INFO     ___FILE_ONLY___   
+2022-03-21 13:48:06,690 INFO     ___FILE_ONLY___ -
+2022-03-21 13:48:06,690 INFO     ___FILE_ONLY___  
+2022-03-21 13:48:06,690 INFO     ___FILE_ONLY___ serviceAccount:service-15765189134@container-engine-robot.iam.gserviceaccount.com
+2022-03-21 13:48:06,690 INFO     ___FILE_ONLY___ 
+
+2022-03-21 13:48:06,690 INFO     ___FILE_ONLY___   
+2022-03-21 13:48:06,690 INFO     ___FILE_ONLY___ role
+2022-03-21 13:48:06,690 INFO     ___FILE_ONLY___ :
+2022-03-21 13:48:06,690 INFO     ___FILE_ONLY___  
+2022-03-21 13:48:06,690 INFO     ___FILE_ONLY___ roles/container.serviceAgent
+2022-03-21 13:48:06,691 INFO     ___FILE_ONLY___ 
+
+2022-03-21 13:48:06,691 INFO     ___FILE_ONLY___ -
+2022-03-21 13:48:06,691 INFO     ___FILE_ONLY___  
+2022-03-21 13:48:06,691 INFO     ___FILE_ONLY___ members
+2022-03-21 13:48:06,691 INFO     ___FILE_ONLY___ :
+2022-03-21 13:48:06,691 INFO     ___FILE_ONLY___ 
+
+2022-03-21 13:48:06,691 INFO     ___FILE_ONLY___   
+2022-03-21 13:48:06,691 INFO     ___FILE_ONLY___ -
+2022-03-21 13:48:06,691 INFO     ___FILE_ONLY___  
+2022-03-21 13:48:06,691 INFO     ___FILE_ONLY___ serviceAccount:service-15765189134@container-analysis.iam.gserviceaccount.com
+2022-03-21 13:48:06,691 INFO     ___FILE_ONLY___ 
+
+2022-03-21 13:48:06,691 INFO     ___FILE_ONLY___   
+2022-03-21 13:48:06,691 INFO     ___FILE_ONLY___ role
+2022-03-21 13:48:06,691 INFO     ___FILE_ONLY___ :
+2022-03-21 13:48:06,691 INFO     ___FILE_ONLY___  
+2022-03-21 13:48:06,691 INFO     ___FILE_ONLY___ roles/containeranalysis.ServiceAgent
+2022-03-21 13:48:06,691 INFO     ___FILE_ONLY___ 
+
+2022-03-21 13:48:06,692 INFO     ___FILE_ONLY___ -
+2022-03-21 13:48:06,692 INFO     ___FILE_ONLY___  
+2022-03-21 13:48:06,692 INFO     ___FILE_ONLY___ members
+2022-03-21 13:48:06,692 INFO     ___FILE_ONLY___ :
+2022-03-21 13:48:06,692 INFO     ___FILE_ONLY___ 
+
+2022-03-21 13:48:06,692 INFO     ___FILE_ONLY___   
+2022-03-21 13:48:06,692 INFO     ___FILE_ONLY___ -
+2022-03-21 13:48:06,692 INFO     ___FILE_ONLY___  
+2022-03-21 13:48:06,692 INFO     ___FILE_ONLY___ serviceAccount:service-15765189134@containerregistry.iam.gserviceaccount.com
+2022-03-21 13:48:06,692 INFO     ___FILE_ONLY___ 
+
+2022-03-21 13:48:06,692 INFO     ___FILE_ONLY___   
+2022-03-21 13:48:06,692 INFO     ___FILE_ONLY___ role
+2022-03-21 13:48:06,692 INFO     ___FILE_ONLY___ :
+2022-03-21 13:48:06,692 INFO     ___FILE_ONLY___  
+2022-03-21 13:48:06,692 INFO     ___FILE_ONLY___ roles/containerregistry.ServiceAgent
+2022-03-21 13:48:06,692 INFO     ___FILE_ONLY___ 
+
+2022-03-21 13:48:06,692 INFO     ___FILE_ONLY___ -
+2022-03-21 13:48:06,692 INFO     ___FILE_ONLY___  
+2022-03-21 13:48:06,693 INFO     ___FILE_ONLY___ members
+2022-03-21 13:48:06,693 INFO     ___FILE_ONLY___ :
+2022-03-21 13:48:06,693 INFO     ___FILE_ONLY___ 
+
+2022-03-21 13:48:06,693 INFO     ___FILE_ONLY___   
+2022-03-21 13:48:06,693 INFO     ___FILE_ONLY___ -
+2022-03-21 13:48:06,693 INFO     ___FILE_ONLY___  
+2022-03-21 13:48:06,693 INFO     ___FILE_ONLY___ serviceAccount:service-15765189134@gcp-sa-containerscanning.iam.gserviceaccount.com
+2022-03-21 13:48:06,693 INFO     ___FILE_ONLY___ 
+
+2022-03-21 13:48:06,693 INFO     ___FILE_ONLY___   
+2022-03-21 13:48:06,693 INFO     ___FILE_ONLY___ role
+2022-03-21 13:48:06,693 INFO     ___FILE_ONLY___ :
+2022-03-21 13:48:06,693 INFO     ___FILE_ONLY___  
+2022-03-21 13:48:06,693 INFO     ___FILE_ONLY___ roles/containerscanning.ServiceAgent
+2022-03-21 13:48:06,693 INFO     ___FILE_ONLY___ 
+
+2022-03-21 13:48:06,693 INFO     ___FILE_ONLY___ -
+2022-03-21 13:48:06,693 INFO     ___FILE_ONLY___  
+2022-03-21 13:48:06,693 INFO     ___FILE_ONLY___ members
+2022-03-21 13:48:06,694 INFO     ___FILE_ONLY___ :
+2022-03-21 13:48:06,694 INFO     ___FILE_ONLY___ 
+
+2022-03-21 13:48:06,694 INFO     ___FILE_ONLY___   
+2022-03-21 13:48:06,694 INFO     ___FILE_ONLY___ -
+2022-03-21 13:48:06,694 INFO     ___FILE_ONLY___  
+2022-03-21 13:48:06,694 INFO     ___FILE_ONLY___ serviceAccount:15765189134-compute@developer.gserviceaccount.com
+2022-03-21 13:48:06,694 INFO     ___FILE_ONLY___ 
+
+2022-03-21 13:48:06,694 INFO     ___FILE_ONLY___   
+2022-03-21 13:48:06,694 INFO     ___FILE_ONLY___ -
+2022-03-21 13:48:06,694 INFO     ___FILE_ONLY___  
+2022-03-21 13:48:06,694 INFO     ___FILE_ONLY___ serviceAccount:15765189134@cloudservices.gserviceaccount.com
+2022-03-21 13:48:06,694 INFO     ___FILE_ONLY___ 
+
+2022-03-21 13:48:06,694 INFO     ___FILE_ONLY___   
+2022-03-21 13:48:06,694 INFO     ___FILE_ONLY___ -
+2022-03-21 13:48:06,694 INFO     ___FILE_ONLY___  
+2022-03-21 13:48:06,695 INFO     ___FILE_ONLY___ serviceAccount:greenday-6aba2@appspot.gserviceaccount.com
+2022-03-21 13:48:06,695 INFO     ___FILE_ONLY___ 
+
+2022-03-21 13:48:06,695 INFO     ___FILE_ONLY___   
+2022-03-21 13:48:06,695 INFO     ___FILE_ONLY___ -
+2022-03-21 13:48:06,695 INFO     ___FILE_ONLY___  
+2022-03-21 13:48:06,695 INFO     ___FILE_ONLY___ user:Msuvakovic12@gmail.com
+2022-03-21 13:48:06,695 INFO     ___FILE_ONLY___ 
+
+2022-03-21 13:48:06,695 INFO     ___FILE_ONLY___   
+2022-03-21 13:48:06,695 INFO     ___FILE_ONLY___ -
+2022-03-21 13:48:06,695 INFO     ___FILE_ONLY___  
+2022-03-21 13:48:06,695 INFO     ___FILE_ONLY___ user:Yester1324@gmail.com
+2022-03-21 13:48:06,695 INFO     ___FILE_ONLY___ 
+
+2022-03-21 13:48:06,695 INFO     ___FILE_ONLY___   
+2022-03-21 13:48:06,695 INFO     ___FILE_ONLY___ -
+2022-03-21 13:48:06,695 INFO     ___FILE_ONLY___  
+2022-03-21 13:48:06,695 INFO     ___FILE_ONLY___ user:ankurahir0429@gmail.com
+2022-03-21 13:48:06,695 INFO     ___FILE_ONLY___ 
+
+2022-03-21 13:48:06,695 INFO     ___FILE_ONLY___   
+2022-03-21 13:48:06,695 INFO     ___FILE_ONLY___ role
+2022-03-21 13:48:06,695 INFO     ___FILE_ONLY___ :
+2022-03-21 13:48:06,696 INFO     ___FILE_ONLY___  
+2022-03-21 13:48:06,696 INFO     ___FILE_ONLY___ roles/editor
+2022-03-21 13:48:06,696 INFO     ___FILE_ONLY___ 
+
+2022-03-21 13:48:06,696 INFO     ___FILE_ONLY___ -
+2022-03-21 13:48:06,696 INFO     ___FILE_ONLY___  
+2022-03-21 13:48:06,696 INFO     ___FILE_ONLY___ members
+2022-03-21 13:48:06,696 INFO     ___FILE_ONLY___ :
+2022-03-21 13:48:06,696 INFO     ___FILE_ONLY___ 
+
+2022-03-21 13:48:06,696 INFO     ___FILE_ONLY___   
+2022-03-21 13:48:06,696 INFO     ___FILE_ONLY___ -
+2022-03-21 13:48:06,696 INFO     ___FILE_ONLY___  
+2022-03-21 13:48:06,696 INFO     ___FILE_ONLY___ serviceAccount:firebase-service-account@firebase-sa-management.iam.gserviceaccount.com
+2022-03-21 13:48:06,696 INFO     ___FILE_ONLY___ 
+
+2022-03-21 13:48:06,696 INFO     ___FILE_ONLY___   
+2022-03-21 13:48:06,696 INFO     ___FILE_ONLY___ role
+2022-03-21 13:48:06,696 INFO     ___FILE_ONLY___ :
+2022-03-21 13:48:06,696 INFO     ___FILE_ONLY___  
+2022-03-21 13:48:06,697 INFO     ___FILE_ONLY___ roles/firebase.managementServiceAgent
+2022-03-21 13:48:06,697 INFO     ___FILE_ONLY___ 
+
+2022-03-21 13:48:06,697 INFO     ___FILE_ONLY___ -
+2022-03-21 13:48:06,697 INFO     ___FILE_ONLY___  
+2022-03-21 13:48:06,697 INFO     ___FILE_ONLY___ members
+2022-03-21 13:48:06,697 INFO     ___FILE_ONLY___ :
+2022-03-21 13:48:06,697 INFO     ___FILE_ONLY___ 
+
+2022-03-21 13:48:06,697 INFO     ___FILE_ONLY___   
+2022-03-21 13:48:06,697 INFO     ___FILE_ONLY___ -
+2022-03-21 13:48:06,697 INFO     ___FILE_ONLY___  
+2022-03-21 13:48:06,697 INFO     ___FILE_ONLY___ serviceAccount:firebase-adminsdk-wppee@greenday-6aba2.iam.gserviceaccount.com
+2022-03-21 13:48:06,697 INFO     ___FILE_ONLY___ 
+
+2022-03-21 13:48:06,697 INFO     ___FILE_ONLY___   
+2022-03-21 13:48:06,697 INFO     ___FILE_ONLY___ role
+2022-03-21 13:48:06,697 INFO     ___FILE_ONLY___ :
+2022-03-21 13:48:06,697 INFO     ___FILE_ONLY___  
+2022-03-21 13:48:06,697 INFO     ___FILE_ONLY___ roles/firebase.sdkAdminServiceAgent
+2022-03-21 13:48:06,697 INFO     ___FILE_ONLY___ 
+
+2022-03-21 13:48:06,697 INFO     ___FILE_ONLY___ -
+2022-03-21 13:48:06,698 INFO     ___FILE_ONLY___  
+2022-03-21 13:48:06,698 INFO     ___FILE_ONLY___ members
+2022-03-21 13:48:06,698 INFO     ___FILE_ONLY___ :
+2022-03-21 13:48:06,698 INFO     ___FILE_ONLY___ 
+
+2022-03-21 13:48:06,698 INFO     ___FILE_ONLY___   
+2022-03-21 13:48:06,698 INFO     ___FILE_ONLY___ -
+2022-03-21 13:48:06,698 INFO     ___FILE_ONLY___  
+2022-03-21 13:48:06,698 INFO     ___FILE_ONLY___ serviceAccount:firebase-adminsdk-wppee@greenday-6aba2.iam.gserviceaccount.com
+2022-03-21 13:48:06,698 INFO     ___FILE_ONLY___ 
+
+2022-03-21 13:48:06,698 INFO     ___FILE_ONLY___   
+2022-03-21 13:48:06,698 INFO     ___FILE_ONLY___ role
+2022-03-21 13:48:06,698 INFO     ___FILE_ONLY___ :
+2022-03-21 13:48:06,698 INFO     ___FILE_ONLY___  
+2022-03-21 13:48:06,698 INFO     ___FILE_ONLY___ roles/firebaseappcheck.admin
+2022-03-21 13:48:06,698 INFO     ___FILE_ONLY___ 
+
+2022-03-21 13:48:06,698 INFO     ___FILE_ONLY___ -
+2022-03-21 13:48:06,698 INFO     ___FILE_ONLY___  
+2022-03-21 13:48:06,698 INFO     ___FILE_ONLY___ members
+2022-03-21 13:48:06,698 INFO     ___FILE_ONLY___ :
+2022-03-21 13:48:06,699 INFO     ___FILE_ONLY___ 
+
+2022-03-21 13:48:06,699 INFO     ___FILE_ONLY___   
+2022-03-21 13:48:06,699 INFO     ___FILE_ONLY___ -
+2022-03-21 13:48:06,699 INFO     ___FILE_ONLY___  
+2022-03-21 13:48:06,699 INFO     ___FILE_ONLY___ serviceAccount:firebase-adminsdk-wppee@greenday-6aba2.iam.gserviceaccount.com
+2022-03-21 13:48:06,699 INFO     ___FILE_ONLY___ 
+
+2022-03-21 13:48:06,699 INFO     ___FILE_ONLY___   
+2022-03-21 13:48:06,699 INFO     ___FILE_ONLY___ role
+2022-03-21 13:48:06,699 INFO     ___FILE_ONLY___ :
+2022-03-21 13:48:06,699 INFO     ___FILE_ONLY___  
+2022-03-21 13:48:06,699 INFO     ___FILE_ONLY___ roles/firebaseauth.admin
+2022-03-21 13:48:06,699 INFO     ___FILE_ONLY___ 
+
+2022-03-21 13:48:06,699 INFO     ___FILE_ONLY___ -
+2022-03-21 13:48:06,699 INFO     ___FILE_ONLY___  
+2022-03-21 13:48:06,699 INFO     ___FILE_ONLY___ members
+2022-03-21 13:48:06,699 INFO     ___FILE_ONLY___ :
+2022-03-21 13:48:06,699 INFO     ___FILE_ONLY___ 
+
+2022-03-21 13:48:06,699 INFO     ___FILE_ONLY___   
+2022-03-21 13:48:06,699 INFO     ___FILE_ONLY___ -
+2022-03-21 13:48:06,700 INFO     ___FILE_ONLY___  
+2022-03-21 13:48:06,700 INFO     ___FILE_ONLY___ serviceAccount:firebase-adminsdk-wppee@greenday-6aba2.iam.gserviceaccount.com
+2022-03-21 13:48:06,700 INFO     ___FILE_ONLY___ 
+
+2022-03-21 13:48:06,700 INFO     ___FILE_ONLY___   
+2022-03-21 13:48:06,700 INFO     ___FILE_ONLY___ role
+2022-03-21 13:48:06,700 INFO     ___FILE_ONLY___ :
+2022-03-21 13:48:06,700 INFO     ___FILE_ONLY___  
+2022-03-21 13:48:06,700 INFO     ___FILE_ONLY___ roles/firebasedatabase.admin
+2022-03-21 13:48:06,700 INFO     ___FILE_ONLY___ 
+
+2022-03-21 13:48:06,700 INFO     ___FILE_ONLY___ -
+2022-03-21 13:48:06,700 INFO     ___FILE_ONLY___  
+2022-03-21 13:48:06,700 INFO     ___FILE_ONLY___ members
+2022-03-21 13:48:06,700 INFO     ___FILE_ONLY___ :
+2022-03-21 13:48:06,700 INFO     ___FILE_ONLY___ 
+
+2022-03-21 13:48:06,700 INFO     ___FILE_ONLY___   
+2022-03-21 13:48:06,700 INFO     ___FILE_ONLY___ -
+2022-03-21 13:48:06,700 INFO     ___FILE_ONLY___  
+2022-03-21 13:48:06,700 INFO     ___FILE_ONLY___ serviceAccount:service-15765189134@gcp-sa-firebasemods.iam.gserviceaccount.com
+2022-03-21 13:48:06,700 INFO     ___FILE_ONLY___ 
+
+2022-03-21 13:48:06,700 INFO     ___FILE_ONLY___   
+2022-03-21 13:48:06,701 INFO     ___FILE_ONLY___ role
+2022-03-21 13:48:06,701 INFO     ___FILE_ONLY___ :
+2022-03-21 13:48:06,701 INFO     ___FILE_ONLY___  
+2022-03-21 13:48:06,701 INFO     ___FILE_ONLY___ roles/firebasemods.serviceAgent
+2022-03-21 13:48:06,701 INFO     ___FILE_ONLY___ 
+
+2022-03-21 13:48:06,701 INFO     ___FILE_ONLY___ -
+2022-03-21 13:48:06,701 INFO     ___FILE_ONLY___  
+2022-03-21 13:48:06,701 INFO     ___FILE_ONLY___ members
+2022-03-21 13:48:06,701 INFO     ___FILE_ONLY___ :
+2022-03-21 13:48:06,701 INFO     ___FILE_ONLY___ 
+
+2022-03-21 13:48:06,701 INFO     ___FILE_ONLY___   
+2022-03-21 13:48:06,701 INFO     ___FILE_ONLY___ -
+2022-03-21 13:48:06,701 INFO     ___FILE_ONLY___  
+2022-03-21 13:48:06,701 INFO     ___FILE_ONLY___ serviceAccount:service-15765189134@firebase-rules.iam.gserviceaccount.com
+2022-03-21 13:48:06,701 INFO     ___FILE_ONLY___ 
+
+2022-03-21 13:48:06,701 INFO     ___FILE_ONLY___   
+2022-03-21 13:48:06,701 INFO     ___FILE_ONLY___ role
+2022-03-21 13:48:06,701 INFO     ___FILE_ONLY___ :
+2022-03-21 13:48:06,701 INFO     ___FILE_ONLY___  
+2022-03-21 13:48:06,702 INFO     ___FILE_ONLY___ roles/firebaserules.system
+2022-03-21 13:48:06,702 INFO     ___FILE_ONLY___ 
+
+2022-03-21 13:48:06,702 INFO     ___FILE_ONLY___ -
+2022-03-21 13:48:06,702 INFO     ___FILE_ONLY___  
+2022-03-21 13:48:06,702 INFO     ___FILE_ONLY___ members
+2022-03-21 13:48:06,702 INFO     ___FILE_ONLY___ :
+2022-03-21 13:48:06,702 INFO     ___FILE_ONLY___ 
+
+2022-03-21 13:48:06,702 INFO     ___FILE_ONLY___   
+2022-03-21 13:48:06,702 INFO     ___FILE_ONLY___ -
+2022-03-21 13:48:06,702 INFO     ___FILE_ONLY___  
+2022-03-21 13:48:06,702 INFO     ___FILE_ONLY___ serviceAccount:service-15765189134@gcp-sa-firebasestorage.iam.gserviceaccount.com
+2022-03-21 13:48:06,702 INFO     ___FILE_ONLY___ 
+
+2022-03-21 13:48:06,702 INFO     ___FILE_ONLY___   
+2022-03-21 13:48:06,702 INFO     ___FILE_ONLY___ role
+2022-03-21 13:48:06,702 INFO     ___FILE_ONLY___ :
+2022-03-21 13:48:06,702 INFO     ___FILE_ONLY___  
+2022-03-21 13:48:06,702 INFO     ___FILE_ONLY___ roles/firebasestorage.serviceAgent
+2022-03-21 13:48:06,702 INFO     ___FILE_ONLY___ 
+
+2022-03-21 13:48:06,703 INFO     ___FILE_ONLY___ -
+2022-03-21 13:48:06,703 INFO     ___FILE_ONLY___  
+2022-03-21 13:48:06,703 INFO     ___FILE_ONLY___ members
+2022-03-21 13:48:06,703 INFO     ___FILE_ONLY___ :
+2022-03-21 13:48:06,703 INFO     ___FILE_ONLY___ 
+
+2022-03-21 13:48:06,703 INFO     ___FILE_ONLY___   
+2022-03-21 13:48:06,703 INFO     ___FILE_ONLY___ -
+2022-03-21 13:48:06,703 INFO     ___FILE_ONLY___  
+2022-03-21 13:48:06,703 INFO     ___FILE_ONLY___ serviceAccount:service-15765189134@gcp-sa-firestore.iam.gserviceaccount.com
+2022-03-21 13:48:06,703 INFO     ___FILE_ONLY___ 
+
+2022-03-21 13:48:06,703 INFO     ___FILE_ONLY___   
+2022-03-21 13:48:06,703 INFO     ___FILE_ONLY___ role
+2022-03-21 13:48:06,703 INFO     ___FILE_ONLY___ :
+2022-03-21 13:48:06,703 INFO     ___FILE_ONLY___  
+2022-03-21 13:48:06,703 INFO     ___FILE_ONLY___ roles/firestore.serviceAgent
+2022-03-21 13:48:06,703 INFO     ___FILE_ONLY___ 
+
+2022-03-21 13:48:06,703 INFO     ___FILE_ONLY___ -
+2022-03-21 13:48:06,703 INFO     ___FILE_ONLY___  
+2022-03-21 13:48:06,703 INFO     ___FILE_ONLY___ members
+2022-03-21 13:48:06,704 INFO     ___FILE_ONLY___ :
+2022-03-21 13:48:06,704 INFO     ___FILE_ONLY___ 
+
+2022-03-21 13:48:06,704 INFO     ___FILE_ONLY___   
+2022-03-21 13:48:06,704 INFO     ___FILE_ONLY___ -
+2022-03-21 13:48:06,704 INFO     ___FILE_ONLY___  
+2022-03-21 13:48:06,704 INFO     ___FILE_ONLY___ serviceAccount:service-15765189134@gcp-sa-gkehub.iam.gserviceaccount.com
+2022-03-21 13:48:06,704 INFO     ___FILE_ONLY___ 
+
+2022-03-21 13:48:06,704 INFO     ___FILE_ONLY___   
+2022-03-21 13:48:06,704 INFO     ___FILE_ONLY___ role
+2022-03-21 13:48:06,704 INFO     ___FILE_ONLY___ :
+2022-03-21 13:48:06,704 INFO     ___FILE_ONLY___  
+2022-03-21 13:48:06,704 INFO     ___FILE_ONLY___ roles/gkehub.serviceAgent
+2022-03-21 13:48:06,704 INFO     ___FILE_ONLY___ 
+
+2022-03-21 13:48:06,704 INFO     ___FILE_ONLY___ -
+2022-03-21 13:48:06,704 INFO     ___FILE_ONLY___  
+2022-03-21 13:48:06,704 INFO     ___FILE_ONLY___ members
+2022-03-21 13:48:06,704 INFO     ___FILE_ONLY___ :
+2022-03-21 13:48:06,704 INFO     ___FILE_ONLY___ 
+
+2022-03-21 13:48:06,704 INFO     ___FILE_ONLY___   
+2022-03-21 13:48:06,704 INFO     ___FILE_ONLY___ -
+2022-03-21 13:48:06,705 INFO     ___FILE_ONLY___  
+2022-03-21 13:48:06,705 INFO     ___FILE_ONLY___ serviceAccount:firebase-adminsdk-wppee@greenday-6aba2.iam.gserviceaccount.com
+2022-03-21 13:48:06,705 INFO     ___FILE_ONLY___ 
+
+2022-03-21 13:48:06,705 INFO     ___FILE_ONLY___   
+2022-03-21 13:48:06,705 INFO     ___FILE_ONLY___ role
+2022-03-21 13:48:06,705 INFO     ___FILE_ONLY___ :
+2022-03-21 13:48:06,705 INFO     ___FILE_ONLY___  
+2022-03-21 13:48:06,705 INFO     ___FILE_ONLY___ roles/iam.serviceAccountAdmin
+2022-03-21 13:48:06,705 INFO     ___FILE_ONLY___ 
+
+2022-03-21 13:48:06,705 INFO     ___FILE_ONLY___ -
+2022-03-21 13:48:06,705 INFO     ___FILE_ONLY___  
+2022-03-21 13:48:06,705 INFO     ___FILE_ONLY___ members
+2022-03-21 13:48:06,705 INFO     ___FILE_ONLY___ :
+2022-03-21 13:48:06,705 INFO     ___FILE_ONLY___ 
+
+2022-03-21 13:48:06,705 INFO     ___FILE_ONLY___   
+2022-03-21 13:48:06,706 INFO     ___FILE_ONLY___ -
+2022-03-21 13:48:06,706 INFO     ___FILE_ONLY___  
+2022-03-21 13:48:06,706 INFO     ___FILE_ONLY___ serviceAccount:greenday-service-account@greenday-6aba2.iam.gserviceaccount.com
+2022-03-21 13:48:06,706 INFO     ___FILE_ONLY___ 
+
+2022-03-21 13:48:06,706 INFO     ___FILE_ONLY___   
+2022-03-21 13:48:06,706 INFO     ___FILE_ONLY___ role
+2022-03-21 13:48:06,706 INFO     ___FILE_ONLY___ :
+2022-03-21 13:48:06,706 INFO     ___FILE_ONLY___  
+2022-03-21 13:48:06,706 INFO     ___FILE_ONLY___ roles/iam.serviceAccountTokenCreator
+2022-03-21 13:48:06,706 INFO     ___FILE_ONLY___ 
+
+2022-03-21 13:48:06,706 INFO     ___FILE_ONLY___ -
+2022-03-21 13:48:06,706 INFO     ___FILE_ONLY___  
+2022-03-21 13:48:06,706 INFO     ___FILE_ONLY___ members
+2022-03-21 13:48:06,706 INFO     ___FILE_ONLY___ :
+2022-03-21 13:48:06,706 INFO     ___FILE_ONLY___ 
+
+2022-03-21 13:48:06,706 INFO     ___FILE_ONLY___   
+2022-03-21 13:48:06,706 INFO     ___FILE_ONLY___ -
+2022-03-21 13:48:06,706 INFO     ___FILE_ONLY___  
+2022-03-21 13:48:06,706 INFO     ___FILE_ONLY___ serviceAccount:greenday-service-account@greenday-6aba2.iam.gserviceaccount.com
+2022-03-21 13:48:06,706 INFO     ___FILE_ONLY___ 
+
+2022-03-21 13:48:06,707 INFO     ___FILE_ONLY___   
+2022-03-21 13:48:06,707 INFO     ___FILE_ONLY___ -
+2022-03-21 13:48:06,707 INFO     ___FILE_ONLY___  
+2022-03-21 13:48:06,707 INFO     ___FILE_ONLY___ user:nextchart.beachrock@gmail.com
+2022-03-21 13:48:06,707 INFO     ___FILE_ONLY___ 
+
+2022-03-21 13:48:06,707 INFO     ___FILE_ONLY___   
+2022-03-21 13:48:06,707 INFO     ___FILE_ONLY___ role
+2022-03-21 13:48:06,707 INFO     ___FILE_ONLY___ :
+2022-03-21 13:48:06,707 INFO     ___FILE_ONLY___  
+2022-03-21 13:48:06,707 INFO     ___FILE_ONLY___ roles/owner
+2022-03-21 13:48:06,707 INFO     ___FILE_ONLY___ 
+
+2022-03-21 13:48:06,707 INFO     ___FILE_ONLY___ -
+2022-03-21 13:48:06,707 INFO     ___FILE_ONLY___  
+2022-03-21 13:48:06,707 INFO     ___FILE_ONLY___ members
+2022-03-21 13:48:06,707 INFO     ___FILE_ONLY___ :
+2022-03-21 13:48:06,707 INFO     ___FILE_ONLY___ 
+
+2022-03-21 13:48:06,707 INFO     ___FILE_ONLY___   
+2022-03-21 13:48:06,707 INFO     ___FILE_ONLY___ -
+2022-03-21 13:48:06,707 INFO     ___FILE_ONLY___  
+2022-03-21 13:48:06,707 INFO     ___FILE_ONLY___ serviceAccount:service-15765189134@gcp-sa-pubsub.iam.gserviceaccount.com
+2022-03-21 13:48:06,707 INFO     ___FILE_ONLY___ 
+
+2022-03-21 13:48:06,707 INFO     ___FILE_ONLY___   
+2022-03-21 13:48:06,707 INFO     ___FILE_ONLY___ role
+2022-03-21 13:48:06,708 INFO     ___FILE_ONLY___ :
+2022-03-21 13:48:06,708 INFO     ___FILE_ONLY___  
+2022-03-21 13:48:06,708 INFO     ___FILE_ONLY___ roles/pubsub.serviceAgent
+2022-03-21 13:48:06,708 INFO     ___FILE_ONLY___ 
+
+2022-03-21 13:48:06,708 INFO     ___FILE_ONLY___ -
+2022-03-21 13:48:06,708 INFO     ___FILE_ONLY___  
+2022-03-21 13:48:06,708 INFO     ___FILE_ONLY___ members
+2022-03-21 13:48:06,708 INFO     ___FILE_ONLY___ :
+2022-03-21 13:48:06,708 INFO     ___FILE_ONLY___ 
+
+2022-03-21 13:48:06,708 INFO     ___FILE_ONLY___   
+2022-03-21 13:48:06,708 INFO     ___FILE_ONLY___ -
+2022-03-21 13:48:06,708 INFO     ___FILE_ONLY___  
+2022-03-21 13:48:06,708 INFO     ___FILE_ONLY___ serviceAccount:service-15765189134@serverless-robot-prod.iam.gserviceaccount.com
+2022-03-21 13:48:06,708 INFO     ___FILE_ONLY___ 
+
+2022-03-21 13:48:06,708 INFO     ___FILE_ONLY___   
+2022-03-21 13:48:06,708 INFO     ___FILE_ONLY___ role
+2022-03-21 13:48:06,708 INFO     ___FILE_ONLY___ :
+2022-03-21 13:48:06,708 INFO     ___FILE_ONLY___  
+2022-03-21 13:48:06,708 INFO     ___FILE_ONLY___ roles/run.serviceAgent
+2022-03-21 13:48:06,708 INFO     ___FILE_ONLY___ 
+
+2022-03-21 13:48:06,708 INFO     ___FILE_ONLY___ -
+2022-03-21 13:48:06,709 INFO     ___FILE_ONLY___  
+2022-03-21 13:48:06,709 INFO     ___FILE_ONLY___ members
+2022-03-21 13:48:06,709 INFO     ___FILE_ONLY___ :
+2022-03-21 13:48:06,709 INFO     ___FILE_ONLY___ 
+
+2022-03-21 13:48:06,709 INFO     ___FILE_ONLY___   
+2022-03-21 13:48:06,709 INFO     ___FILE_ONLY___ -
+2022-03-21 13:48:06,709 INFO     ___FILE_ONLY___  
+2022-03-21 13:48:06,709 INFO     ___FILE_ONLY___ serviceAccount:firebase-adminsdk-wppee@greenday-6aba2.iam.gserviceaccount.com
+2022-03-21 13:48:06,709 INFO     ___FILE_ONLY___ 
+
+2022-03-21 13:48:06,709 INFO     ___FILE_ONLY___   
+2022-03-21 13:48:06,709 INFO     ___FILE_ONLY___ role
+2022-03-21 13:48:06,709 INFO     ___FILE_ONLY___ :
+2022-03-21 13:48:06,709 INFO     ___FILE_ONLY___  
+2022-03-21 13:48:06,709 INFO     ___FILE_ONLY___ roles/storage.admin
+2022-03-21 13:48:06,709 INFO     ___FILE_ONLY___ 
+
+2022-03-21 13:48:06,709 INFO     ___FILE_ONLY___ etag
+2022-03-21 13:48:06,709 INFO     ___FILE_ONLY___ :
+2022-03-21 13:48:06,709 INFO     ___FILE_ONLY___  
+2022-03-21 13:48:06,709 INFO     ___FILE_ONLY___ BwXawJ0Hp_U=
+2022-03-21 13:48:06,709 INFO     ___FILE_ONLY___ 
+
+2022-03-21 13:48:06,709 INFO     ___FILE_ONLY___ version
+2022-03-21 13:48:06,709 INFO     ___FILE_ONLY___ :
+2022-03-21 13:48:06,710 INFO     ___FILE_ONLY___  
+2022-03-21 13:48:06,710 INFO     ___FILE_ONLY___ 1
+2022-03-21 13:48:06,710 INFO     ___FILE_ONLY___ 
+

@@ -1,0 +1,105 @@
+2022-03-07 20:40:57,079 DEBUG    root            Loaded Command Group: ['gcloud', 'builds']
+2022-03-07 20:40:57,094 DEBUG    root            Loaded Command Group: ['gcloud', 'builds', 'submit']
+2022-03-07 20:40:57,101 DEBUG    root            Running [gcloud.builds.submit] with arguments: [--project: "greenday-6aba2", --tag: "us-east1-docker.pkg.dev/greenday-6aba2/greenday/multi:latest"]
+2022-03-07 20:40:57,124 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): storage.googleapis.com:443
+2022-03-07 20:40:57,277 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /storage/v1/b/greenday-6aba2_cloudbuild?alt=json HTTP/1.1" 200 648
+2022-03-07 20:40:57,471 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /storage/v1/b?alt=json&maxResults=1000&prefix=greenday-6aba2_cloudbuild&project=greenday-6aba2 HTTP/1.1" 200 794
+2022-03-07 20:40:57,475 INFO     root            Using default gcloudignore file:
+--------------------------------------------------
+# This file specifies files that are *not* uploaded to Google Cloud
+# using gcloud. It follows the same syntax as .gitignore, with the addition of
+# "#!include" directives (which insert the entries of the given .gitignore-style
+# file at that point).
+#
+# For more information, run:
+#   $ gcloud topic gcloudignore
+#
+.gcloudignore
+# If you would like to upload your .git directory, .gitignore file or files
+# from your .gitignore file, remove the corresponding line
+# below:
+.git
+.gitignore
+#!include:.gitignore
+
+--------------------------------------------------
+2022-03-07 20:40:57,477 DEBUG    root            Skipping file [.gitignore]
+2022-03-07 20:40:57,478 DEBUG    root            Skipping file [greenday-6aba2-firebase-adminsdk-wppee-88cc844ed3.json]
+2022-03-07 20:40:57,478 DEBUG    root            Skipping file [__pycache__]
+2022-03-07 20:40:57,478 DEBUG    root            Skipping file [venv]
+2022-03-07 20:40:57,479 DEBUG    root            Skipping file [.git]
+2022-03-07 20:40:57,480 DEBUG    root            Skipping file [clip/__pycache__]
+2022-03-07 20:40:57,480 DEBUG    root            Skipping file [.vscode/settings.json]
+2022-03-07 20:40:57,480 INFO     ___FILE_ONLY___ Creating temporary tarball archive of 20 file(s) totalling 1.4 MiB before compression.
+
+2022-03-07 20:40:57,482 DEBUG    root            Added dir [clip]
+2022-03-07 20:40:57,482 DEBUG    root            Added dir [.vscode]
+2022-03-07 20:40:57,483 DEBUG    root            Added [user_image_database.py]
+2022-03-07 20:40:57,483 DEBUG    root            Added [requirements.txt]
+2022-03-07 20:40:57,484 DEBUG    root            Added [business_database.py]
+2022-03-07 20:40:57,485 DEBUG    root            Added [Dockerfile]
+2022-03-07 20:40:57,486 DEBUG    root            Added [location_database.py]
+2022-03-07 20:40:57,486 DEBUG    root            Added [auth_server.py]
+2022-03-07 20:40:57,488 DEBUG    root            Added [trashcan_database.py]
+2022-03-07 20:40:57,488 DEBUG    root            Added [MANIFEST.in]
+2022-03-07 20:40:57,489 DEBUG    root            Added [.Dockerignore]
+2022-03-07 20:40:57,490 DEBUG    root            Added [machine_learning.py]
+2022-03-07 20:40:57,490 DEBUG    root            Added [deploy.sh]
+2022-03-07 20:40:57,491 DEBUG    root            Added [main.py]
+2022-03-07 20:40:57,492 DEBUG    root            Added [user_database.py]
+2022-03-07 20:40:57,492 DEBUG    root            Added [data.py]
+2022-03-07 20:40:57,493 DEBUG    root            Added [google_storage_functions.py]
+2022-03-07 20:40:57,524 DEBUG    root            Added [clip/bpe_simple_vocab_16e6.txt.gz]
+2022-03-07 20:40:57,524 DEBUG    root            Added [clip/__init__.py]
+2022-03-07 20:40:57,525 DEBUG    root            Added [clip/model.py]
+2022-03-07 20:40:57,526 DEBUG    root            Added [clip/clip.py]
+2022-03-07 20:40:57,527 DEBUG    root            Added [clip/simple_tokenizer.py]
+2022-03-07 20:40:57,527 INFO     ___FILE_ONLY___ Some files were not included in the source upload.
+
+Check the gcloud log [/Users/ankurahir/.config/gcloud/logs/2022.03.07/20.40.57.077311.log] to see which files and the contents of the
+default gcloudignore file used (see `$ gcloud topic gcloudignore` to learn
+more).
+
+
+2022-03-07 20:40:57,527 INFO     ___FILE_ONLY___ Uploading tarball of [.] to [gs://greenday-6aba2_cloudbuild/source/1646714457.109991-0056cc00a14049f4aa004f5fd313e430.tgz]
+
+2022-03-07 20:40:57,531 INFO     root            Uploading [/var/folders/s5/kqdr94n90p92sn2jtby_q0rh0000gn/T/tmpni_52sh8/file.tgz] to [greenday-6aba2_cloudbuild/source/1646714457.109991-0056cc00a14049f4aa004f5fd313e430.tgz]
+2022-03-07 20:40:57,902 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "POST /upload/storage/v1/b/greenday-6aba2_cloudbuild/o?alt=json&name=source%2F1646714457.109991-0056cc00a14049f4aa004f5fd313e430.tgz&uploadType=multipart HTTP/1.1" 200 1001
+2022-03-07 20:40:57,909 DEBUG    root            submitting build: <Build
+ images: ['us-east1-docker.pkg.dev/greenday-6aba2/greenday/multi:latest']
+ secrets: []
+ source: <Source
+ storageSource: <StorageSource
+ bucket: 'greenday-6aba2_cloudbuild'
+ generation: 1646714457808857
+ object: 'source/1646714457.109991-0056cc00a14049f4aa004f5fd313e430.tgz'>>
+ steps: [<BuildStep
+ args: ['build', '--network', 'cloudbuild', '--no-cache', '-t', 'us-east1-docker.pkg.dev/greenday-6aba2/greenday/multi:latest', '.']
+ env: []
+ name: 'gcr.io/cloud-builders/docker'
+ secretEnv: []
+ volumes: []
+ waitFor: []>]
+ tags: []
+ warnings: []>
+2022-03-07 20:40:57,955 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): cloudbuild.googleapis.com:443
+2022-03-07 20:40:58,698 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "POST /v1/projects/greenday-6aba2/locations/global/builds?alt=json HTTP/1.1" 200 None
+2022-03-07 20:40:58,708 INFO     ___FILE_ONLY___ Created [https://cloudbuild.googleapis.com/v1/projects/greenday-6aba2/locations/global/builds/c24612db-9a82-44d8-a55f-25c7a3c91d63].
+
+2022-03-07 20:40:58,708 INFO     ___FILE_ONLY___ Logs are available at [https://console.cloud.google.com/cloud-build/builds/c24612db-9a82-44d8-a55f-25c7a3c91d63?project=15765189134].
+
+2022-03-07 20:40:59,131 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/greenday-6aba2/locations/global/builds/c24612db-9a82-44d8-a55f-25c7a3c91d63?alt=json HTTP/1.1" 200 None
+2022-03-07 20:40:59,137 DEBUG    root            GCS logfile url is https://storage.googleapis.com/15765189134.cloudbuild-logs.googleusercontent.com/log-c24612db-9a82-44d8-a55f-25c7a3c91d63.txt
+2022-03-07 20:40:59,142 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): storage.googleapis.com:443
+2022-03-07 20:40:59,320 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /15765189134.cloudbuild-logs.googleusercontent.com/log-c24612db-9a82-44d8-a55f-25c7a3c91d63.txt HTTP/1.1" 416 164
+2022-03-07 20:40:59,322 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-03-07 20:40:59,459 DEBUG    urllib3.connectionpool https://cloudbuild.googleapis.com:443 "GET /v1/projects/greenday-6aba2/locations/global/builds/c24612db-9a82-44d8-a55f-25c7a3c91d63?alt=json HTTP/1.1" 200 None
+2022-03-07 20:41:00,204 INFO     ___FILE_ONLY___ Cancelling...
+
+2022-03-07 20:41:00,434 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "GET /15765189134.cloudbuild-logs.googleusercontent.com/log-c24612db-9a82-44d8-a55f-25c7a3c91d63.txt HTTP/1.1" 416 164
+2022-03-07 20:41:00,437 DEBUG    root            Reading GCS logfile: 416 (no new content; keep polling)
+2022-03-07 20:41:00,560 INFO     ___FILE_ONLY___ 
+
+Command killed by keyboard interrupt
+
+

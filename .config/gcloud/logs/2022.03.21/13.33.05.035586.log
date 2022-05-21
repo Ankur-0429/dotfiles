@@ -1,0 +1,10 @@
+2022-03-21 13:33:05,036 DEBUG    root            Loaded Command Group: ['gcloud', 'auth']
+2022-03-21 13:33:05,037 DEBUG    root            Loaded Command Group: ['gcloud', 'auth', 'application_default']
+2022-03-21 13:33:05,054 DEBUG    root            Loaded Command Group: ['gcloud', 'auth', 'application-default', 'print_access_token']
+2022-03-21 13:33:05,055 DEBUG    root            Running [gcloud.auth.application-default.print-access-token] with arguments: []
+2022-03-21 13:33:05,090 DEBUG    google.auth.transport.requests Making request: POST https://oauth2.googleapis.com/token
+2022-03-21 13:33:05,095 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): oauth2.googleapis.com:443
+2022-03-21 13:33:05,245 DEBUG    urllib3.connectionpool https://oauth2.googleapis.com:443 "POST /token HTTP/1.1" 200 None
+2022-03-21 13:33:05,246 INFO     root            Display format: "value(token)"
+2022-03-21 13:33:05,246 INFO     ___FILE_ONLY___ ya29.c.b0AXv0zTOrcZIgAMK17aLkOQRYshAb7spUM5Lh7aBnh-M9G95P175atMnvI8t0EEGKaiahZUsZAefo4MoZs2w_zKr12sZl74PhIwt4Nd099d5XKd6Waf0lM62djXFuWjuDNeB_z7uHzTt-85SHnH7jHs8uxmql03Ols4UPo0XciKYkTYBAWKIjZAOTV4VBdOrBmtXbk5tLh-CmSC3AspqLm_9nbMPDHA.........................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+

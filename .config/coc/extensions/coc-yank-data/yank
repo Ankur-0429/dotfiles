@@ -1,0 +1,918 @@
+5b7fc21dffafbcc543c2b6746bd8e8fd|file:///Users/ankurahir/.config/nvim/init.vim|36|1|v|vim
+	if has('nvim')
+	  Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
+	else
+	  Plug 'Shougo/defx.nvim'
+	  Plug 'roxma/nvim-yarp'
+	  Plug 'roxma/vim-hug-neovim-rpc'
+	endif
+	
+a78eed036c65a825711e1d0662c73962|file:///Users/ankurahir/.config/nvim/init.vim|78|1|v|vim
+	" Set appearance
+	call defx#custom#option('_', {
+	       'winwidth': 30,
+	       'split': 'vertical',
+	       'direction': 'topleft',
+	       'show_ignored_files': 0,
+	       'buffer_name': 'defxplorer',
+	       'toggle': 1,
+	       'resume': 1,
+	       })
+9e208e49f91e1fb0120c857deaf6f1dc|file:///Users/ankurahir/.config/nvim/init.vim|78|1|V|vim
+	" Set appearance
+0f747d8600e89fd2c1366ae380eb0be9|file:///Users/ankurahir/.config/nvim/init.vim|78|1|V|vim
+	call defx#custom#option('_', {
+ae5d9dfddfab8a9dc497f1f0892381e7|file:///Users/ankurahir/.config/nvim/init.vim|78|1|V|vim
+	       'winwidth': 30,
+60da3b986f34d73a806b7f70bd8e8656|file:///Users/ankurahir/.config/nvim/init.vim|78|1|V|vim
+	       'split': 'vertical',
+9388b6a623e5ba93272675e94c4903bd|file:///Users/ankurahir/.config/nvim/init.vim|78|1|V|vim
+	       'direction': 'topleft',
+c6d57b437bac56ab075d5f9f09bc9c5b|file:///Users/ankurahir/.config/nvim/init.vim|78|1|V|vim
+	       'show_ignored_files': 0,
+24565d231580eea0e2072653ef5f4782|file:///Users/ankurahir/.config/nvim/init.vim|78|1|V|vim
+	       'buffer_name': 'defxplorer',
+a0394e5b86a932af78b8ffabac5d7545|file:///Users/ankurahir/.config/nvim/init.vim|78|1|V|vim
+	       'toggle': 1,
+4d4b31bd2cd3c7e90cf197100a184d66|file:///Users/ankurahir/.config/nvim/init.vim|78|1|V|vim
+	       'resume': 1,
+04f0cb22f5fda6209be1ff75bfa40f59|file:///Users/ankurahir/.config/nvim/init.vim|78|1|V|vim
+	       })
+218371323fceba4729134b6d2e38e004|file:///Users/ankurahir/.config/nvim/init.vim|1|1|V|vim
+	call plug#begin()
+	Plug 'altercation/vim-colors-solarized'
+46fca14fc4026f1602740ff595c51d4c|file:///Users/ankurahir/.config/nvim/init.vim|43|1|v|vim
+	autocmd FileType defx call s:defx_my_settings()
+	function! s:defx_my_settings() abort
+	  " Define mappings
+	  nnoremap <silent><buffer><expr> <CR> defx#do_action('drop')
+	  nnoremap <silent><buffer><expr> c defx#do_action('copy')
+	  nnoremap <silent><buffer><expr> m defx#do_action('move')
+	  nnoremap <silent><buffer><expr> p defx#do_action('paste')
+	  nnoremap <silent><buffer><expr> l defx#do_action('open')
+	  nnoremap <silent><buffer><expr> E defx#do_action('open', 'vsplit')
+	  nnoremap <silent><buffer><expr> P defx#do_action('open', 'pedit')
+	  nnoremap <silent><buffer><expr> o defx#do_action('open_or_close_tree')
+	  nnoremap <silent><buffer><expr> K defx#do_action('new_directory')
+	  nnoremap <silent><buffer><expr> N defx#do_action('new_file')
+	  nnoremap <silent><buffer><expr> M defx#do_action('new_multiple_files')
+	  nnoremap <silent><buffer><expr> C defx#do_action('toggle_columns', 'mark:indent:icon:filename:type:size:time')
+	  nnoremap <silent><buffer><expr> S defx#do_action('toggle_sort', 'time')
+	  nnoremap <silent><buffer><expr> d defx#do_action('remove')
+	  nnoremap <silent><buffer><expr> r defx#do_action('rename')
+	  nnoremap <silent><buffer><expr> ! defx#do_action('execute_command')
+	  nnoremap <silent><buffer><expr> x defx#do_action('execute_system')
+	  nnoremap <silent><buffer><expr> yy defx#do_action('yank_path')
+	  nnoremap <silent><buffer><expr> . defx#do_action('toggle_ignored_files')
+	  nnoremap <silent><buffer><expr> ; defx#do_action('repeat')
+	  nnoremap <silent><buffer><expr> h defx#do_action('cd', ['..'])
+	  nnoremap <silent><buffer><expr> ~ defx#do_action('cd')
+	  nnoremap <silent><buffer><expr> q defx#do_action('quit')
+	  nnoremap <silent><buffer><expr> <Space> defx#do_action('toggle_select') . 'j'
+	  nnoremap <silent><buffer><expr> * defx#do_action('toggle_select_all')
+	  nnoremap <silent><buffer><expr> j line('.') == line('$') ? 'gg' : 'j'
+	  nnoremap <silent><buffer><expr> k line('.') == 1 ? 'G' : 'k'
+	  nnoremap <silent><buffer><expr> <C-l> defx#do_action('redraw')
+	  nnoremap <silent><buffer><expr> <C-g> defx#do_action('print')
+	  nnoremap <silent><buffer><expr> cd defx#do_action('change_vim_cwd')
+	endfunction
+	
+cffe979ffaa3c6494320afbff6c10a21|file:///Users/ankurahir/Documents/VS%20Code/waypoint/waypoint/screens/Create/CreatePostScreen.tsx|22|25|V|typescriptreact
+	            setIfRender(true)
+79e5f10cac53ec833f0e7578c508cbea|file:///Users/ankurahir/.config/nvim/init.vim|319|1|V|vim
+	endtry
+fb429e4746744d8bd2b2eeba7ddebb8a|file:///Users/ankurahir/.config/nvim/init.vim|314|1|V|vim
+	set background=dark
+51c458f73457073e6b8b194e96ca1882|file:///Users/ankurahir/.config/nvim/init.vim|313|1|V|vim
+	" Editor theme
+360692d1f1b43cf3d0c67b71002550e0|file:///Users/ankurahir/.config/nvim/init.vim|313|1|V|vim
+	  colorscheme OceanicNext
+a8982eb2a988054aa4d8d792dd074cca|file:///Users/ankurahir/.config/nvim/init.vim|313|1|V|vim
+	catch
+58a99d2703aa09ddf6e1253f014f951c|file:///Users/ankurahir/.config/nvim/init.vim|313|1|V|vim
+	  colorscheme slate
+1c6106f039fd76aadd20aa2127bc672b|file:///Users/ankurahir/.config/nvim/init.vim|312|1|V|vim
+	
+	" ============================================================================ "
+a3ea09e70374504dcce70e2fc8acb4f2|file:///Users/ankurahir/.config/nvim/init.vim|260|1|V|vim
+	  " Hightlight trailing whitespace
+35372d51465028c83f981711f381c067|file:///Users/ankurahir/.config/nvim/init.vim|260|1|V|vim
+	  highlight Trail ctermbg=red guibg=red
+133bb8e80b117ec59f0a1c745dd3bf38|file:///Users/ankurahir/.config/nvim/init.vim|260|1|V|vim
+	  call matchadd('Trail', '\s\+$', 100)
+0be1394b740969da702715614ca4f298|file:///Users/ankurahir/.config/nvim/init.vim|260|1|V|vim
+	endfunction
+776a3d73478012306ea96bd4552c1471|file:///Users/ankurahir/.config/nvim/init.vim|259|1|V|vim
+	function! TrailingSpaceHighlights() abort
+422b4e5426035c3dac5f8f01ba807c00|file:///Users/ankurahir/.config/nvim/init.vim|259|1|V|vim
+	function! s:custom_jarvis_colors()
+b73376fee7c807dd97b1569be9e5b841|file:///Users/ankurahir/.config/nvim/init.vim|259|1|V|vim
+	  " coc.nvim color changes
+759ace6e4dc5a4d14cd3e1720ab00ac2|file:///Users/ankurahir/.config/nvim/init.vim|259|1|V|vim
+	  hi link CocErrorSign WarningMsg
+8482c247f5cb8f8641114b41ca0e9544|file:///Users/ankurahir/.config/nvim/init.vim|259|1|V|vim
+	  hi link CocWarningSign Number
+b2876cba20e8baaff1d9230003c83086|file:///Users/ankurahir/.config/nvim/init.vim|259|1|V|vim
+	  hi link CocInfoSign Type
+355745284bb81718967a9617171af255|file:///Users/ankurahir/.config/nvim/init.vim|259|1|V|vim
+	  " Make background transparent for many things
+7630a5f56a63e485a879caba7121f872|file:///Users/ankurahir/.config/nvim/init.vim|259|1|V|vim
+	  hi Normal ctermbg=NONE guibg=NONE
+68933b37b90c2682ffff796937fc8c16|file:///Users/ankurahir/.config/nvim/init.vim|259|1|V|vim
+	  hi NonText ctermbg=NONE guibg=NONE
+5729e9831d05e25656809476cf8fdd6b|file:///Users/ankurahir/.config/nvim/init.vim|259|1|V|vim
+	  hi LineNr ctermfg=NONE guibg=NONE
+f0519871f4d461144d3ea3011de2fda8|file:///Users/ankurahir/.config/nvim/init.vim|259|1|V|vim
+	  hi SignColumn ctermfg=NONE guibg=NONE
+9b2631d6e803b0eb1f7c6ebecd2e9ad1|file:///Users/ankurahir/.config/nvim/init.vim|259|1|V|vim
+	  hi StatusLine guifg=#16252b guibg=#6699CC
+e97782c755852e741faaf1cbdefc122e|file:///Users/ankurahir/.config/nvim/init.vim|259|1|V|vim
+	  hi StatusLineNC guifg=#16252b guibg=#16252b
+3e95d6dc682445c6a762d1cda472d499|file:///Users/ankurahir/.config/nvim/init.vim|259|1|V|vim
+	  " Try to hide vertical spit and end of buffer symbol
+22929037130d83cb9e266cc0ba6d269d|file:///Users/ankurahir/.config/nvim/init.vim|259|1|V|vim
+	  hi VertSplit gui=NONE guifg=#17252c guibg=#17252c
+4c018d096f96d19ccfc6d8d0401a3e34|file:///Users/ankurahir/.config/nvim/init.vim|259|1|V|vim
+	  hi EndOfBuffer ctermbg=NONE ctermfg=NONE guibg=#17252c guifg=#17252c
+a9a95cb43498610ca45af59bd526f936|file:///Users/ankurahir/.config/nvim/init.vim|259|1|V|vim
+	  " Customize NERDTree directory
+0971bddc080288992643c2fab0de2511|file:///Users/ankurahir/.config/nvim/init.vim|259|1|V|vim
+	  hi NERDTreeCWD guifg=#99c794
+16ab5034716a979e0e93a8d37637dcb3|file:///Users/ankurahir/.config/nvim/init.vim|259|1|V|vim
+	  " Make background color transparent for git changes
+621bd13edaa3b6e6cfd6984767489130|file:///Users/ankurahir/.config/nvim/init.vim|259|1|V|vim
+	  hi SignifySignAdd guibg=NONE
+9995a98014a1324b38092343b1b3e1ce|file:///Users/ankurahir/.config/nvim/init.vim|259|1|V|vim
+	  hi SignifySignDelete guibg=NONE
+10bbc5fa3beb81ee9eff5ddd2e5e716c|file:///Users/ankurahir/.config/nvim/init.vim|259|1|V|vim
+	  hi SignifySignChange guibg=NONE
+af3b3a9a491bdc24905c651db0d90089|file:///Users/ankurahir/.config/nvim/init.vim|259|1|V|vim
+	  " Highlight git change signs
+fb935cef405cce4825a78eed789910e1|file:///Users/ankurahir/.config/nvim/init.vim|259|1|V|vim
+	  hi SignifySignAdd guifg=#99c794
+4596dcb2b118dea950ae4dcb0ee3c75e|file:///Users/ankurahir/.config/nvim/init.vim|259|1|V|vim
+	  hi SignifySignDelete guifg=#ec5f67
+335bf208141ef25eebc3eef4d380caec|file:///Users/ankurahir/.config/nvim/init.vim|259|1|V|vim
+	  hi SignifySignChange guifg=#c594c5
+26ffb08eb948dbc1bba568e5f8fe68fe|file:///Users/ankurahir/.config/nvim/init.vim|259|1|V|vim
+	autocmd! ColorScheme * call TrailingSpaceHighlights()
+8e5c819ebd7e53e2671163901cd6bffd|file:///Users/ankurahir/.config/nvim/init.vim|259|1|V|vim
+	autocmd! ColorScheme OceanicNext call s:custom_jarvis_colors()
+f676b237f16df00dc3a1622902874f19|file:///Users/ankurahir/.config/nvim/init.vim|259|1|V|vim
+	" Call method on window enter
+45b8e5d87e246ae24561a8d78cd8b558|file:///Users/ankurahir/.config/nvim/init.vim|259|1|V|vim
+	augroup WindowManagement
+5e8a43069a71bcc99e1dcfdd3756af3d|file:///Users/ankurahir/.config/nvim/init.vim|259|1|V|vim
+	  autocmd!
+87ac60c10220a865f72074f6ebae7568|file:///Users/ankurahir/.config/nvim/init.vim|259|1|V|vim
+	  autocmd WinEnter * call Handle_Win_Enter()
+66cab462c4bffe635e37db8a3349b05f|file:///Users/ankurahir/.config/nvim/init.vim|259|1|V|vim
+	augroup END
+143d29a1d6756c75eee473a398e6a4e6|file:///Users/ankurahir/.config/nvim/init.vim|259|1|V|vim
+	" Change highlight group of preview window when open
+70e8449f6d6fd78927f62d72374f9285|file:///Users/ankurahir/.config/nvim/init.vim|259|1|V|vim
+	function! Handle_Win_Enter()
+1984193eff9728da76e961499d4b7cbd|file:///Users/ankurahir/.config/nvim/init.vim|259|1|V|vim
+	  if &previewwindow
+f88409ad857ca4e582ecd3adaae77958|file:///Users/ankurahir/.config/nvim/init.vim|259|1|V|vim
+	    setlocal winhighlight=Normal:MarkdownError
+ee943172a9748155e757620e2392c886|file:///Users/ankurahir/.config/nvim/init.vim|259|1|V|vim
+	  endif
+4ad75fa06be49add9e34803e5eebf750|file:///Users/ankurahir/.config/nvim/init.vim|252|1|V|vim
+	" ============================================================================ "
+248b93a69fb722505e8625a246199cdc|file:///Users/ankurahir/.config/nvim/init.vim|252|1|V|vim
+	" ===                      CUSTOM COLORSCHEME CHANGES                      === "
+c873054a15c935b1dd237b9d3149dff0|file:///Users/ankurahir/.config/nvim/init.vim|252|1|V|vim
+	" Add custom highlights in method that is executed every time a colorscheme is sourced
+22a860469c5bb5b8635a32dd582d8ddd|file:///Users/ankurahir/.config/nvim/init.vim|252|1|V|vim
+	" See https://gist.github.com/romainl/379904f91fa40533175dfaec4c833f2f for details
+ae38308fca20c2667aacf1923c306a83|file:///Users/ankurahir/Documents/VS%20Code/waypoint/waypoint/screens/Create/CreatePostScreen.tsx|21|4|V|typescriptreact
+	  console.log(isFocused);
+a08b93612f709291f876bcd1bc9f3200|file:///Users/ankurahir/Documents/VS%20Code/waypoint/waypoint/screens/Create/CreatePostScreen.tsx|22|29|v|typescriptreact
+	initialValue
+2245023265ae4cf87d02c8b6ba991139|file:///Users/ankurahir/Documents/VS%20Code/waypoint/waypoint/screens/Create/CreatePostScreen.tsx|107|57|v|typescriptreact
+	config
+7d30d883222dfd51e1526fed2516074d|file:///Users/ankurahir/Documents/VS%20Code/waypoint/waypoint/screens/Create/CreatePostScreen.tsx|122|19|V|typescriptreact
+	                console.log("press out");
+f63552c2ec6211f5534591bfcca5f524|file:///Users/ankurahir/Documents/VS%20Code/waypoint/waypoint/screens/Create/CreatePostScreen.tsx|118|26|V|typescriptreact
+	                showAnim();
+209b7a9e24c1f4596d492c129adfaf88|file:///Users/ankurahir/Documents/VS%20Code/waypoint/waypoint/screens/Create/CreatePostScreen.tsx|123|27|V|typescriptreact
+	                hideAnim();
+489fad8010d568db0bd83a7f2ea8d72c|file:///Users/ankurahir/Documents/VS%20Code/waypoint/waypoint/screens/Create/CreatePostScreen.tsx|124|16|V|typescriptreact
+	                await hideAnim();
+3bb99899aa21c866bbda9db8981b8b68|file:///Users/ankurahir/Documents/VS%20Code/waypoint/waypoint/screens/Create/CreatePostScreen.tsx|132|1|V|typescriptreact
+	              />
+bcc5913445b703efe9323a2df470d472|file:///Users/ankurahir/Documents/VS%20Code/waypoint/waypoint/screens/Create/CreatePostScreen.tsx|131|35|V|typescriptreact
+	                progressValueColor=
+affa1e13dfe41f9d1f2433b1b0e3a22f|file:///Users/ankurahir/Documents/VS%20Code/waypoint/waypoint/screens/Create/CreatePostScreen.tsx|128|31|V|typescriptreact
+	              <CircularProgress
+d4ec23d7d4120782dfdf9a42b91902fa|file:///Users/ankurahir/Documents/VS%20Code/waypoint/waypoint/screens/Create/CreatePostScreen.tsx|128|28|V|typescriptreact
+	                radius={120}
+bbc9e4a139f0e3f5d12c969c43711559|file:///Users/ankurahir/Documents/VS%20Code/waypoint/waypoint/screens/Create/CreatePostScreen.tsx|128|28|V|typescriptreact
+	                duration={10000}
+714fe173d5aafb802b353766956c6e88|file:///Users/ankurahir/Documents/VS%20Code/waypoint/waypoint/screens/Create/CreatePostScreen.tsx|19|1|V|typescriptreact
+	import CircularProgress from "react-native-circular-progress-indicator";
+882cdc6581cde3502656cdfae2c9a916|file:///Users/ankurahir/Documents/VS%20Code/waypoint/waypoint/screens/Create/CreatePostScreen.tsx|113|1|V|typescriptreact
+	            <CircularProgress
+8f2ee4efcaccc49a34de119de4d4fabc|file:///Users/ankurahir/Documents/VS%20Code/waypoint/waypoint/screens/Create/CreatePostScreen.tsx|113|1|V|typescriptreact
+	              value={1}
+1f0415b6d827c8e25981ca6d10ba5875|file:///Users/ankurahir/Documents/VS%20Code/waypoint/waypoint/screens/Create/CreatePostScreen.tsx|113|1|V|typescriptreact
+	              duration={10000}
+9c09294088eddcd0bdca47c1197ee21f|file:///Users/ankurahir/Documents/VS%20Code/waypoint/waypoint/screens/Create/CreatePostScreen.tsx|113|1|V|typescriptreact
+	              progressValueColor={Colors["constants"].cancel}
+e478a73c6612b8e66a3b273f8a18105a|file:///Users/ankurahir/Documents/VS%20Code/waypoint/waypoint/screens/Create/CreatePostScreen.tsx|113|1|V|typescriptreact
+	              radius={120}
+22213dd147a4978a7f20b158143d29ce|file:///Users/ankurahir/Documents/VS%20Code/waypoint/waypoint/screens/Create/CreatePostScreen.tsx|113|1|V|typescriptreact
+	            />
+08aa4fca80a7d16f8426cdba191bdd5d|file:///Users/ankurahir/Documents/VS%20Code/CSE13/struct/hastTable.c|16|1|V|c
+	  FriendNode *build_friend_table(size_t num_buckets) {
+	    FriendTable * output = (FriendTable *)calloc(1, sizof(FriendTable));
+	
+	    output->num_buckets = num_buckets;
+	    output->buckets = (FriendNode **)calloc(num_buckets, sizof(FriendNode *));
+	
+	    return output;
+	  }
+9f706654ab601f19a8751fc2b4ef1b3c|file:///Users/ankurahir/.config/nvim/plugins.vim|90|3|V|vim
+	Plug 'c.vim'
+d15ee693115eae6f01bf3e936a771bf0|file:///Users/ankurahir/Documents/VS%20Code/CSE13/cse13s_anahir/hw6/wordle_game.c|121|1|V|c
+	  UNUSED(vocabulary);
+d88c58c44b36fb9a96ece93b3f5a77d5|file:///Users/ankurahir/Documents/VS%20Code/CSE13/cse13s_anahir/hw6/wordle_game.c|121|1|V|c
+	  UNUSED(num_words);
+7dea2643eacd0f84edd4a8ff2c60cdf8|file:///Users/ankurahir/Documents/VS%20Code/CSE13/cse13s_anahir/hw6/wordle_game.c|116|1|V|c
+	  // TODO(you): finish this function
+de288e5b235fa2e3b643e7db7aba4dd0|file:///Users/ankurahir/Documents/VS%20Code/CSE13/cse13s_anahir/hw5/graphsearch.c|268|1|V|c
+	        if (!set_contains(visited, k))
+	        {
+665fdda1ffbb6a2d384fc6e06503815e|file:///Users/ankurahir/.config/nvim/coc-settings.json|2|1|V|json
+	  "languageserver": {
+	    "ccls": {
+	      "command": "ccls",
+	      "filetypes": ["c", "cpp", "objc", "objcpp"],
+	      "rootPatterns": [
+	        ".ccls",
+	        "compile_commands.json",
+	        ".vim/",
+8d1d6a9908610f891fa1ebbebb885baf|file:///Users/ankurahir/.config/nvim/coc-settings.json|2|1|V|json
+	        ".git/",
+	        ".hg/"
+	      ],
+	      "initializationOptions": {
+9501e42ba446ef92c9093177203a52b8|file:///Users/ankurahir/.config/nvim/coc-settings.json|2|1|V|json
+	        "cache": {
+	          "directory": "/tmp/ccls"
+	        }
+	      }
+b707a260c467bf99b2dfa0cc0402dc3d|file:///Users/ankurahir/.config/nvim/coc-settings.json|2|1|V|json
+	    }
+	  },
+73ec8d16ac3f0de4380dcfa3fb23409e|file:///Users/ankurahir/.config/nvim/init.vim|72|1|V|vim
+	" ============================================================================ "
+	" ===                           EDITING OPTIONS                            === "
+	" ============================================================================ "
+05cba83144358f9e338af3f2856db493|file:///Users/ankurahir/.config/nvim/init.vim|19|1|V|vim
+	let g:nvim_tree_auto_open = 1
+13fcb821b0df16120c3403ec5767310e|file:///Users/ankurahir/.config/nvim/init.vim|5|1|V|vim
+	" ============================================================================ "
+	" ===                           FILE TREE STYSTEM                          === "
+	" ============================================================================ "
+	" vimrc
+	let g:nvim_tree_git_hl = 1 "0 by default, will enable file highlight for git attributes (can be used without the icons).
+	let g:nvim_tree_highlight_opened_files = 1 "0 by default, will enable folder and file icon highlight for opened files/directories.
+	let g:nvim_tree_root_folder_modifier = ':~' "This is the default. See :help filename-modifiers for more options
+	let g:nvim_tree_add_trailing = 1 "0 by default, append a trailing slash to folder names
+	let g:nvim_tree_group_empty = 1 " 0 by default, compact folders that only contain a single folder into one node in the file tree
+	let g:nvim_tree_icon_padding = ' ' "one space by default, used for rendering the space between the icon and the filename. Use with caution, it could break rendering if you set an empty string depending on your font.
+d95ac2a26a97dc359fc3218689975244|file:///Users/ankurahir/.config/nvim/init.vim|5|1|V|vim
+	let g:nvim_tree_symlink_arrow = ' >> ' " defaults to ' ➛ '. used as a separator between symlinks' source and target.
+	let g:nvim_tree_respect_buf_cwd = 1 "0 by default, will change cwd of nvim-tree to that of new buffer's when opening nvim-tree.
+	let g:nvim_tree_create_in_closed_folder = 1 "0 by default, When creating files, sets the path of a file when cursor is on a closed folder to the parent folder when 0, and inside the folder when 1.
+	let g:nvim_tree_special_files = { 'README.md': 1, 'Makefile': 1, 'MAKEFILE': 1 } " List of filenames that gets highlighted with NvimTreeSpecialFile
+	let g:nvim_tree_show_icons = {
+	    \ 'git': 1,
+	    \ 'folders': 0,
+	    \ 'files': 0,
+	    \ 'folder_arrows': 0,
+	    \ }
+cfdb552a43f0b4008b34f9b07567bf23|file:///Users/ankurahir/.config/nvim/init.vim|5|1|V|vim
+	"If 0, do not show the icons for one of 'git' 'folder' and 'files'
+	"1 by default, notice that if 'files' is 1, it will only display
+	"if nvim-web-devicons is installed and on your runtimepath.
+	"if folder is 1, you can also tell folder_arrows 1 to show small arrows next to the folder icons.
+	"but this will not work when you set renderer.indent_markers.enable (because of UI conflict)
+e4dd59ff77866c905a3b37d6495fa8d0|file:///Users/ankurahir/.config/nvim/init.vim|5|1|V|vim
+	
+	" default will show icon by default if no icon is provided
+	" default shows no icon by default
+	let g:nvim_tree_icons = {
+	    \ 'default': "",
+	    \ 'symlink': "",
+	    \ 'git': {
+	    \   'unstaged': "✗",
+	    \   'staged': "✓",
+	    \   'unmerged': "",
+	    \   'renamed': "➜",
+	    \   'untracked': "★",
+	    \   'deleted': "",
+	    \   'ignored': "◌"
+	    \   },
+	    \ 'folder': {
+	    \   'arrow_open': "",
+	    \   'arrow_closed': "",
+	    \   'default': "",
+	    \   'open': "",
+	    \   'empty': "",
+	    \   'empty_open': "",
+	    \   'symlink': "",
+	    \   'symlink_open': "",
+	    \   }
+	    \ }
+	
+	nnoremap <C-n> :NvimTreeToggle<CR>
+	nnoremap <leader>r :NvimTreeRefresh<CR>
+	nnoremap <leader>n :NvimTreeFindFile<CR>
+	" More available functions:
+	" NvimTreeOpen
+	" NvimTreeClose
+	" NvimTreeFocus
+	" NvimTreeFindFileToggle
+	" NvimTreeResize
+	" NvimTreeCollapse
+	" NvimTreeCollapseKeepBuffers
+	
+	set termguicolors " this variable must be enabled for colors to be applied properly
+	
+	" a list of groups can be found at `:help nvim_tree_highlight`
+	highlight NvimTreeFolderIcon guibg=blue
+	
+	
+	" ============================================================================ "
+	" ===                           EDITING OPTIONS                            === "
+	" ============================================================================ "
+	
+	set path+=**
+	set wildmenu
+	
+	" Remap leader key to ,
+	let g:mapleader=','
+	
+	" Disable line numbers
+	set nonumber
+	
+	" Don't show last command
+	set noshowcmd
+	
+	" Yank and paste with the system clipboard
+	set clipboard=unnamed
+	
+	" Hides buffers instead of closing them
+	set hidden
+	
+	" === TAB/Space settings === "
+	" Insert spaces when TAB is pressed.
+	set expandtab
+	
+	" Change number of spaces that a <Tab> counts for during editing ops
+	set softtabstop=2
+	
+	" Indentation amount for < and > commands.
+	set shiftwidth=2
+	
+	" do not wrap long lines by default
+	set nowrap
+	
+	" Don't highlight current cursor line
+	set nocursorline
+	
+	" Disable line/column number in status line
+	" Shows up in preview window when airline is disabled if not
+	set noruler
+	
+	" Only one line for command line
+	set cmdheight=1
+	
+	" === Completion Settings === "
+	
+	" Don't give completion messages like 'match 1 of 2'
+	" or 'The only match'
+	set shortmess+=c
+	
+	" ============================================================================ "
+	" ===                           PLUGIN SETUP                               === "
+	" ============================================================================ "
+	
+	" Wrap in try/catch to avoid errors on initial install before plugin is available
+	try
+	" === Denite setup ==="
+	" Use ripgrep for searching current directory for files
+	" By default, ripgrep will respect rules in .gitignore
+	"   --files: Print each file that would be searched (but don't search)
+	"   --glob:  Include or exclues files for searching that match the given glob
+	"            (aka ignore .git files)
+	"
+	call denite#custom#var('file/rec', 'command', ['rg', '--files', '--glob', '!.git'])
+	
+	" Use ripgrep in place of "grep"
+	call denite#custom#var('grep', 'command', ['rg'])
+	
+	" Custom options for ripgrep
+	"   --vimgrep:  Show results with every match on it's own line
+	"   --hidden:   Search hidden directories and files
+	"   --heading:  Show the file name above clusters of matches from each file
+	"   --S:        Search case insensitively if the pattern is all lowercase
+	call denite#custom#var('grep', 'default_opts', ['--hidden', '--vimgrep', '--heading', '-S'])
+	
+	" Recommended defaults for ripgrep via Denite docs
+	call denite#custom#var('grep', 'recursive_opts', [])
+	call denite#custom#var('grep', 'pattern_opt', ['--regexp'])
+	call denite#custom#var('grep', 'separator', ['--'])
+	call denite#custom#var('grep', 'final_opts', [])
+	
+	" Remove date from buffer list
+	call denite#custom#var('buffer', 'date_format', '')
+	
+	" Custom options for Denite
+	"   split                       - Use floating window for Denite
+	"   start_filter                - Start filtering on default
+	"   auto_resize                 - Auto resize the Denite window height automatically.
+	"   source_names                - Use short long names if multiple sources
+	"   prompt                      - Customize denite prompt
+	"   highlight_matched_char      - Matched characters highlight
+	"   highlight_matched_range     - matched range highlight
+	"   highlight_window_background - Change background group in floating window
+	"   highlight_filter_background - Change background group in floating filter window
+	"   winrow                      - Set Denite filter window to top
+	"   vertical_preview            - Open the preview window vertically
+	
+	let s:denite_options = {'default' : {
+	\ 'split': 'floating',
+	\ 'start_filter': 1,
+	\ 'auto_resize': 1,
+	\ 'source_names': 'short',
+	\ 'prompt': 'λ ',
+	\ 'highlight_matched_char': 'QuickFixLine',
+	\ 'highlight_matched_range': 'Visual',
+	\ 'highlight_window_background': 'Visual',
+	\ 'highlight_filter_background': 'DiffAdd',
+	\ 'winrow': 1,
+	\ 'vertical_preview': 1
+	\ }}
+	
+	" Loop through denite options and enable them
+	function! s:profile(opts) abort
+	  for l:fname in keys(a:opts)
+	    for l:dopt in keys(a:opts[l:fname])
+	      call denite#custom#option(l:fname, l:dopt, a:opts[l:fname][l:dopt])
+	    endfor
+	  endfor
+	endfunction
+	
+	call s:profile(s:denite_options)
+	catch
+	  echo 'Denite not installed. It should work after running :PlugInstall'
+	endtry
+	
+	" === Coc.nvim === "
+	" use <tab> for trigger completion and navigate to next complete item
+	function! s:check_back_space() abort
+	  let col = col('.') - 1
+	  return !col || getline('.')[col - 1]  =~ '\s'
+	endfunction
+	
+	inoremap <silent><expr> <TAB>
+	      \ pumvisible() ? "\<C-n>" :
+	      \ <SID>check_back_space() ? "\<TAB>" :
+	      \ coc#refresh()
+	
+	"Close preview window when completion is done.
+	autocmd! CompleteDone * if pumvisible() == 0 | pclose | endif
+	
+	" === NeoSnippet === "
+	" Map <C-k> as shortcut to activate snippet if available
+	imap <C-k> <Plug>(neosnippet_expand_or_jump)
+	smap <C-k> <Plug>(neosnippet_expand_or_jump)
+	xmap <C-k> <Plug>(neosnippet_expand_target)
+	
+	" Load custom snippets from snippets folder
+	let g:neosnippet#snippets_directory='~/.config/nvim/snippets'
+	
+	" Hide conceal markers
+	let g:neosnippet#enable_conceal_markers = 0
+	
+	" === NERDTree === "
+	" Show hidden files/directories
+	let g:NERDTreeShowHidden = 1
+	
+	" Remove bookmarks and help text from NERDTree
+	let g:NERDTreeMinimalUI = 1
+	
+	" Custom icons for expandable/expanded directories
+	let g:NERDTreeDirArrowExpandable = '⬏'
+	let g:NERDTreeDirArrowCollapsible = '⬎'
+	
+	" Hide certain files and directories from NERDTree
+f850f554550b408ae9cd517dceb7e919|file:///Users/ankurahir/.config/nvim/init.vim|6|1|V|vim
+	" default will show icon by default if no icon is provided
+	" default shows no icon by default
+	let g:nvim_tree_icons = {
+	    \ 'default': "",
+	    \ 'symlink': "",
+	    \ 'git': {
+	    \   'unstaged': "✗",
+	    \   'staged': "✓",
+	    \   'unmerged': "",
+	    \   'renamed': "➜",
+6a2ea60b25b5f7fe5d5ba4638594f3ef|file:///Users/ankurahir/.config/nvim/init.vim|6|1|V|vim
+	    \   'untracked': "★",
+	    \   'deleted': "",
+	    \   'ignored': "◌"
+	    \   },
+	    \ 'folder': {
+	    \   'arrow_open': "",
+	    \   'arrow_closed': "",
+	    \   'default': "",
+177acd4301a5a697a806ad6500f5b875|file:///Users/ankurahir/.config/nvim/init.vim|6|1|V|vim
+	    \   'open': "",
+	    \   'empty': "",
+	    \   'empty_open': "",
+	    \   'symlink': "",
+	    \   'symlink_open': "",
+	    \   }
+	    \ }
+	
+f748479370f6904da03b3aca1c374dfb|file:///Users/ankurahir/.config/nvim/init.vim|6|1|V|vim
+	nnoremap <C-n> :NvimTreeToggle<CR>
+	nnoremap <leader>r :NvimTreeRefresh<CR>
+	nnoremap <leader>n :NvimTreeFindFile<CR>
+	" More available functions:
+	" NvimTreeOpen
+	" NvimTreeClose
+	" NvimTreeFocus
+	" NvimTreeFindFileToggle
+0a960a7ecc1d3cd905fbf0a53a74925d|file:///Users/ankurahir/.config/nvim/init.vim|6|1|V|vim
+	" NvimTreeResize
+	" NvimTreeCollapse
+	" NvimTreeCollapseKeepBuffers
+8cc23fe8ab9f6abe056f17447f94ce99|file:///Users/ankurahir/.config/nvim/init.vim|6|1|V|vim
+	
+	set termguicolors " this variable must be enabled for colors to be applied properly
+	
+aff9d6e7949345473a1ae82e81e21e2f|file:///Users/ankurahir/.config/nvim/init.vim|6|1|V|vim
+	" a list of groups can be found at `:help nvim_tree_highlight`
+	highlight NvimTreeFolderIcon guibg=blue
+f322f4ebf6456f0f22eb7bad76e1ff83|file:///Users/ankurahir/.config/nvim/init.vim|6|1|V|vim
+	
+	
+	" ============================================================================ "
+	" ===                           EDITING OPTIONS                            === "
+	" ============================================================================ "
+	
+	set path+=**
+	set wildmenu
+	
+	" Remap leader key to ,
+	let g:mapleader=','
+	
+	" Disable line numbers
+	set nonumber
+	
+	" Don't show last command
+	set noshowcmd
+	
+	" Yank and paste with the system clipboard
+	set clipboard=unnamed
+	
+	" Hides buffers instead of closing them
+	set hidden
+	
+	" === TAB/Space settings === "
+	" Insert spaces when TAB is pressed.
+	set expandtab
+	
+	" Change number of spaces that a <Tab> counts for during editing ops
+	set softtabstop=2
+	
+	" Indentation amount for < and > commands.
+6362e2d09d643866e3868aa4262563ac|file:///Users/ankurahir/.config/nvim/init.vim|74|1|V|vim
+	lua << EOF require('telescope').setup{ defaults = { file_ignore_patterns = {"node_modules"} } } 
+ada9026ff1ad4d7a86b1b6ddba0ca3c6|file:///Users/ankurahir/.config/nvim/lua/ankurahir/telescope.lua|1|1|V|lua
+	require('telescope').setup{}
+3023708b6604886987bf1b765606f675|file:///Users/ankurahir/Documents/VS%20Code/waypoint/waypoint/navigation/index.tsx|25|2|V|typescriptreact
+	import { View } from '../components/Themed';
+9ceb99487808b71dc0aa41e6200892be|file:///Users/ankurahir/.zshrc|12|1|V|zsh
+	ZSH_THEME="robbyrussell"
+cba9a93b8755fd67aa1f6c6c19d5992b|file:///Users/ankurahir/.zshrc|11|1|V|zsh
+	
+	ZSH_THEME="robbyrussell"
+44a5d4a833c18b6df957db6a14f8770a|file:///Users/ankurahir/.zshrc|78|1|V|zsh
+	  zsh-syntax-highlighting
+87f1480bc4765ba9f9bd9a0115a3b6fe|file:///Users/ankurahir/.zshrc|78|1|V|zsh
+	  zsh-autosuggestions
+078d925c5f9147af961fec6d3d47fe61|file:///Users/ankurahir/.config/nvim/lua/ankurahir/telescope.lua|2|33|V|lua
+	  file_ignore_patterns = {"./node_modules/*", "node_modules", "^node_modules/*", "node_modules/*"},
+016198f0779580f12ad15e05fcec6ff6|file:///Users/ankurahir/.config/nvim/lua/ankurahir/telescope.lua|2|14|V|lua
+	  defaults = {
+	    layout_config = {
+ba0b850d96ad9cbce10e51c0583c9b7e|file:///Users/ankurahir/.config/nvim/lua/ankurahir/telescope.lua|3|5|V|lua
+	    pickers = {
+2078662c600baa9295703efbc9d34f6c|file:///Users/ankurahir/.config/nvim/lua/ankurahir/telescope.lua|3|5|V|lua
+	      find_files = {
+d24150f62a56d122e82474ef93f50c90|file:///Users/ankurahir/.config/nvim/lua/ankurahir/telescope.lua|3|5|V|lua
+	        mappings = {
+b956fc7f2f9cae7520d88bcc92d3014d|file:///Users/ankurahir/.config/nvim/lua/ankurahir/telescope.lua|3|5|V|lua
+	          ["CR"] = function(prompt_bufnr)
+	          end,
+1eb5603bbf082f3b7ecc93044f39e863|file:///Users/ankurahir/.config/nvim/lua/ankurahir/telescope.lua|3|5|V|lua
+	        },
+fd2ad8ea9fe6586bd78b94706277f0e8|file:///Users/ankurahir/.config/nvim/lua/ankurahir/telescope.lua|3|5|V|lua
+	      },
+bfef4935e0288f10478bf812873435e4|file:///Users/ankurahir/.config/nvim/lua/ankurahir/telescope.lua|3|5|V|lua
+	    },
+	    file_ignore_patterns = {"./node_modules/*", "node_modules", "^node_modules/*", "node_modules/*"},
+4f94b621d1743e8056e8c54b9d4bbf1d|file:///Users/ankurahir/.config/nvim/lua/ankurahir/telescope.lua|3|5|V|lua
+	    },
+8018d8e4c37807d9fc45f629eb354b6d|file:///Users/ankurahir/Documents/VS%20Code/waypoint/waypoint/screens/Create/ShowPost.tsx|17|26|V|typescriptreact
+	        marginTop: "auto",
+df00dc1fb73555b79e81539b1053a2ec|file:///Users/ankurahir/Documents/VS%20Code/waypoint/waypoint/screens/Create/ShowPost.tsx|17|26|V|typescriptreact
+	        marginBottom: "auto",
+3f697ad07ffc4ff97010470565137898|file:///Users/ankurahir/Documents/VS%20Code/waypoint/waypoint/screens/Create/ShowPost.tsx|16|12|V|typescriptreact
+	        style={{ alignSelf: "center" }}
+8a864cb2d50690401d9d53cf37bf6cbc|file:///Users/ankurahir/Documents/VS%20Code/waypoint/waypoint/screens/Create/ShowPost.tsx|18|1|V|typescriptreact
+	      <VideoViewer
+	        postUri={postUri}
+1efd08a066a3074177aeb289efa743fa|file:///Users/ankurahir/Documents/VS%20Code/waypoint/waypoint/screens/Create/ShowPost.tsx|18|1|V|typescriptreact
+	      <VideoViewer
+8082809bfeaaf17ed0570955d96cc2e4|file:///Users/ankurahir/Documents/VS%20Code/waypoint/waypoint/screens/Create/ShowPost.tsx|18|1|V|typescriptreact
+	      <VideoViewer
+	        postUri={postUri}
+	        messageCount={0}
+	        likes={0}
+0dfb1dd53bd20a074df7dfa45a86ff60|file:///Users/ankurahir/Documents/VS%20Code/waypoint/waypoint/screens/Create/ShowPost.tsx|18|1|V|typescriptreact
+	      <VideoViewer
+	        postUri={postUri}
+	        messageCount={0}
+	        likes={0}
+	      />
+0d12810174298620dae797d52e17af53|file:///Users/ankurahir/Documents/VS%20Code/waypoint/waypoint/screens/Create/ShowPost.tsx|23|7|V|typescriptreact
+	      <VideoViewer
+	        postUri={postUri}
+	        messageCount={0}
+	        likes={0}
+	      />
+	    </ScrollView>
+b1907528bdeda6a8e96c2caafec768b4|file:///Users/ankurahir/Documents/VS%20Code/waypoint/waypoint/screens/Create/ShowPost.tsx|1|1|V|typescriptreact
+	import { useRoute } from "@react-navigation/native";
+d7ce281b5002eb10111f5dfeeb69ffe1|file:///Users/ankurahir/.config/nvim/plugins.vim|23|1|V|vim
+	Plug 'stsewd/spotify.nvim', { 'do': ':UpdateRemotePlugins' }
+b5df312f6f3a76bb3e2b093c20ee7423|file:///Users/ankurahir/.config/nvim/lua/ankurahir/init.lua|2|1|V|lua
+	require('ankurahir/nvim-tree')
+4b84c7bb021d0e4b52ed6e25847d24c7|file:///Users/ankurahir/.config/nvim/plugins.vim|24|1|V|vim
+	Plugin 'valloric/youcompleteme'
+011c1c72807aa1834dcf3c126236b6bf|file:///Users/ankurahir/.config/nvim/init.vim|53|1|V|vim
+	nnoremap <C-space> :SpToggle <CR>
+23b6ea5033c2ae8570e7f8a3f82b6f7c|file:///Users/ankurahir/.config/nvim/init.vim|56|27|V|vim
+	nnoremap <C-9> :SpPrevious <CR>
+cee829543c68b0272e1f141ccc10b402|file:///Users/ankurahir/.config/nvim/init.vim|55|1|V|vim
+	nnoremap <C-]> :SpNext <CR>
+8a406063219c83cb36ed79a0c08fd3fc|file:///Users/ankurahir/.config/nvim/init.vim|56|1|V|vim
+	nnoremap <leader>x :SpPrevious <CR>
+f229634ae4b14ea5aea20818a79e20d3|file:///Users/ankurahir/.config/nvim/init.vim|55|1|V|vim
+	nnoremap <leader>z :SpNext <CR>
+f29e1a79bb7191d16d7d0576219c4094|file:///Users/ankurahir/.config/nvim/init.vim|27|1|V|vim
+	    \   'untracked': "★",
+9074501aed1f29e008c327cb8eff4fd4|file:///Users/ankurahir/.config/nvim/init.vim|27|1|V|vim
+	    \   'deleted': "",
+f0738b2c0b2bd36faa2021ea0d7e647d|file:///Users/ankurahir/.config/nvim/init.vim|27|1|V|vim
+	    \   'ignored': "◌"
+	    \   },
+	    \ 'folder': {
+	    \   'arrow_open': "",
+	    \   'arrow_closed': "",
+	    \   'default': "",
+	    \   'open': "",
+	    \   'empty': "",
+	    \   'empty_open': "",
+770ed52c2e6d58e5e143ae61902a4686|file:///Users/ankurahir/.config/nvim/init.vim|27|1|V|vim
+	    \   'symlink': "",
+	    \   'symlink_open': "",
+	    \   }
+	    \ }
+50fe03ab7bf37089a7e88da9b31ffb3b|file:///Users/ankurahir/Documents/VS%20Code/waypoint/waypoint/screens/Create/FullScreenView.tsx|11|11|v|typescriptreact
+	props
+36510987906cf3a70d3c896e5dc5bfc5|file:///Users/ankurahir/Documents/VS%20Code/waypoint/waypoint/screens/Home/VidView.tsx|35|1|^v|typescriptreact
+	          <Vi
+	            r
+	            s
+	            o
+	             
+	            }
+	            r
+	            o
+	             
+	             
+	             
+	            }
+	            s
+	             
+	             
+	            }
+	            s
+	            i
+	            o
+	             
+	            }
+	            u
+	            u
+	            i
+	          />
+38ecde807e3fe71d217febfea47af7ef|file:///Users/ankurahir/Documents/VS%20Code/waypoint/waypoint/screens/Home/VidView.tsx|34|1|V|typescriptreact
+	        >
+fd61f294d820b5b0547c60d896d1f9d3|file:///Users/ankurahir/Documents/VS%20Code/waypoint/waypoint/screens/Home/VidView.tsx|35|1|V|typescriptreact
+	          <Video
+	            ref={video}
+	            style={[styles.video, { width: SIZE, height: height }]}
+	            onReadyForDisplay={({ naturalSize: { width, height } }) => {
+	              setHeight(SIZE * (height / width));
+	            }}
+	            resizeMode={ResizeMode.CONTAIN}
+	            onFullscreenUpdate={(vid) => {
+	              if (vid.fullscreenUpdate == 3) {
+	                video.current?.playAsync();
+	              }
+	            }}
+	            source={{
+	              uri: postUri,
+	              overrideFileExtensionAndroid: "mp4",
+	            }}
+	            shouldPlay
+	            isMuted
+	            onPlaybackStatusUpdate={(curr: AVPlaybackStatus) =>
+	              setStatus(() => curr)
+	            }
+	            useNativeControls={false}
+	            usePoster
+	            isLooping
+	          />
+323e9cceca33383c1cd453027e1e8bda|file:///Users/ankurahir/Documents/VS%20Code/waypoint/waypoint/screens/Create/FullScreenView.tsx|17|5|V|typescriptreact
+	    >
+8f8d6b5eaeb62907a401db9a836c48e9|file:///Users/ankurahir/Documents/VS%20Code/waypoint/waypoint/screens/Create/FullScreenView.tsx|15|3|V|typescriptreact
+	    <Video
+a127fd1f86e4ab650f2216f09992afa4|file:///Users/ankurahir/Documents/VS%20Code/waypoint/waypoint/screens/Create/FullScreenView.tsx|15|3|V|typescriptreact
+	      
+f147587ff954e0482646a7393c6a2b9e|file:///Users/ankurahir/Documents/VS%20Code/waypoint/waypoint/screens/Home/VidView.tsx|34|1|V|typescriptreact
+	        >
+	          <Video
+ef475e7519e1a76c058b235744660a8b|file:///Users/ankurahir/Documents/VS%20Code/waypoint/waypoint/screens/Create/FullScreenView.tsx|19|33|V|typescriptreact
+	            onReadyForDisplay={({ naturalSize: { width, height } }) => {
+	              setHeight(SIZE * (height / width));
+	            }}
+84a2eccab6a781f6b49e70cb271f27bb|file:///Users/ankurahir/Documents/VS%20Code/waypoint/waypoint/screens/Create/CreatePostScreen.tsx|17|23|V|typescriptreact
+	import ShowPost from "./ShowPost";
+f325aba9b9b68c61d495aa678fd2c31a|file:///Users/ankurahir/Documents/VS%20Code/waypoint/waypoint/screens/Create/CreatePostScreen.tsx|16|1|V|typescriptreact
+	import VideoViewer from "../Home/VidView";
+1be5abe240648919c97bbed8b9523723|file:///Users/ankurahir/Documents/VS%20Code/waypoint/waypoint/screens/Home/VidView.tsx|18|1|V|typescriptreact
+	  const video = React.useRef<Video>(null);
+	  const [status, setStatus] = useState<AVPlaybackStatus>();
+	  const colorScheme = useColorScheme();
+dc0a13e0f447cae5118579ac5a5a912c|file:///Users/ankurahir/Documents/VS%20Code/waypoint/waypoint/screens/Create/FullScreenView.tsx|17|32|V|typescriptreact
+	  const colorScheme = useColorScheme();
+7c98f51aac1a3cf5e959337027f1e443|file:///Users/ankurahir/Documents/VS%20Code/waypoint/waypoint/screens/Home/VidView.tsx|3|1|V|typescriptreact
+	import { Video, AVPlaybackStatus, ResizeMode } from "expo-av";
+5ddb276ace9fbe2d3440cabdeff5b202|file:///Users/ankurahir/Documents/VS%20Code/waypoint/waypoint/screens/Create/FullScreenView.tsx|4|1|V|typescriptreact
+	import { Video } from "expo-av";
+df79701abf85746718d00bc4f4d1e998|file:///Users/ankurahir/Documents/VS%20Code/waypoint/waypoint/screens/Create/FullScreenView.tsx|22|1|V|typescriptreact
+	    <Video
+	      ref={video}
+	      style={{ width: width, height: height }}
+	      resizeMode={ResizeMode.CONTAIN}
+	      onFullscreenUpdate={(vid) => {
+	        if (vid.fullscreenUpdate == 3) {
+	          video.current?.playAsync();
+	        }
+	      }}
+	      source={{
+	        uri: postUri,
+	        overrideFileExtensionAndroid: "mp4",
+	      }}
+	      shouldPlay
+	      isMuted
+	      onPlaybackStatusUpdate={(curr: AVPlaybackStatus) => setStatus(() => curr)}
+	      useNativeControls={false}
+	      usePoster
+	      isLooping
+	    />
+0854ab9c81ff4cf4e3134d3bb09d8b09|file:///Users/ankurahir/Documents/VS%20Code/waypoint/waypoint/screens/Create/FullScreenView.tsx|22|1|V|typescriptreact
+	    <Video
+	      ref={video}
+2471b4bff7d876f65ba86119456e1953|file:///Users/ankurahir/Documents/VS%20Code/waypoint/waypoint/screens/Create/FullScreenView.tsx|21|1|V|typescriptreact
+	    </View>
+	  );
+f5d526d6ee937089d6bef8a5c2696456|file:///Users/ankurahir/Documents/VS%20Code/waypoint/waypoint/screens/Create/CreatePostScreen.tsx|91|1|V|typescriptreact
+	            <GoBack marginLeft={10} marginTop={50} />
+ff2380a9628a3742d0e82d9c30da0d27|file:///Users/ankurahir/Documents/VS%20Code/waypoint/waypoint/screens/Create/FullScreenView.tsx|21|21|V|typescriptreact
+	      <GoBack marginTop={10} marginLeft={50} />
+856dccd47563047b39fc431289197ca6|file:///Users/ankurahir/Documents/VS%20Code/waypoint/waypoint/screens/Create/FullScreenView.tsx|24|6|V|typescriptreact
+	      <GoBack marginLeft={10} marginTop={50} />
+0e9dd4f7a903aad28376f3a63ed5784e|file:///Users/ankurahir/Documents/VS%20Code/waypoint/waypoint/screens/Create/FullScreenView.tsx|23|13|V|typescriptreact
+	      </View>
+4b83efc8bae4ac7c0b05dfb2a54f5b9d|file:///Users/ankurahir/Documents/VS%20Code/waypoint/waypoint/screens/Create/FullScreenView.tsx|21|12|V|typescriptreact
+	      <View style={{ position: "absolute" }}>
+2ff2f611789f15cccbbca372ac917e64|file:///Users/ankurahir/Documents/VS%20Code/waypoint/waypoint/screens/Create/FullScreenView.tsx|52|26|V|typescriptreact
+	            alignContent: "flex-end",
+e35c5c759cfb9fdeeacd901dd5d53ac3|file:///Users/ankurahir/Documents/VS%20Code/waypoint/waypoint/screens/Create/FullScreenView.tsx|51|12|V|typescriptreact
+	            justifyContent: "flex-end",
+791c075852e0ed06b497c74d0fa8b66b|file:///Users/ankurahir/Documents/VS%20Code/waypoint/waypoint/screens/Create/FullScreenView.tsx|61|17|^v|typescriptreact
+	style={{ paddingHorizontal: 15, paddingVertical: 10 }}
+5e3afbf94c04cce9ec23ce4abb283356|file:///Users/ankurahir/Documents/VS%20Code/waypoint/waypoint/screens/Create/FullScreenView.tsx|60|1|V|typescriptreact
+	          <AntDesign name="arrowright" size={24} color="black" />
+	          <Text style={{ paddingHorizontal: 15, paddingVertical: 10 }}>
+0f888202cfba6029cc5ee83f6fbcd151|file:///Users/ankurahir/Documents/VS%20Code/waypoint/waypoint/screens/Create/FullScreenView.tsx|67|12|V|typescriptreact
+	          <Text style={{}}>Testing...</Text>
+95536c5ee0223f1609705cc4500c7c39|file:///Users/ankurahir/Documents/VS%20Code/waypoint/waypoint/screens/Create/FullScreenView.tsx|73|65|V|typescriptreact
+	            style={{ paddingHorizontal: 10, paddingVertical: 10 }}
+15305c16f34580b2d6cabb59c7eb6c59|file:///Users/ankurahir/Documents/VS%20Code/waypoint/waypoint/screens/Create/FullScreenView.tsx|66|29|V|typescriptreact
+	              paddingHorizontal: 10,
+daab568c2f114d6e608295df77d3cd61|file:///Users/ankurahir/Documents/VS%20Code/waypoint/waypoint/screens/Create/FullScreenView.tsx|66|29|V|typescriptreact
+	              paddingVertical: 10,
+343246b12f1753de0937e4a9647a749a|file:///Users/ankurahir/Documents/VS%20Code/waypoint/waypoint/screens/Create/FullScreenView.tsx|56|57|V|typescriptreact
+	            backgroundColor: Colors["constants"].primary,
+e48828e00a93a51f08ca104366a391e4|file:///Users/ankurahir/Documents/VS%20Code/waypoint/waypoint/screens/Create/FullScreenView.tsx|56|29|V|typescriptreact
+	            borderRadius: 10,
+f47a1c13a67a195cff6870364169c7db|file:///Users/ankurahir/Documents/VS%20Code/waypoint/waypoint/screens/Create/FullScreenView.tsx|56|29|V|typescriptreact
+	            flexDirection: "row",
+2e06aa886e604fc00c3609da5a550ee3|file:///Users/ankurahir/Documents/VS%20Code/waypoint/waypoint/components/cacheImage.ts|25|2|V|typescript
+	      console.log("read image from cache");
+122e06f3533dc4bb7a3d82311ad9b2a1|file:///Users/ankurahir/Documents/VS%20Code/waypoint/waypoint/components/cacheImage.ts|23|1|V|typescript
+	    const path = `${FileSystem.cacheDirectory}${name}`;
+544c5c2dfc4c28bf346ece05380270a8|file:///Users/ankurahir/Documents/VS%20Code/waypoint/waypoint/components/cacheImage.ts|11|42|V|typescript
+	  const path = `${FileSystem.cacheDirectory}${name}`;
+e3a877b09a280c2281665f18974069f4|file:///Users/ankurahir/Documents/VS%20Code/waypoint/waypoint/components/cacheImage.ts|40|1|V|typescript
+	    const newImage = await FileSystem.downloadAsync(uri, path);
+70960d6da244158222a0caff25eb838b|file:///Users/ankurahir/Documents/VS%20Code/waypoint/waypoint/components/cacheImage.ts|26|35|V|typescript
+	  componentDidMount = async () => {
+fd87c057e5a6768432d6c267677248e1|file:///Users/ankurahir/Documents/VS%20Code/waypoint/waypoint/components/cacheImage.ts|26|31|V|typescript
+	    const { uri } = this.props;
+bf9a708a2dd89d8313e27b00310d5ee7|file:///Users/ankurahir/Documents/VS%20Code/waypoint/waypoint/components/cacheImage.ts|26|31|V|typescript
+	    const name = shorthash.unique(uri);
+325528e2b039d158eaa0767a32652749|file:///Users/ankurahir/Documents/VS%20Code/waypoint/waypoint/components/cacheImage.ts|26|22|V|typescript
+	    console.log(name);
+	    const path = `${FileSystem.cacheDirectory}${name}`;
+	    const image = await FileSystem.getInfoAsync(path);
+	    if (image.exists) {
+	      this.setState({
+1bb30a5f7f98ce320e2a3591ccd01716|file:///Users/ankurahir/Documents/VS%20Code/waypoint/waypoint/components/cacheImage.ts|28|9|V|typescript
+	      });
+44ae1c8f7eba9706f3b58da61a214a8e|file:///Users/ankurahir/Documents/VS%20Code/waypoint/waypoint/components/cacheImage.ts|26|9|V|typescript
+	        source: {
+4c2ec96cd0ba0c8bfbab5f309facc6f2|file:///Users/ankurahir/Documents/VS%20Code/waypoint/waypoint/components/cacheImage.ts|27|9|V|typescript
+	      return;
+	    }
+07ab0682f941c0f73b69ba9371bcbb1e|file:///Users/ankurahir/Documents/VS%20Code/waypoint/waypoint/components/cacheImage.ts|27|1|V|typescript
+	
+	    console.log("downloading image to cache");
+84ac624a3e713095dc98334439380683|file:///Users/ankurahir/Documents/VS%20Code/waypoint/waypoint/components/cacheImage.ts|28|1|V|typescript
+	      source: {
+	        uri: newImage.uri,
+f74218384aae33674c8bfb1afa055b21|file:///Users/ankurahir/Documents/VS%20Code/waypoint/waypoint/components/cacheImage.ts|28|1|V|typescript
+	    });
+4ac3986f2badc1480056dffb47b37079|file:///Users/ankurahir/Documents/VS%20Code/waypoint/waypoint/components/cacheImage.ts|28|1|V|typescript
+	  };
+72bc04716f22f7be6390002f09ef17c7|file:///Users/ankurahir/Documents/VS%20Code/waypoint/waypoint/components/cacheImage.ts|28|1|V|typescript
+	  render() {
+2548deaa18ec6d18bd7f52123cf7473e|file:///Users/ankurahir/Documents/VS%20Code/waypoint/waypoint/components/cacheImage.ts|28|1|V|typescript
+	    return <Image style={this.props.style} source={this.state.source} />;
+17dab2185e6cd296921ba1d0b899b845|file:///Users/ankurahir/Documents/VS%20Code/waypoint/waypoint/components/cacheImage.ts|26|1|V|typescript
+	          uri: image.uri,
+	    this.setState({
+d966c1118932c50cb1843ce7cb593f6c|file:///Users/ankurahir/Documents/VS%20Code/waypoint/waypoint/components/cacheImage.ts|22|1|V|typescript
+	  state = {
+efec263b4d64a391d09b95e8f45d8bae|file:///Users/ankurahir/Documents/VS%20Code/waypoint/waypoint/components/cacheImage.ts|22|1|V|typescript
+	    source: null,
+23e95fe388b3a5d732d8d2257610b7e7|file:///Users/ankurahir/Documents/VS%20Code/waypoint/waypoint/components/cacheImage.ts|21|1|V|typescript
+	export default class CacheImage extends React.Component {
+	
+bf5b17fac5c60d745a593b5920372235|file:///Users/ankurahir/Documents/VS%20Code/waypoint/waypoint/screens/Home/HomeScreen.tsx|42|11|v|typescriptreact
+	effect
+037940a10f3d0fcba8dcb4a6aa6e3e57|file:///Users/ankurahir/Documents/VS%20Code/waypoint/waypoint/screens/Home/HomeScreen.tsx|46|1|V|typescriptreact
+	  for (int i = 0; i < PostImageData.length; i++) {
+	  PostImageData[i].postUri = findCache(PostImageData[i].postUri);
+	}
+b61e4ef04a4f1be6aba53b90eb2ce2ba|file:///Users/ankurahir/Documents/VS%20Code/waypoint/waypoint/screens/Home/HomeScreen.tsx|44|1|V|typescriptreact
+	useEffect(async () => {
+	  for (let i = 0; i < PostImageData.length; i++) {
+	    PostImageData[i].postUri = await findCache(PostImageData[i].postUri);
+	  }
+3c0cb84e34f15bb58a62fefb542ec1fd|file:///Users/ankurahir/Documents/VS%20Code/waypoint/waypoint/screens/Home/HomeScreen.tsx|44|1|V|typescriptreact
+	useEffect(async () => {
+	  for (let i = 0; i < PostImageData.length; i++) {
+	    PostImageData[i].postUri = await findCache(PostImageData[i].postUri);
+	  }
+	}, []);
+1a64614be58b8d4935a6b30a1c79b7f8|file:///Users/ankurahir/Documents/VS%20Code/waypoint/waypoint/screens/Create/CreatePostScreen.tsx|69|1|V|typescriptreact
+	    const photo = await camera.takePictureAsync({ quality: 1, base64: true });
+	    setRecord(photo.uri);
+	    setIfPost(true);
+0b5ea967dae15796bea325487c765e67|file:///Users/ankurahir/Documents/VS%20Code/waypoint/waypoint/screens/Create/CreatePostScreen.tsx|136|31|V|typescriptreact
+	                  console.log("take picture");
+0a3a8c54a223b9095fee7cbb67c01120|file:///Users/ankurahir/Documents/VS%20Code/waypoint/waypoint/screens/Home/VidView.tsx|53|1|V|typescriptreact
+	            isMuted

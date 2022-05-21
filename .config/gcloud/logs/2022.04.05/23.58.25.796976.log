@@ -1,0 +1,71 @@
+2022-04-05 23:58:25,798 DEBUG    root            Loaded Command Group: ['gcloud', 'run']
+2022-04-05 23:58:25,820 DEBUG    root            Loaded Command Group: ['gcloud', 'run', 'deploy']
+2022-04-05 23:58:25,826 DEBUG    root            Running [gcloud.run.deploy] with arguments: [--clear-env-vars: "True", --cpu: "1", --image: "us-east1-docker.pkg.dev/greenday-6aba2/greenday/app:latest", --max-instances: "<googlecloudsdk.command_lib.run.flags._ScaleValue object at 0x104f09bb0>", --memory: "512MB", --min-instances: "<googlecloudsdk.command_lib.run.flags._ScaleValue object at 0x104f09df0>", --region: "us-east1", --service-account: "greenday-service-account@greenday-6aba2.iam.gserviceaccount.com", SERVICE: "discordbot"]
+2022-04-05 23:58:25,860 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): us-east1-run.googleapis.com:443
+2022-04-05 23:58:26,407 DEBUG    urllib3.connectionpool https://us-east1-run.googleapis.com:443 "GET /apis/serving.knative.dev/v1/namespaces/greenday-6aba2/services/discordbot?alt=json HTTP/1.1" 404 None
+2022-04-05 23:58:26,824 DEBUG    urllib3.connectionpool https://us-east1-run.googleapis.com:443 "POST /v1/projects/greenday-6aba2/locations/us-east1/services/discordbot:testIamPermissions?alt=json HTTP/1.1" 200 None
+2022-04-05 23:58:30,554 INFO     ___FILE_ONLY___ Deploying container to Cloud Run service [[1mdiscordbot[m] in project [[1mgreenday-6aba2[m] region [[1mus-east1[m]
+
+2022-04-05 23:58:30,555 INFO     ___FILE_ONLY___ Deploying new service...
+2022-04-05 23:58:31,024 DEBUG    urllib3.connectionpool https://us-east1-run.googleapis.com:443 "POST /apis/serving.knative.dev/v1/namespaces/greenday-6aba2/services?alt=json HTTP/1.1" 400 None
+2022-04-05 23:58:31,075 DEBUG    root            (gcloud.run.deploy) could not match suffix MB while parsing Quantity. Allowed values are [m, k, M, G, T, Ki, Mi, Gi, Ti, Pi, Ei]
+Traceback (most recent call last):
+  File "/Users/ankurahir/Documents/G-Cloud/google-cloud-sdk/lib/googlecloudsdk/command_lib/run/serverless_operations.py", line 935, in _UpdateOrCreateService
+    raw_service = self._client.namespaces_services.Create(serv_create_req)
+  File "/Users/ankurahir/Documents/G-Cloud/google-cloud-sdk/lib/googlecloudsdk/third_party/apis/run/v1/run_v1_client.py", line 901, in Create
+    return self._RunMethod(
+  File "/Users/ankurahir/Documents/G-Cloud/google-cloud-sdk/lib/third_party/apitools/base/py/base_api.py", line 737, in _RunMethod
+    return self.ProcessHttpResponse(method_config, http_response, request)
+  File "/Users/ankurahir/Documents/G-Cloud/google-cloud-sdk/lib/third_party/apitools/base/py/base_api.py", line 743, in ProcessHttpResponse
+    self.__ProcessHttpResponse(method_config, http_response, request))
+  File "/Users/ankurahir/Documents/G-Cloud/google-cloud-sdk/lib/third_party/apitools/base/py/base_api.py", line 609, in __ProcessHttpResponse
+    raise exceptions.HttpError.FromResponse(
+apitools.base.py.exceptions.HttpBadRequestError: HttpError accessing <https://us-east1-run.googleapis.com/apis/serving.knative.dev/v1/namespaces/greenday-6aba2/services?alt=json>: response: <{'vary': 'Origin, X-Origin, Referer', 'content-type': 'application/json; charset=UTF-8', 'content-encoding': 'gzip', 'date': 'Wed, 06 Apr 2022 06:58:31 GMT', 'server': 'ESF', 'cache-control': 'private', 'x-xss-protection': '0', 'x-frame-options': 'SAMEORIGIN', 'x-content-type-options': 'nosniff', 'alt-svc': 'h3=":443"; ma=2592000,h3-29=":443"; ma=2592000,h3-Q050=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"', 'transfer-encoding': 'chunked', 'status': 400}>, content <{
+  "error": {
+    "code": 400,
+    "message": "spec.template.spec.containers[0].resources.limits.memory: could not match suffix MB while parsing Quantity. Allowed values are [m, k, M, G, T, Ki, Mi, Gi, Ti, Pi, Ei]",
+    "status": "INVALID_ARGUMENT",
+    "details": [
+      {
+        "@type": "type.googleapis.com/google.rpc.BadRequest",
+        "fieldViolations": [
+          {
+            "field": "spec.template.spec.containers[0].resources.limits.memory",
+            "description": "could not match suffix MB while parsing Quantity. Allowed values are [m, k, M, G, T, Ki, Mi, Gi, Ti, Pi, Ei]"
+          }
+        ]
+      }
+    ]
+  }
+}
+>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/ankurahir/Documents/G-Cloud/google-cloud-sdk/lib/googlecloudsdk/calliope/cli.py", line 987, in Execute
+    resources = calliope_command.Run(cli=self, args=args)
+  File "/Users/ankurahir/Documents/G-Cloud/google-cloud-sdk/lib/googlecloudsdk/calliope/backend.py", line 809, in Run
+    resources = command_instance.Run(args)
+  File "/Users/ankurahir/Documents/G-Cloud/google-cloud-sdk/lib/surface/run/deploy.py", line 265, in Run
+    service = operations.ReleaseService(
+  File "/Users/ankurahir/Documents/G-Cloud/google-cloud-sdk/lib/googlecloudsdk/command_lib/run/serverless_operations.py", line 1145, in ReleaseService
+    created_or_updated_service = self._UpdateOrCreateService(
+  File "/Users/ankurahir/Documents/G-Cloud/google-cloud-sdk/lib/googlecloudsdk/command_lib/run/serverless_operations.py", line 940, in _UpdateOrCreateService
+    exceptions.reraise(serverless_exceptions.HttpError(e))
+  File "/Users/ankurahir/Documents/G-Cloud/google-cloud-sdk/lib/googlecloudsdk/core/exceptions.py", line 146, in reraise
+    six.reraise(type(exc_value), exc_value, tb)
+  File "/Users/ankurahir/Documents/G-Cloud/google-cloud-sdk/lib/third_party/six/__init__.py", line 692, in reraise
+    raise value.with_traceback(tb)
+  File "/Users/ankurahir/Documents/G-Cloud/google-cloud-sdk/lib/googlecloudsdk/command_lib/run/serverless_operations.py", line 935, in _UpdateOrCreateService
+    raw_service = self._client.namespaces_services.Create(serv_create_req)
+  File "/Users/ankurahir/Documents/G-Cloud/google-cloud-sdk/lib/googlecloudsdk/third_party/apis/run/v1/run_v1_client.py", line 901, in Create
+    return self._RunMethod(
+  File "/Users/ankurahir/Documents/G-Cloud/google-cloud-sdk/lib/third_party/apitools/base/py/base_api.py", line 737, in _RunMethod
+    return self.ProcessHttpResponse(method_config, http_response, request)
+  File "/Users/ankurahir/Documents/G-Cloud/google-cloud-sdk/lib/third_party/apitools/base/py/base_api.py", line 743, in ProcessHttpResponse
+    self.__ProcessHttpResponse(method_config, http_response, request))
+  File "/Users/ankurahir/Documents/G-Cloud/google-cloud-sdk/lib/third_party/apitools/base/py/base_api.py", line 609, in __ProcessHttpResponse
+    raise exceptions.HttpError.FromResponse(
+googlecloudsdk.command_lib.run.exceptions.HttpError: could not match suffix MB while parsing Quantity. Allowed values are [m, k, M, G, T, Ki, Mi, Gi, Ti, Pi, Ei]
+2022-04-05 23:58:31,083 ERROR    root            (gcloud.run.deploy) could not match suffix MB while parsing Quantity. Allowed values are [m, k, M, G, T, Ki, Mi, Gi, Ti, Pi, Ei]

@@ -1,0 +1,15 @@
+2022-04-05 23:53:48,752 DEBUG    root            Loaded Command Group: ['gcloud', 'run']
+2022-04-05 23:53:48,780 DEBUG    root            Loaded Command Group: ['gcloud', 'run', 'deploy']
+2022-04-05 23:53:48,787 DEBUG    root            Running [gcloud.run.deploy] with arguments: [--clear-env-vars: "True", --cpu: "1", --image: "us-east1-docker.pkg.dev/greenday-6aba2/greenday/app:latest", --max-instances: "<googlecloudsdk.command_lib.run.flags._ScaleValue object at 0x1055a7dc0>", --memory: "512MB", --min-instances: "<googlecloudsdk.command_lib.run.flags._ScaleValue object at 0x1055a73d0>", --region: "us-east1", --service-account: "greenday-service-account@greenday-6aba2.iam.gserviceaccount.com", SERVICE: "discordBot"]
+2022-04-05 23:53:48,788 DEBUG    root            (gcloud.run.deploy) Invalid resource name [discordBot]. The name must use only lowercase alphanumeric characters and dashes, cannot begin or end with a dash, and cannot be longer than 63 characters.
+Traceback (most recent call last):
+  File "/Users/ankurahir/Documents/G-Cloud/google-cloud-sdk/lib/googlecloudsdk/calliope/cli.py", line 987, in Execute
+    resources = calliope_command.Run(cli=self, args=args)
+  File "/Users/ankurahir/Documents/G-Cloud/google-cloud-sdk/lib/googlecloudsdk/calliope/backend.py", line 809, in Run
+    resources = command_instance.Run(args)
+  File "/Users/ankurahir/Documents/G-Cloud/google-cloud-sdk/lib/surface/run/deploy.py", line 181, in Run
+    flags.ValidateResource(service_ref)
+  File "/Users/ankurahir/Documents/G-Cloud/google-cloud-sdk/lib/googlecloudsdk/command_lib/run/flags.py", line 1551, in ValidateResource
+    raise serverless_exceptions.ArgumentError(
+googlecloudsdk.command_lib.run.exceptions.ArgumentError: Invalid resource name [discordBot]. The name must use only lowercase alphanumeric characters and dashes, cannot begin or end with a dash, and cannot be longer than 63 characters.
+2022-04-05 23:53:48,789 ERROR    root            (gcloud.run.deploy) Invalid resource name [discordBot]. The name must use only lowercase alphanumeric characters and dashes, cannot begin or end with a dash, and cannot be longer than 63 characters.

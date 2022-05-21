@@ -1,0 +1,268 @@
+2022-03-29 14:18:06,674 DEBUG    root            Loaded Command Group: ['gcloud', 'builds']
+2022-03-29 14:18:06,689 DEBUG    root            Loaded Command Group: ['gcloud', 'builds', 'submit']
+2022-03-29 14:18:06,696 DEBUG    root            Running [gcloud.builds.submit] with arguments: [--project: "greenday-6aba2", --tag: "us-east1-docker.pkg.dev/greenday-6aba2/greenday/multi:latest"]
+2022-03-29 14:18:06,705 DEBUG    google.auth.transport.requests Making request: POST https://oauth2.googleapis.com/token
+2022-03-29 14:18:06,715 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): oauth2.googleapis.com:443
+2022-03-29 14:18:06,716 DEBUG    google.auth.transport.requests Making request: POST https://oauth2.googleapis.com/token
+2022-03-29 14:18:06,717 DEBUG    urllib3.connectionpool Starting new HTTPS connection (2): oauth2.googleapis.com:443
+2022-03-29 14:18:06,717 DEBUG    root            HTTPSConnectionPool(host='oauth2.googleapis.com', port=443): Max retries exceeded with url: /token (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x10616b670>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+Traceback (most recent call last):
+  File "/Users/ankurahir/Documents/G-Cloud/google-cloud-sdk/lib/third_party/urllib3/connection.py", line 159, in _new_conn
+    conn = connection.create_connection(
+  File "/Users/ankurahir/Documents/G-Cloud/google-cloud-sdk/lib/third_party/urllib3/util/connection.py", line 61, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/socket.py", line 954, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 8] nodename nor servname provided, or not known
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/ankurahir/Documents/G-Cloud/google-cloud-sdk/lib/third_party/urllib3/connectionpool.py", line 670, in urlopen
+    httplib_response = self._make_request(
+  File "/Users/ankurahir/Documents/G-Cloud/google-cloud-sdk/lib/third_party/urllib3/connectionpool.py", line 381, in _make_request
+    self._validate_conn(conn)
+  File "/Users/ankurahir/Documents/G-Cloud/google-cloud-sdk/lib/third_party/urllib3/connectionpool.py", line 976, in _validate_conn
+    conn.connect()
+  File "/Users/ankurahir/Documents/G-Cloud/google-cloud-sdk/lib/third_party/urllib3/connection.py", line 308, in connect
+    conn = self._new_conn()
+  File "/Users/ankurahir/Documents/G-Cloud/google-cloud-sdk/lib/third_party/urllib3/connection.py", line 171, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPSConnection object at 0x10616b670>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/ankurahir/Documents/G-Cloud/google-cloud-sdk/lib/third_party/requests/adapters.py", line 439, in send
+    resp = conn.urlopen(
+  File "/Users/ankurahir/Documents/G-Cloud/google-cloud-sdk/lib/third_party/urllib3/connectionpool.py", line 724, in urlopen
+    retries = retries.increment(
+  File "/Users/ankurahir/Documents/G-Cloud/google-cloud-sdk/lib/third_party/urllib3/util/retry.py", line 439, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='oauth2.googleapis.com', port=443): Max retries exceeded with url: /token (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x10616b670>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/ankurahir/Documents/G-Cloud/google-cloud-sdk/lib/third_party/google/auth/transport/requests.py", line 183, in __call__
+    response = self.session.request(
+  File "/Users/ankurahir/Documents/G-Cloud/google-cloud-sdk/lib/googlecloudsdk/core/transport.py", line 251, in WrappedRequest
+    response = orig_request(*modified_args, **modified_kwargs)
+  File "/Users/ankurahir/Documents/G-Cloud/google-cloud-sdk/lib/googlecloudsdk/core/requests.py", line 216, in WrappedRequest
+    return orig_request_method(*args, **kwargs)
+  File "/Users/ankurahir/Documents/G-Cloud/google-cloud-sdk/lib/third_party/requests/sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/Users/ankurahir/Documents/G-Cloud/google-cloud-sdk/lib/third_party/requests/sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "/Users/ankurahir/Documents/G-Cloud/google-cloud-sdk/lib/third_party/requests/adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='oauth2.googleapis.com', port=443): Max retries exceeded with url: /token (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x10616b670>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/ankurahir/Documents/G-Cloud/google-cloud-sdk/lib/googlecloudsdk/calliope/cli.py", line 987, in Execute
+    resources = calliope_command.Run(cli=self, args=args)
+  File "/Users/ankurahir/Documents/G-Cloud/google-cloud-sdk/lib/googlecloudsdk/calliope/backend.py", line 809, in Run
+    resources = command_instance.Run(args)
+  File "/Users/ankurahir/Documents/G-Cloud/google-cloud-sdk/lib/surface/builds/submit.py", line 154, in Run
+    build_config = submit_util.CreateBuildConfig(
+  File "/Users/ankurahir/Documents/G-Cloud/google-cloud-sdk/lib/googlecloudsdk/command_lib/builds/submit_util.py", line 438, in CreateBuildConfig
+    build_config = _SetSource(build_config, messages, is_specified_source,
+  File "/Users/ankurahir/Documents/G-Cloud/google-cloud-sdk/lib/googlecloudsdk/command_lib/builds/submit_util.py", line 233, in _SetSource
+    gcs_client = storage_api.StorageClient()
+  File "/Users/ankurahir/Documents/G-Cloud/google-cloud-sdk/lib/googlecloudsdk/api_lib/storage/storage_api.py", line 91, in __init__
+    self.client = client or storage_util.GetClient()
+  File "/Users/ankurahir/Documents/G-Cloud/google-cloud-sdk/lib/googlecloudsdk/api_lib/storage/storage_util.py", line 294, in GetClient
+    return core_apis.GetClientInstance('storage', 'v1')
+  File "/Users/ankurahir/Documents/G-Cloud/google-cloud-sdk/lib/googlecloudsdk/api_lib/util/apis.py", line 244, in GetClientInstance
+    return apis_internal._GetClientInstance(api_name, api_version, no_http, None,
+  File "/Users/ankurahir/Documents/G-Cloud/google-cloud-sdk/lib/googlecloudsdk/api_lib/util/apis_internal.py", line 168, in _GetClientInstance
+    http_client = transports.GetApitoolsTransport(
+  File "/Users/ankurahir/Documents/G-Cloud/google-cloud-sdk/lib/googlecloudsdk/core/credentials/transports.py", line 80, in GetApitoolsTransport
+    session = requests.GetSession(
+  File "/Users/ankurahir/Documents/G-Cloud/google-cloud-sdk/lib/googlecloudsdk/core/credentials/requests.py", line 78, in GetSession
+    session = request_wrapper.WrapQuota(session, enable_resource_quota,
+  File "/Users/ankurahir/Documents/G-Cloud/google-cloud-sdk/lib/googlecloudsdk/core/credentials/requests.py", line 111, in WrapQuota
+    quota_project = self.QuotaProject(enable_resource_quota,
+  File "/Users/ankurahir/Documents/G-Cloud/google-cloud-sdk/lib/googlecloudsdk/core/credentials/transport.py", line 55, in QuotaProject
+    creds = store.LoadIfEnabled(allow_account_impersonation, use_google_auth)
+  File "/Users/ankurahir/Documents/G-Cloud/google-cloud-sdk/lib/googlecloudsdk/core/credentials/store.py", line 455, in LoadIfEnabled
+    return Load(
+  File "/Users/ankurahir/Documents/G-Cloud/google-cloud-sdk/lib/googlecloudsdk/core/credentials/store.py", line 560, in Load
+    cred = _Load(account, scopes, prevent_refresh, use_google_auth)
+  File "/Users/ankurahir/Documents/G-Cloud/google-cloud-sdk/lib/googlecloudsdk/core/credentials/store.py", line 713, in _Load
+    RefreshIfAlmostExpire(cred)
+  File "/Users/ankurahir/Documents/G-Cloud/google-cloud-sdk/lib/googlecloudsdk/core/credentials/store.py", line 927, in RefreshIfAlmostExpire
+    RefreshIfExpireWithinWindow(credentials, window=_CREDENTIALS_EXPIRY_WINDOW)
+  File "/Users/ankurahir/Documents/G-Cloud/google-cloud-sdk/lib/googlecloudsdk/core/credentials/store.py", line 923, in RefreshIfExpireWithinWindow
+    Refresh(credentials)
+  File "/Users/ankurahir/Documents/G-Cloud/google-cloud-sdk/lib/googlecloudsdk/core/credentials/store.py", line 757, in Refresh
+    _RefreshGoogleAuth(credentials, http_client, is_impersonated_credential,
+  File "/Users/ankurahir/Documents/G-Cloud/google-cloud-sdk/lib/googlecloudsdk/core/credentials/store.py", line 867, in _RefreshGoogleAuth
+    credentials.refresh(request_client)
+  File "/Users/ankurahir/Documents/G-Cloud/google-cloud-sdk/lib/googlecloudsdk/core/credentials/creds.py", line 553, in _WrappedRefresh
+    orig_refresh(request)
+  File "/Users/ankurahir/Documents/G-Cloud/google-cloud-sdk/lib/googlecloudsdk/core/credentials/google_auth_credentials.py", line 102, in refresh
+    return self._Refresh(request)
+  File "/Users/ankurahir/Documents/G-Cloud/google-cloud-sdk/lib/googlecloudsdk/core/credentials/google_auth_credentials.py", line 129, in _Refresh
+    access_token, refresh_token, expiry, grant_response = _RefreshGrant(
+  File "/Users/ankurahir/Documents/G-Cloud/google-cloud-sdk/lib/googlecloudsdk/core/credentials/google_auth_credentials.py", line 206, in _RefreshGrant
+    response_data = _TokenEndpointRequestWithRetry(request, token_uri, body)
+  File "/Users/ankurahir/Documents/G-Cloud/google-cloud-sdk/lib/googlecloudsdk/core/util/retry.py", line 312, in DecoratedFunction
+    exceptions.reraise(to_reraise[1], tb=to_reraise[2])
+  File "/Users/ankurahir/Documents/G-Cloud/google-cloud-sdk/lib/googlecloudsdk/core/exceptions.py", line 146, in reraise
+    six.reraise(type(exc_value), exc_value, tb)
+  File "/Users/ankurahir/Documents/G-Cloud/google-cloud-sdk/lib/third_party/six/__init__.py", line 693, in reraise
+    raise value
+  File "/Users/ankurahir/Documents/G-Cloud/google-cloud-sdk/lib/googlecloudsdk/core/util/retry.py", line 182, in TryFunc
+    return func(*args, **kwargs), None
+  File "/Users/ankurahir/Documents/G-Cloud/google-cloud-sdk/lib/googlecloudsdk/core/credentials/google_auth_credentials.py", line 262, in _TokenEndpointRequestWithRetry
+    response = request(method='POST', url=token_uri, headers=headers, body=body)
+  File "/Users/ankurahir/Documents/G-Cloud/google-cloud-sdk/lib/third_party/google/auth/transport/requests.py", line 189, in __call__
+    six.raise_from(new_exc, caught_exc)
+  File "<string>", line 3, in raise_from
+google.auth.exceptions.TransportError: HTTPSConnectionPool(host='oauth2.googleapis.com', port=443): Max retries exceeded with url: /token (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x10616b670>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2022-03-29 14:18:06,725 ERROR    ___FILE_ONLY___ BEGIN CRASH STACKTRACE
+Traceback (most recent call last):
+  File "/Users/ankurahir/Documents/G-Cloud/google-cloud-sdk/lib/third_party/urllib3/connection.py", line 159, in _new_conn
+    conn = connection.create_connection(
+  File "/Users/ankurahir/Documents/G-Cloud/google-cloud-sdk/lib/third_party/urllib3/util/connection.py", line 61, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/socket.py", line 954, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 8] nodename nor servname provided, or not known
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/ankurahir/Documents/G-Cloud/google-cloud-sdk/lib/third_party/urllib3/connectionpool.py", line 670, in urlopen
+    httplib_response = self._make_request(
+  File "/Users/ankurahir/Documents/G-Cloud/google-cloud-sdk/lib/third_party/urllib3/connectionpool.py", line 381, in _make_request
+    self._validate_conn(conn)
+  File "/Users/ankurahir/Documents/G-Cloud/google-cloud-sdk/lib/third_party/urllib3/connectionpool.py", line 976, in _validate_conn
+    conn.connect()
+  File "/Users/ankurahir/Documents/G-Cloud/google-cloud-sdk/lib/third_party/urllib3/connection.py", line 308, in connect
+    conn = self._new_conn()
+  File "/Users/ankurahir/Documents/G-Cloud/google-cloud-sdk/lib/third_party/urllib3/connection.py", line 171, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPSConnection object at 0x10616b670>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/ankurahir/Documents/G-Cloud/google-cloud-sdk/lib/third_party/requests/adapters.py", line 439, in send
+    resp = conn.urlopen(
+  File "/Users/ankurahir/Documents/G-Cloud/google-cloud-sdk/lib/third_party/urllib3/connectionpool.py", line 724, in urlopen
+    retries = retries.increment(
+  File "/Users/ankurahir/Documents/G-Cloud/google-cloud-sdk/lib/third_party/urllib3/util/retry.py", line 439, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='oauth2.googleapis.com', port=443): Max retries exceeded with url: /token (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x10616b670>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/ankurahir/Documents/G-Cloud/google-cloud-sdk/lib/third_party/google/auth/transport/requests.py", line 183, in __call__
+    response = self.session.request(
+  File "/Users/ankurahir/Documents/G-Cloud/google-cloud-sdk/lib/googlecloudsdk/core/transport.py", line 251, in WrappedRequest
+    response = orig_request(*modified_args, **modified_kwargs)
+  File "/Users/ankurahir/Documents/G-Cloud/google-cloud-sdk/lib/googlecloudsdk/core/requests.py", line 216, in WrappedRequest
+    return orig_request_method(*args, **kwargs)
+  File "/Users/ankurahir/Documents/G-Cloud/google-cloud-sdk/lib/third_party/requests/sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/Users/ankurahir/Documents/G-Cloud/google-cloud-sdk/lib/third_party/requests/sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "/Users/ankurahir/Documents/G-Cloud/google-cloud-sdk/lib/third_party/requests/adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='oauth2.googleapis.com', port=443): Max retries exceeded with url: /token (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x10616b670>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/ankurahir/Documents/G-Cloud/google-cloud-sdk/lib/googlecloudsdk/command_lib/crash_handling.py", line 190, in Wrapper
+    target_function(*args, **kwargs)
+  File "/Users/ankurahir/Documents/G-Cloud/google-cloud-sdk/lib/googlecloudsdk/gcloud_main.py", line 202, in main
+    gcloud_cli.Execute()
+  File "/Users/ankurahir/Documents/G-Cloud/google-cloud-sdk/lib/googlecloudsdk/calliope/cli.py", line 1013, in Execute
+    self._HandleAllErrors(exc, command_path_string, specified_arg_names)
+  File "/Users/ankurahir/Documents/G-Cloud/google-cloud-sdk/lib/googlecloudsdk/calliope/cli.py", line 1050, in _HandleAllErrors
+    exceptions.HandleError(exc, command_path_string, self.__known_error_handler)
+  File "/Users/ankurahir/Documents/G-Cloud/google-cloud-sdk/lib/googlecloudsdk/calliope/exceptions.py", line 547, in HandleError
+    core_exceptions.reraise(exc)
+  File "/Users/ankurahir/Documents/G-Cloud/google-cloud-sdk/lib/googlecloudsdk/core/exceptions.py", line 146, in reraise
+    six.reraise(type(exc_value), exc_value, tb)
+  File "/Users/ankurahir/Documents/G-Cloud/google-cloud-sdk/lib/third_party/six/__init__.py", line 693, in reraise
+    raise value
+  File "/Users/ankurahir/Documents/G-Cloud/google-cloud-sdk/lib/googlecloudsdk/calliope/cli.py", line 987, in Execute
+    resources = calliope_command.Run(cli=self, args=args)
+  File "/Users/ankurahir/Documents/G-Cloud/google-cloud-sdk/lib/googlecloudsdk/calliope/backend.py", line 809, in Run
+    resources = command_instance.Run(args)
+  File "/Users/ankurahir/Documents/G-Cloud/google-cloud-sdk/lib/surface/builds/submit.py", line 154, in Run
+    build_config = submit_util.CreateBuildConfig(
+  File "/Users/ankurahir/Documents/G-Cloud/google-cloud-sdk/lib/googlecloudsdk/command_lib/builds/submit_util.py", line 438, in CreateBuildConfig
+    build_config = _SetSource(build_config, messages, is_specified_source,
+  File "/Users/ankurahir/Documents/G-Cloud/google-cloud-sdk/lib/googlecloudsdk/command_lib/builds/submit_util.py", line 233, in _SetSource
+    gcs_client = storage_api.StorageClient()
+  File "/Users/ankurahir/Documents/G-Cloud/google-cloud-sdk/lib/googlecloudsdk/api_lib/storage/storage_api.py", line 91, in __init__
+    self.client = client or storage_util.GetClient()
+  File "/Users/ankurahir/Documents/G-Cloud/google-cloud-sdk/lib/googlecloudsdk/api_lib/storage/storage_util.py", line 294, in GetClient
+    return core_apis.GetClientInstance('storage', 'v1')
+  File "/Users/ankurahir/Documents/G-Cloud/google-cloud-sdk/lib/googlecloudsdk/api_lib/util/apis.py", line 244, in GetClientInstance
+    return apis_internal._GetClientInstance(api_name, api_version, no_http, None,
+  File "/Users/ankurahir/Documents/G-Cloud/google-cloud-sdk/lib/googlecloudsdk/api_lib/util/apis_internal.py", line 168, in _GetClientInstance
+    http_client = transports.GetApitoolsTransport(
+  File "/Users/ankurahir/Documents/G-Cloud/google-cloud-sdk/lib/googlecloudsdk/core/credentials/transports.py", line 80, in GetApitoolsTransport
+    session = requests.GetSession(
+  File "/Users/ankurahir/Documents/G-Cloud/google-cloud-sdk/lib/googlecloudsdk/core/credentials/requests.py", line 78, in GetSession
+    session = request_wrapper.WrapQuota(session, enable_resource_quota,
+  File "/Users/ankurahir/Documents/G-Cloud/google-cloud-sdk/lib/googlecloudsdk/core/credentials/requests.py", line 111, in WrapQuota
+    quota_project = self.QuotaProject(enable_resource_quota,
+  File "/Users/ankurahir/Documents/G-Cloud/google-cloud-sdk/lib/googlecloudsdk/core/credentials/transport.py", line 55, in QuotaProject
+    creds = store.LoadIfEnabled(allow_account_impersonation, use_google_auth)
+  File "/Users/ankurahir/Documents/G-Cloud/google-cloud-sdk/lib/googlecloudsdk/core/credentials/store.py", line 455, in LoadIfEnabled
+    return Load(
+  File "/Users/ankurahir/Documents/G-Cloud/google-cloud-sdk/lib/googlecloudsdk/core/credentials/store.py", line 560, in Load
+    cred = _Load(account, scopes, prevent_refresh, use_google_auth)
+  File "/Users/ankurahir/Documents/G-Cloud/google-cloud-sdk/lib/googlecloudsdk/core/credentials/store.py", line 713, in _Load
+    RefreshIfAlmostExpire(cred)
+  File "/Users/ankurahir/Documents/G-Cloud/google-cloud-sdk/lib/googlecloudsdk/core/credentials/store.py", line 927, in RefreshIfAlmostExpire
+    RefreshIfExpireWithinWindow(credentials, window=_CREDENTIALS_EXPIRY_WINDOW)
+  File "/Users/ankurahir/Documents/G-Cloud/google-cloud-sdk/lib/googlecloudsdk/core/credentials/store.py", line 923, in RefreshIfExpireWithinWindow
+    Refresh(credentials)
+  File "/Users/ankurahir/Documents/G-Cloud/google-cloud-sdk/lib/googlecloudsdk/core/credentials/store.py", line 757, in Refresh
+    _RefreshGoogleAuth(credentials, http_client, is_impersonated_credential,
+  File "/Users/ankurahir/Documents/G-Cloud/google-cloud-sdk/lib/googlecloudsdk/core/credentials/store.py", line 867, in _RefreshGoogleAuth
+    credentials.refresh(request_client)
+  File "/Users/ankurahir/Documents/G-Cloud/google-cloud-sdk/lib/googlecloudsdk/core/credentials/creds.py", line 553, in _WrappedRefresh
+    orig_refresh(request)
+  File "/Users/ankurahir/Documents/G-Cloud/google-cloud-sdk/lib/googlecloudsdk/core/credentials/google_auth_credentials.py", line 102, in refresh
+    return self._Refresh(request)
+  File "/Users/ankurahir/Documents/G-Cloud/google-cloud-sdk/lib/googlecloudsdk/core/credentials/google_auth_credentials.py", line 129, in _Refresh
+    access_token, refresh_token, expiry, grant_response = _RefreshGrant(
+  File "/Users/ankurahir/Documents/G-Cloud/google-cloud-sdk/lib/googlecloudsdk/core/credentials/google_auth_credentials.py", line 206, in _RefreshGrant
+    response_data = _TokenEndpointRequestWithRetry(request, token_uri, body)
+  File "/Users/ankurahir/Documents/G-Cloud/google-cloud-sdk/lib/googlecloudsdk/core/util/retry.py", line 312, in DecoratedFunction
+    exceptions.reraise(to_reraise[1], tb=to_reraise[2])
+  File "/Users/ankurahir/Documents/G-Cloud/google-cloud-sdk/lib/googlecloudsdk/core/exceptions.py", line 146, in reraise
+    six.reraise(type(exc_value), exc_value, tb)
+  File "/Users/ankurahir/Documents/G-Cloud/google-cloud-sdk/lib/third_party/six/__init__.py", line 693, in reraise
+    raise value
+  File "/Users/ankurahir/Documents/G-Cloud/google-cloud-sdk/lib/googlecloudsdk/core/util/retry.py", line 182, in TryFunc
+    return func(*args, **kwargs), None
+  File "/Users/ankurahir/Documents/G-Cloud/google-cloud-sdk/lib/googlecloudsdk/core/credentials/google_auth_credentials.py", line 262, in _TokenEndpointRequestWithRetry
+    response = request(method='POST', url=token_uri, headers=headers, body=body)
+  File "/Users/ankurahir/Documents/G-Cloud/google-cloud-sdk/lib/third_party/google/auth/transport/requests.py", line 189, in __call__
+    six.raise_from(new_exc, caught_exc)
+  File "<string>", line 3, in raise_from
+google.auth.exceptions.TransportError: HTTPSConnectionPool(host='oauth2.googleapis.com', port=443): Max retries exceeded with url: /token (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x10616b670>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2022-03-29 14:18:06,726 ERROR    root            gcloud crashed (TransportError): HTTPSConnectionPool(host='oauth2.googleapis.com', port=443): Max retries exceeded with url: /token (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x10616b670>: Failed to establish a new connection: [Errno 8] nodename nor servname provided, or not known'))
+2022-03-29 14:18:06,726 INFO     ___FILE_ONLY___ 
+If you would like to report this issue, please run the following command:
+
+2022-03-29 14:18:06,726 INFO     ___FILE_ONLY___   gcloud feedback
+
+2022-03-29 14:18:06,726 INFO     ___FILE_ONLY___ 
+To check gcloud for common problems, please run the following command:
+
+2022-03-29 14:18:06,726 INFO     ___FILE_ONLY___   gcloud info --run-diagnostics
+
